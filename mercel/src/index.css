@@ -65,4 +65,7 @@
 .shopnow:focus{
   background-color: black!important;
   color: #fff;
+}.shopnow:active{
+  background-color: black!important;
+  color: #fff;
 }
