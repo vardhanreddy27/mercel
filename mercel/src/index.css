@@ -40,4 +40,6 @@
 }
 .activebackground{
  background-color:  rgb(130, 9, 155);
+ position: fixed;
+    width: 100%;
 }
