@@ -41,5 +41,8 @@
 .activebackground{
  /* background-color:  #3b3b3b; */
  position: fixed;
-    width: 100%;
+  width: 100%;
+}
+.pt5{
+  padding-top: 4rem;
 }
