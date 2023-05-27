@@ -39,7 +39,7 @@
   color: rgb(130, 9, 155);
 }
 .activebackground{
- /* background-color:  #3b3b3b; */
+ background-color:  white;
  position: fixed;
   width: 100%;
 }
