@@ -46,3 +46,19 @@
 .pt5{
   padding-top: 4rem;
 }
+.herobanner{background-color:#dee2e624;
+  padding-top:2rem!important;
+  padding-left: 2rem!important;
+  font-weight: 900;
+  padding-right: 2rem!important;
+}.herobannerbg{background-color:#dee2e624;
+}
+.shopnow{
+  height: 3rem;
+    width: 8rem;
+    color: #fff;
+    background-color: black;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}

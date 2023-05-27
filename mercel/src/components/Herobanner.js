@@ -1,0 +1,18 @@
+import React from "react";
+
+function Herobanner() {
+  return (
+    <div>
+      <div className="row herobannerbg">
+        <h1 className="herobanner">
+          Latest
+          <br />
+          Trending Offers
+        </h1>
+        <button className="btn shopnow">shop now</button>
+      </div>
+    </div>
+  );
+}
+
+export default Herobanner;
