@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 
 function Search() {
   return (
-    <div className="search-input p-2">
+    <div className="search-input p-3 activebackground">
       <input
         type="text"
         className="searchbar form-control"
