@@ -7,6 +7,7 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Menu from "../components/Menu";
 function Home() {
   const [isHome, setIsHome] = useState(true);
   const [isShops, setIsShops] = useState(false);
@@ -39,9 +40,8 @@ function Home() {
   return (
     <>
       <Search />
-      <p className="pt5">
-        <Herobanner />
-      </p>
+      <Menu />
+      <Herobanner />
       <nav className=" fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
           <div className="col-3">
