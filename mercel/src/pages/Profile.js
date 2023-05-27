@@ -6,10 +6,10 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-function Home() {
-  const [isHome, setIsHome] = useState(true);
+function Profile() {
+  const [isHome, setIsHome] = useState(false);
   const [isShops, setIsShops] = useState(false);
-  const [isProfile, setIsProfile] = useState(false);
+  const [isProfile, setIsProfile] = useState(true);
   const [isCart, setIsCart] = useState(false);
   const clickHome = () => {
     setIsHome(true);
@@ -38,8 +38,7 @@ function Home() {
   return (
     <>
       <Search />
-      <h1 className="p-5">home</h1>
-
+      <h1 className="p-5">profile</h1>
       <nav className=" fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
           <div className="col-3">
@@ -74,4 +73,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Profile;
