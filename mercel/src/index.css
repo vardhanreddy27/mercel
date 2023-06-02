@@ -2,6 +2,7 @@
     position: relative;
     text-align: center;
   }
+  html, body {touch-action: none;}
 
   .searchs-icon{
     position: absolute;
