@@ -6,7 +6,7 @@ function Search() {
     <div className="search-input p-3 activebackground">
       <input
         type="text"
-        className="searchbar form-control"
+        className="searchbar herobannerbg form-control"
         placeholder="Search..."
       />
       <FaSearch className="search-icon" />

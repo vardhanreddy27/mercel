@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CNKyZWFhT7XRfUaCJyJRrsuzkbFcvCl77A&usqp=CAU",
+      "name": "Shop 1",
+      "distance": 2
+    },
+    {
+      "id": 2,
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CNKyZWFhT7XRfUaCJyJRrsuzkbFcvCl77A&usqp=CAU",
+      "name": "Shop 2",
+      "distance": 2
+    },
+    {
+      "id": 3,
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CNKyZWFhT7XRfUaCJyJRrsuzkbFcvCl77A&usqp=CAU",
+      "name": "Shop 3",
+      "distance": 2
+    }
+  ]

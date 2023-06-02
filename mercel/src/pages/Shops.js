@@ -1,12 +1,13 @@
-import React from "react";
-import Search from "../components/Search";
+import React, { useEffect, useState } from "react";
 import { HiOutlineHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
+import { RiListSettingsFill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import SearchShop from "../components/SearchShop";
 function Shops() {
+  const [shops, setShops] = useState([]);
   const [isHome, setIsHome] = useState(false);
   const [isShops, setIsShops] = useState(true);
   const [isProfile, setIsProfile] = useState(false);
@@ -35,10 +36,80 @@ function Shops() {
     setIsShops(true);
     setIsCart(false);
   };
+  useEffect(() => {
+    fetch("/shops.json")
+      .then((response) => response.json())
+      .then((data) => setShops(data))
+      .catch((error) => console.error("Error:", error));
+  }, []);
+
   return (
     <>
-      <Search />
-      <h1 className="p-5">shop</h1>
+      <SearchShop />
+      <div className="container pt-5">
+        <div className="row start">
+          <div className="col-2">
+            <button
+              type="button"
+              className="btn mt-3 mybtn ms-1  shadow-sm herobannerbg"
+            >
+              <p className="sort">Sort</p>
+              <RiListSettingsFill className="d-inline sorticon" />
+            </button>
+          </div>
+          <div className="col-2 mymargins">
+            <button
+              type="button"
+              className="btn mt-3 ms-1  shadow-sm herobannerbg"
+            >
+              <p className="sorts">Nearest </p>
+            </button>
+          </div>
+          <div className="col-2 mymar">
+            <button
+              type="button"
+              className="btn mt-3 ms-1  shadow-sm herobannerbg"
+            >
+              <p className="sorts">Electronics </p>
+            </button>
+          </div>
+          <div className="col-2">
+            <button
+              type="button"
+              className="btn mt-3 ms-1 mymargin shadow-sm herobannerbg"
+            >
+              <p className="sorts">Fashion </p>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className=" ">
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Logo</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {shops.map((shop) => (
+              <tr key={shop.id}>
+                <td>
+                  <img
+                    src={shop.logo}
+                    alt="Shop Logo"
+                    className="rounded-circle"
+                    width="50"
+                    height="50"
+                  />
+                </td>
+                <td>{shop.name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <nav className=" fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
           <div className="col-3">

@@ -3,7 +3,14 @@
     text-align: center;
   }
 
-  
+  .searchs-icon{
+    position: absolute;
+    top: 63%;
+    right: 26px;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+  }
   .search-input .search-icon {
     position: absolute;
     top: 50%;
@@ -19,8 +26,8 @@
   }
   input[type="text"], textarea {
     outline: none;
-    box-shadow:none !important;
-    border:1px solid #ccc !important;
+  
+    border:1px solid #cccccc5e!important;
                                        }
                           .menufont{
                             font-size: x-small;
@@ -46,13 +53,31 @@
 .pt5{
   padding-top: 4rem;
 }
-.herobanner{
-  padding-top:2rem!important;
-  padding-left: 2rem!important;
+.font{
   font-weight: 900;
-  padding-right: 2rem!important;
 }.herobannerbg{background-color:#dee2e624;
 }
+.start{margin-left: -7px;
+}
+.herobannerbg:focus{background-color:#dee2e624;
+}
+.mybtn{margin-left: 5px!important;
+  width: 4rem;
+  padding-right: 25px;}
+  .sort{
+    display: flex!important;
+    margin-bottom: 0px;
+    margin-left: -4px;
+  }.sorts{
+    display: flex!important;
+    margin-bottom: 0px;
+  }.mymargins{    margin-left: 9px;}
+  .mymargin{margin-left: 48px!important;}
+  .mymar{    margin-left: 23px}
+.sorticon{
+  position: absolute;
+  margin-top: -19px;
+  margin-left: 15px;}
 .shopnow{
   height: 3rem;
     width: 8rem;
@@ -61,6 +86,7 @@
     margin-left: 2rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
+    box-shadow: 7px 7px 7px #c5c5c5;
 }
 .shopnow:hover, .shopnow:active, .shopnow:focus {
   background-color: black!important;
