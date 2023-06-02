@@ -62,23 +62,7 @@
 }
 .herobannerbg:focus{background-color:#dee2e624;
 }
-.mybtn{margin-left: 5px!important;
-  width: 4rem;
-  padding-right: 25px;}
-  .sort{
-    display: flex!important;
-    margin-bottom: 0px;
-    margin-left: -4px;
-  }.sorts{
-    display: flex!important;
-    margin-bottom: 0px;
-  }.mymargins{    margin-left: 9px;}
-  .mymargin{margin-left: 48px!important;}
-  .mymar{    margin-left: 23px}
-.sorticon{
-  position: absolute;
-  margin-top: -19px;
-  margin-left: 15px;}
+
 .shopnow{
   height: 3rem;
     width: 8rem;
@@ -104,4 +88,8 @@
 
 .flex-item {
   padding: .5em;
+}
+.marginsort{margin-right: 3px;}
+.sort{
+  padding: 2px;
 }

@@ -47,51 +47,19 @@ function Shops() {
     <>
       <SearchShop />
       <div className="container pt-5">
-        <div className="row start">
-          <div className="col-2">
-            <button
-              type="button"
-              className="btn mt-3 mybtn ms-1  shadow-sm herobannerbg"
-            >
-              <p className="sort">Sort</p>
-              <RiListSettingsFill className="d-inline sorticon" />
-            </button>
-          </div>
-          <div className="col-2 mymargins">
-            <button
-              type="button"
-              className="btn mt-3 ms-1  shadow-sm herobannerbg"
-            >
-              <p className="sorts">Nearest </p>
-            </button>
-          </div>
-          <div className="col-2 mymar">
-            <button
-              type="button"
-              className="btn mt-3 ms-1  shadow-sm herobannerbg"
-            >
-              <p className="sorts">Electronics </p>
-            </button>
-          </div>
-          <div className="col-2">
-            <button
-              type="button"
-              className="btn mt-3 ms-1 mymargin shadow-sm herobannerbg"
-            >
-              <p className="sorts">Fashion </p>
-            </button>
-          </div>
+        <div className="d-flex justify-content-center mt-3">
+          <button className="btn herobannerbg marginsort">
+            Sort
+            <RiListSettingsFill className="sort" />
+          </button>
+          <button className="btn herobannerbg marginsort">Nearest</button>
+          <button className="btn herobannerbg marginsort">Fashion</button>
+          <button className="btn herobannerbg">Electronics</button>
         </div>
       </div>
 
       <div className=" ">
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Logo</th>
-              <th>Name</th>
-            </tr>
-          </thead>
+        {/* <table className="table">
           <tbody>
             {shops.map((shop) => (
               <tr key={shop.id}>
@@ -108,7 +76,7 @@ function Shops() {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
       </div>
       <nav className=" fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
