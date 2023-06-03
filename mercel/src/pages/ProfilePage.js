@@ -89,11 +89,14 @@ const ProfilePage = () => {
                 Returns & Cancellations
               </a>
             </li>
-            <li className="list-group-item mb-5">
+            <li className="list-group-item">
               <a href="/home" className="profile-link">
                 Logout
               </a>
             </li>
+            <br />
+            <br />
+            <br />
           </ul>
         </div>
       </div>
