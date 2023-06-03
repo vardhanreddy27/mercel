@@ -131,8 +131,12 @@
   color: white;
   background-color:rgb(130, 9, 155);
   border: none;
-
+}.selected:active {
+  color: white;
+  background-color:rgb(130, 9, 155);
+  border: none;
 }
+
 .remove-border{
   border: none;
 }
