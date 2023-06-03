@@ -1,20 +1,48 @@
 [
-    {
-      "id": 1,
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CNKyZWFhT7XRfUaCJyJRrsuzkbFcvCl77A&usqp=CAU",
-      "name": "Shop 1",
-      "distance": 2
-    },
-    {
-      "id": 2,
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CNKyZWFhT7XRfUaCJyJRrsuzkbFcvCl77A&usqp=CAU",
-      "name": "Shop 2",
-      "distance": 2
-    },
-    {
-      "id": 3,
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9CNKyZWFhT7XRfUaCJyJRrsuzkbFcvCl77A&usqp=CAU",
-      "name": "Shop 3",
-      "distance": 2
-    }
-  ]
+  {
+    "name": "Reliance digital",
+    "address": "D.N.R. Towers, Kotireddy Circle, Kadapa",
+    "category": "Electronics | Accessories | Home Appliances",
+    "image": "https://www.thehitavada.com/Encyc/2020/10/24/2_05_15_20_Reliance-Digital_1_H@@IGHT_415_W@@IDTH_675.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },  {
+    "name": "Reliance digital",
+    "address": "Address 1",
+    "category": "Fashion",
+    "image": "https://www.thehitavada.com/Encyc/2020/10/24/2_05_15_20_Reliance-Digital_1_H@@IGHT_415_W@@IDTH_675.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },  {
+    "name": "Shop 1",
+    "address": "Address 1",
+    "category": "Fashion",
+    "image": "https://www.thehitavada.com/Encyc/2020/10/24/2_05_15_20_Reliance-Digital_1_H@@IGHT_415_W@@IDTH_675.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },  {
+    "name": "Shop 1",
+    "address": "Address 1",
+    "category": "Fashion",
+    "image": "https://www.thehitavada.com/Encyc/2020/10/24/2_05_15_20_Reliance-Digital_1_H@@IGHT_415_W@@IDTH_675.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "name": "Shop 2",
+    "address": "Address 2",
+    "category": "Electronics",
+    "image": "https://www.thehitavada.com/Encyc/2020/10/24/2_05_15_20_Reliance-Digital_1_H@@IGHT_415_W@@IDTH_675.jpg",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "name": "Shop 3",
+    "address": "Address 3",
+    "category": "Fashion",
+    "image": "https://www.thehitavada.com/Encyc/2020/10/24/2_05_15_20_Reliance-Digital_1_H@@IGHT_415_W@@IDTH_675.jpg",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+  },
+  {
+    "name": "Shop 4",
+    "address": "Address 4",
+    "category": "Electronics",
+    "image": "https://www.thehitavada.com/Encyc/2020/10/24/2_05_15_20_Reliance-Digital_1_H@@IGHT_415_W@@IDTH_675.jpg",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
+  }
+]

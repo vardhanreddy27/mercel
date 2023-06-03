@@ -46,37 +46,43 @@ function Shops() {
   return (
     <>
       <SearchShop />
-      <div className="container pt-5">
-        <div className="d-flex justify-content-center mt-3">
-          <button className="btn herobannerbg marginsort">
+      <div className="container">
+        <div className="d-flex justify-content-center">
+          <button className="btn herobannerbg marginsort shadow-sm ">
             Sort
             <RiListSettingsFill className="sort" />
           </button>
-          <button className="btn herobannerbg marginsort">Nearest</button>
-          <button className="btn herobannerbg marginsort">Fashion</button>
-          <button className="btn herobannerbg">Electronics</button>
+          <button className="btn herobannerbg marginsort shadow-sm ">
+            Nearest
+          </button>
+          <button className="btn herobannerbg marginsort shadow-sm ">
+            Fashion
+          </button>
+          <button className="btn herobannerbg shadow-sm ">Electronics</button>
         </div>
       </div>
 
-      <div className=" ">
-        {/* <table className="table">
-          <tbody>
-            {shops.map((shop) => (
-              <tr key={shop.id}>
-                <td>
-                  <img
-                    src={shop.logo}
-                    alt="Shop Logo"
-                    className="rounded-circle"
-                    width="50"
-                    height="50"
-                  />
-                </td>
-                <td>{shop.name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table> */}
+      <div className="container ps-3 pe-3 pt-3 pb-5 mb-5">
+        <div className="row">
+          {shops.map((shop, index) => (
+            <div key={index} className="col-md-6">
+              <div className="card mb-3 shadow-sm">
+                <img
+                  src={shop.image}
+                  alt={shop.name}
+                  className="card-img-top"
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{shop.name}</h5>
+                  <p className="card-text mb-1">{shop.address}</p>
+                  <p className="card-text">
+                    <small className="text-muted">{shop.category}</small>
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <nav className=" fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
