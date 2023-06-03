@@ -97,6 +97,7 @@ const ProfilePage = () => {
             <br />
             <br />
             <br />
+            <br />
           </ul>
         </div>
       </div>
