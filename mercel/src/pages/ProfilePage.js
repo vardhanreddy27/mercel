@@ -63,6 +63,34 @@ const ProfilePage = () => {
             </li>
             <li className="list-group-item">
               <a href="/home" className="profile-link">
+                cart
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h3 className="mt-3 ml5"> Privacy & Information</h3>
+
+      <div className="row p-3">
+        <div className="col-md-6 nomargin offset-md-3">
+          <ul className="list-group">
+            <li className="list-group-item">
+              <a href="/home" className="profile-link">
+                Terms and Conditions
+              </a>
+            </li>
+            <li className="list-group-item">
+              <a href="/home" className="profile-link">
+                FAQs
+              </a>
+            </li>
+            <li className="list-group-item">
+              <a href="/home" className="profile-link">
+                Returns & Cancellations
+              </a>
+            </li>
+            <li className="list-group-item">
+              <a href="/home" className="profile-link">
                 Logout
               </a>
             </li>
