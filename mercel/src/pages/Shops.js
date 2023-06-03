@@ -9,34 +9,41 @@ import SearchShop from "../components/SearchShop";
 
 function Shops() {
   const [shops, setShops] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
   const [isHome, setIsHome] = useState(false);
   const [isShops, setIsShops] = useState(true);
   const [isProfile, setIsProfile] = useState(false);
   const [isCart, setIsCart] = useState(false);
+
   const clickHome = () => {
     setIsHome(true);
     setIsProfile(false);
     setIsShops(false);
     setIsCart(false);
   };
+
   const clickProfile = () => {
     setIsHome(false);
     setIsProfile(true);
     setIsShops(false);
     setIsCart(false);
   };
+
   const clickCart = () => {
     setIsHome(false);
     setIsProfile(false);
     setIsShops(false);
     setIsCart(true);
   };
+
   const clickShops = () => {
     setIsHome(false);
     setIsProfile(false);
     setIsShops(true);
     setIsCart(false);
   };
+
   useEffect(() => {
     fetch("/shops.json")
       .then((response) => response.json())
@@ -44,35 +51,61 @@ function Shops() {
       .catch((error) => console.error("Error:", error));
   }, []);
 
+  const handleSort = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const filteredShops =
+    selectedCategory === "All"
+      ? shops
+      : shops.filter((shop) => shop.category.includes(selectedCategory));
+
   return (
     <>
       <SearchShop />
       <div className="container">
         <div className="d-flex justify-content-center">
-          <button className="btn herobannerbg marginsort shadow-sm ">
+          <button
+            className="btn herobannerbg marginsort shadow-sm"
+            onClick={() => handleSort("All")}
+          >
             Sort
             <RiListSettingsFill className="sort" />
           </button>
-          <button className="btn herobannerbg marginsort shadow-sm ">
+          <button
+            className="btn herobannerbg marginsort shadow-sm"
+            onClick={() => handleSort("Nearest")}
+          >
             Nearest
           </button>
-          <button className="btn herobannerbg marginsort shadow-sm ">
+          <button
+            className="btn herobannerbg marginsort shadow-sm"
+            onClick={() => handleSort("Fashion")}
+          >
             Fashion
           </button>
-          <button className="btn herobannerbg shadow-sm ">Electronics</button>
+          <button
+            className="btn herobannerbg shadow-sm"
+            onClick={() => handleSort("Electronics")}
+          >
+            Electronics
+          </button>
         </div>
       </div>
 
       <div className="container ps-3 pe-3 pt-3 pb-5 mb-5">
         <div className="row">
-          {shops.map((shop, index) => (
+          {filteredShops.map((shop, index) => (
             <div key={index} className="col-md-6">
               <div className="card mb-3 shadow-sm">
-                <img
-                  src={shop.image}
-                  alt={shop.name}
-                  className="card-img-top fixed-height-img"
-                />
+                <div className="image-container">
+                  <img
+                    src={shop.image}
+                    alt={shop.name}
+                    className="card-img-top fixed-height-img"
+                  />
+                  <div className="overlay"></div>
+                </div>
                 <div className="card-body">
                   <h5 className="card-title">{shop.name}</h5>
                   <p className="card-text mb-1">{shop.address}</p>
@@ -85,7 +118,7 @@ function Shops() {
           ))}
         </div>
       </div>
-      <nav className=" fixed-bottom navbar-light bg-light">
+      <nav className="fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
           <div className="col-3">
             <Link to="/" onClick={clickHome}>
