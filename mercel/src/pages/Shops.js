@@ -10,6 +10,7 @@ import SearchShop from "../components/SearchShop";
 function Shops() {
   const [shops, setShops] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const [isHome, setIsHome] = useState(false);
   const [isShops, setIsShops] = useState(true);
@@ -55,14 +56,22 @@ function Shops() {
     setSelectedCategory(category);
   };
 
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   const filteredShops =
     selectedCategory === "All"
       ? shops
       : shops.filter((shop) => shop.category.includes(selectedCategory));
 
+  const searchedShops = filteredShops.filter((shop) =>
+    shop.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
-      <SearchShop />
+      <SearchShop handleSearch={handleSearch} />
       <div className="container">
         <div className="d-flex justify-content-center">
           <button
@@ -95,7 +104,7 @@ function Shops() {
 
       <div className="container ps-3 pe-3 pt-3 pb-5 mb-5">
         <div className="row">
-          {filteredShops.map((shop, index) => (
+          {searchedShops.map((shop, index) => (
             <div key={index} className="col-md-6">
               <div className="card mb-3 shadow-sm">
                 <div className="image-container">
