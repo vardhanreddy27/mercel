@@ -106,8 +106,8 @@ function Shops() {
         <div className="row">
           {searchedShops.map((shop, index) => (
             <div key={index} className="col-md-6">
-              <div className="card mb-3 shadow-sm">
-                <div className="image-container rounded card-top-radius">
+              <div className="card mb-3 shadow-sm rounded ">
+                <div className="image-container card-top-radius">
                   <img
                     src={shop.image}
                     alt={shop.name}
