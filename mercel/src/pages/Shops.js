@@ -75,26 +75,34 @@ function Shops() {
       <div className="container">
         <div className="d-flex justify-content-center">
           <button
-            className="btn herobannerbg marginsort shadow-sm"
+            className={`btn herobannerbg marginsort shadow-sm remove-border ${
+              selectedCategory === "All"
+            }`}
             onClick={() => handleSort("All")}
           >
             Sort
             <RiListSettingsFill className="sort" />
           </button>
           <button
-            className="btn herobannerbg marginsort shadow-sm"
-            onClick={() => handleSort("Nearest")}
+            className={`btn herobannerbg marginsort shadow-sm remove-border ${
+              selectedCategory === "All" ? "" : ""
+            }`}
+            onClick={() => handleSort("All")}
           >
             Nearest
           </button>
           <button
-            className="btn herobannerbg marginsort shadow-sm"
+            className={`btn herobannerbg marginsort shadow-sm ${
+              selectedCategory === "Fashion" ? "selected" : ""
+            }`}
             onClick={() => handleSort("Fashion")}
           >
             Fashion
           </button>
           <button
-            className="btn herobannerbg shadow-sm"
+            className={`btn herobannerbg shadow-sm ${
+              selectedCategory === "Electronics" ? "selected" : ""
+            }`}
             onClick={() => handleSort("Electronics")}
           >
             Electronics

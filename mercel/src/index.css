@@ -122,3 +122,17 @@
 .rounded{
   border-radius: 1rem!important;
 }
+.selected {
+  color: white;
+  background-color:rgb(130, 9, 155);
+  border: none;
+
+}.selected:focus {
+  color: white;
+  background-color:rgb(130, 9, 155);
+  border: none;
+
+}
+.remove-border{
+  border: none;
+}
