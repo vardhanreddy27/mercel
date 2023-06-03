@@ -6,6 +6,7 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import SearchShop from "../components/SearchShop";
+
 function Shops() {
   const [shops, setShops] = useState([]);
   const [isHome, setIsHome] = useState(false);
@@ -70,7 +71,7 @@ function Shops() {
                 <img
                   src={shop.image}
                   alt={shop.name}
-                  className="card-img-top"
+                  className="card-img-top fixed-height-img"
                 />
                 <div className="card-body">
                   <h5 className="card-title">{shop.name}</h5>
