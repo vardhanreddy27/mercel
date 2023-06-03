@@ -123,17 +123,17 @@
   border-radius: 1rem!important;
 }
 .selected {
-  color: white;
-  background-color:rgb(130, 9, 155);
+  color: white!important;
+  background-color:rgb(130, 9, 155)!important;
   border: none;
 
 }.selected:focus {
-  color: white;
-  background-color:rgb(130, 9, 155);
+  color: white!important;
+  background-color:rgb(130, 9, 155)!important;
   border: none;
 }.selected:active {
-  color: white;
-  background-color:rgb(130, 9, 155);
+  color: white!important;
+  background-color:rgb(130, 9, 155)!important;
   border: none;
 }
 
