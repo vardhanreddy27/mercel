@@ -71,7 +71,7 @@ const ProfilePage = () => {
       </div>
       <h3 className="mt-3 ml5"> Privacy & Information</h3>
 
-      <div className="row p-3 mb-2">
+      <div className="row p-3 pb-5">
         <div className="col-md-6 nomargin offset-md-3">
           <ul className="list-group">
             <li className="list-group-item">
