@@ -107,13 +107,13 @@ function Shops() {
           {searchedShops.map((shop, index) => (
             <div key={index} className="col-md-6">
               <div className="card mb-3 shadow-sm">
-                <div className="image-container">
+                <div className="image-container rounded card-top-radius">
                   <img
                     src={shop.image}
                     alt={shop.name}
-                    className="card-img-top fixed-height-img"
+                    className="card-img-top fixed-height-img card-top-radius"
                   />
-                  <div className="overlay"></div>
+                  <div className="overlay card-top-radius"></div>
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">{shop.name}</h5>

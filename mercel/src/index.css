@@ -112,3 +112,9 @@
 }.image-container {
   position: relative;
 }
+.card{
+  --bs-card-border-width:0px;
+}
+.card-top-radius{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;}
