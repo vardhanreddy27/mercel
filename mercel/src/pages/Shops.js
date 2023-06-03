@@ -117,7 +117,7 @@ function Shops() {
                 </div>
                 <div className="card-body">
                   <h5 className="card-title">{shop.name}</h5>
-                  <p className="card-text mb-1">{shop.address}</p>
+                  <p className="card-text mb-1 text-muted">{shop.address}</p>
                   <p className="card-text">
                     <small className="text-muted">{shop.category}</small>
                   </p>
