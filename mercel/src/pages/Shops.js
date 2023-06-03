@@ -115,7 +115,7 @@ function Shops() {
       <div className="container ps-3 pe-3 pt-3 pb-5 mb-5">
         <div className="row">
           {searchedShops.map((shop, index) => (
-            <LazyLoad key={index} height={370}>
+            <LazyLoad key={index} height={390}>
               <div key={index} className="col-md-6">
                 <div className="card mb-3 shadow-sm rounded ">
                   <div className="image-container card-top-radius">
@@ -128,12 +128,14 @@ function Shops() {
                   </div>
                   <div className="card-body">
                     <h5 className="card-title">{shop.name}</h5>
-                    <p className="card-text mb-1 text-muted">{shop.address}</p>
+                    <p className="card-text mb-1 text-muted">
+                      <small className="text-muted">{shop.address}</small>
+                    </p>
                     <p className="card-text">
                       <small className="text-muted">{shop.category}</small>
                     </p>
                     <hr className="dashed-line" />
-                    <p className="card-text ">
+                    <p className="card-text offer-text">
                       <small className="active ">
                         <Offer className="offer" />
                         {shop.offer}

@@ -1,5 +1,5 @@
 import React from "react";
-import Search from "../components/Search";
+import ProfilePage from "./ProfilePage";
 import { HiOutlineHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
@@ -37,8 +37,11 @@ function Profile() {
   };
   return (
     <>
-      <Search />
-      <h1 className="p-5">profile</h1>
+      <div className="container pt-4">
+        <div className="wrapper">
+          <ProfilePage />
+        </div>
+      </div>
       <nav className=" fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
           <div className="col-3">

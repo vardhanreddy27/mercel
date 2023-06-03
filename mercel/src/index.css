@@ -43,6 +43,13 @@
 }
 .active{
   color: rgb(130, 9, 155);
+}.background{
+  background-color: rgb(130, 9, 155)!important;
+  color: white!important;
+}
+.nomargin{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
 }
 .activebackground{
  background-color:  white;
@@ -144,6 +151,8 @@
   color: rgb(130, 9, 155)!important;
 
 }
+.user-image{height: 4rem;}
+.offer-text{font-weight: bolder;}
 .remove-border{
   border: none;
 }
@@ -151,4 +160,22 @@ hr.dashed-line {
   border: none;
   border-top: 1px dashed #ccc;
   margin: 5px 0!important;
+}
+.display{
+  display: inline-block;
+}
+.mytextalign{    text-align: initial;}
+.display-profile{
+  display: flex;
+  justify-content: space-between;
+}
+.left{margin-left: 15px;}
+.right{
+  margin-right: 15px;
+}
+.ml3{
+  margin-left: 3px;
+}
+.ml5{
+  margin-left: 5px;
 }
