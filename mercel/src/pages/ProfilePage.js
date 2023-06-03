@@ -8,7 +8,7 @@ import { MdLocalOffer } from "react-icons/md";
 
 const ProfilePage = () => {
   return (
-    <div className="fluid-container mb-3">
+    <div className="fluid-container">
       <h3 className="text-secondary ml3">
         Good afternoon<span className="active"> USER</span>
       </h3>
@@ -89,7 +89,7 @@ const ProfilePage = () => {
                 Returns & Cancellations
               </a>
             </li>
-            <li className="list-group-item">
+            <li className="list-group-item mb-5">
               <a href="/home" className="profile-link">
                 Logout
               </a>
