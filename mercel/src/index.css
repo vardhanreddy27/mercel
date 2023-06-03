@@ -114,6 +114,8 @@
 }
 .card{
   --bs-card-border-width:0px;
+  --bs-card-spacer-y: 10px;
+
 }
 .card-top-radius{
   border-top-left-radius: 1rem;
@@ -136,7 +138,17 @@
   background-color:rgb(130, 9, 155)!important;
   border: none;
 }
+.offer{
+  height: 1rem;
+  margin-bottom: 3px;
+  color: rgb(130, 9, 155)!important;
 
+}
 .remove-border{
   border: none;
+}
+hr.dashed-line {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 5px 0!important;
 }

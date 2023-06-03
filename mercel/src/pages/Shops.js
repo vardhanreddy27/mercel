@@ -6,6 +6,8 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import SearchShop from "../components/SearchShop";
+import LazyLoad from "react-lazy-load";
+import { Offer } from "@styled-icons/boxicons-solid/Offer";
 
 function Shops() {
   const [shops, setShops] = useState([]);
@@ -113,25 +115,34 @@ function Shops() {
       <div className="container ps-3 pe-3 pt-3 pb-5 mb-5">
         <div className="row">
           {searchedShops.map((shop, index) => (
-            <div key={index} className="col-md-6">
-              <div className="card mb-3 shadow-sm rounded ">
-                <div className="image-container card-top-radius">
-                  <img
-                    src={shop.image}
-                    alt={shop.name}
-                    className="card-img-top fixed-height-img card-top-radius"
-                  />
-                  <div className="overlay card-top-radius"></div>
-                </div>
-                <div className="card-body">
-                  <h5 className="card-title">{shop.name}</h5>
-                  <p className="card-text mb-1 text-muted">{shop.address}</p>
-                  <p className="card-text">
-                    <small className="text-muted">{shop.category}</small>
-                  </p>
+            <LazyLoad key={index} height={370}>
+              <div key={index} className="col-md-6">
+                <div className="card mb-3 shadow-sm rounded ">
+                  <div className="image-container card-top-radius">
+                    <img
+                      src={shop.image}
+                      alt={shop.name}
+                      className="card-img-top fixed-height-img card-top-radius"
+                    />
+                    <div className="overlay card-top-radius"></div>
+                  </div>
+                  <div className="card-body">
+                    <h5 className="card-title">{shop.name}</h5>
+                    <p className="card-text mb-1 text-muted">{shop.address}</p>
+                    <p className="card-text">
+                      <small className="text-muted">{shop.category}</small>
+                    </p>
+                    <hr className="dashed-line" />
+                    <p className="card-text ">
+                      <small className="active ">
+                        <Offer className="offer" />
+                        {shop.offer}
+                      </small>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </LazyLoad>
           ))}
         </div>
       </div>
