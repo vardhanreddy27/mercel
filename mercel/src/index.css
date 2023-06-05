@@ -173,6 +173,13 @@ hr.dashed-line {
 .right{
   margin-right: 15px;
 }
+.profile-link{
+  display: flex;
+}
+.myflex{
+  display: flex;
+  align-items: center;
+}
 .ml3{
   margin-left: 3px;
 }

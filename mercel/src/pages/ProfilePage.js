@@ -3,9 +3,15 @@ import {
   BsFillCartCheckFill,
   BsFillHeartFill,
   BsHeadset,
+  BsFillPinMapFill,
+  BsCart3,
 } from "react-icons/bs";
-import { MdLocalOffer } from "react-icons/md";
-
+import { TbTruckReturn, TbLogout } from "react-icons/tb";
+import { RiFileEditLine } from "react-icons/ri";
+import { MdLocalOffer, MdKeyboardArrowRight } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { RiUserLocationLine } from "react-icons/ri";
+import { FaQuestion } from "react-icons/fa";
 const ProfilePage = () => {
   return (
     <div className="fluid-container">
@@ -48,22 +54,46 @@ const ProfilePage = () => {
           <ul className="list-group">
             <li className="list-group-item">
               <a href="/home" className="profile-link">
-                Edit Profile
+                <div className="col-1 myflex">
+                  <CgProfile />
+                </div>
+                <div className="col-10">Edit Profile</div>
+                <div className="col-1">
+                  <MdKeyboardArrowRight />
+                </div>
               </a>
             </li>
             <li className="list-group-item">
               <a href="/home" className="profile-link">
-                Track Orders
+                <div className="col-1 myflex">
+                  <BsFillPinMapFill />
+                </div>
+                <div className="col-10">Track Orders</div>
+                <div className="col-1">
+                  <MdKeyboardArrowRight />
+                </div>
               </a>
             </li>
             <li className="list-group-item">
               <a href="/home" className="profile-link">
-                Manage Address
+                <div className="col-1 myflex">
+                  <RiUserLocationLine />
+                </div>
+                <div className="col-10">Manage Address</div>
+                <div className="col-1">
+                  <MdKeyboardArrowRight />
+                </div>
               </a>
             </li>
             <li className="list-group-item">
               <a href="/home" className="profile-link">
-                cart
+                <div className="col-1 myflex">
+                  <BsCart3 />
+                </div>
+                <div className="col-10">Cart</div>
+                <div className="col-1">
+                  <MdKeyboardArrowRight />
+                </div>
               </a>
             </li>
           </ul>
@@ -76,22 +106,46 @@ const ProfilePage = () => {
           <ul className="list-group">
             <li className="list-group-item">
               <a href="/home" className="profile-link">
-                Terms and Conditions
+                <div className="col-1 myflex">
+                  <RiFileEditLine />
+                </div>
+                <div className="col-10"> Terms and Conditions</div>
+                <div className="col-1">
+                  <MdKeyboardArrowRight />
+                </div>
               </a>
             </li>
             <li className="list-group-item">
               <a href="/home" className="profile-link">
-                FAQs
+                <div className="col-1 myflex">
+                  <FaQuestion />
+                </div>
+                <div className="col-10"> FAQs</div>
+                <div className="col-1">
+                  <MdKeyboardArrowRight />
+                </div>
               </a>
             </li>
             <li className="list-group-item">
               <a href="/home" className="profile-link">
-                Returns & Cancellations
+                <div className="col-1 myflex">
+                  <TbTruckReturn />
+                </div>
+                <div className="col-10"> Returns & Cancellations</div>
+                <div className="col-1">
+                  <MdKeyboardArrowRight />
+                </div>
               </a>
             </li>
             <li className="list-group-item">
               <a href="/home" className="profile-link">
-                Logout
+                <div className="col-1 myflex">
+                  <TbLogout />
+                </div>
+                <div className="col-10"> Logout</div>
+                <div className="col-1">
+                  <MdKeyboardArrowRight />
+                </div>
               </a>
             </li>
             <br />
