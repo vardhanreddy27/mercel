@@ -5,6 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Recommended from "../components/Recommended";
 const Cart = () => {
   const [isHome, setIsHome] = useState(false);
   const itemCount = 0;
@@ -36,11 +37,13 @@ const Cart = () => {
     setIsCart(false);
   };
   return (
-    <div>
+    <>
+      {/* https://cdnl.iconscout.com/lottie/premium/thumb/shopping-bag-6866084-5624247.gif test with this img also this is for expty cart image*/}
+
       {itemCount === 0 ? (
         <>
-          <div className="fluid-container pt-4">
-            <div className="row text-center">
+          <div className="container pt-4">
+            <div className="row p-2 ps-3">
               <h3>Cart</h3>
             </div>
             <div className="row text-center">
@@ -48,11 +51,10 @@ const Cart = () => {
                 src="https://cdn.dribbble.com/users/887568/screenshots/3172047/ufo.gif"
                 alt="cart"
               />
-              {/* https://cdnl.iconscout.com/lottie/premium/thumb/shopping-bag-6866084-5624247.gif test with this img also this is for expty cart image*/}
-              <p className="fw-bold">your cart is empty!</p>
+              <p className="fw-bold text-muted">your cart is empty!</p>
             </div>
             <div className="row customheight  p-2 secondaryback">
-              <h3 className="pt-4">Recommended for you</h3>
+              <Recommended />
             </div>
           </div>
 
@@ -95,11 +97,11 @@ const Cart = () => {
         </>
       ) : (
         <div>
-          <h1>Your cart is not empty</h1>
+          <h1 className="text-muted">Your cart is not empty</h1>
           <p>Add items to your cart to continue shopping.</p>
         </div>
       )}
-    </div>
+    </>
   );
 };
 export default Cart;
