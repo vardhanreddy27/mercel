@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Recommended from "../components/Recommended";
+import RecommendedProducts from "../components/RecommendedProducts";
 const Cart = () => {
   const [isHome, setIsHome] = useState(false);
   const itemCount = 0;
@@ -54,7 +54,7 @@ const Cart = () => {
               <p className="fw-bold text-muted">your cart is empty!</p>
             </div>
             <div className="row customheight  p-2 secondaryback">
-              <Recommended />
+              <RecommendedProducts />
             </div>
           </div>
 
