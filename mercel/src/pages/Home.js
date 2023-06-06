@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "../components/Search";
+import EditProfile from "../components/EditProfile";
 import Herobanner from "../components/Herobanner";
 import { HiOutlineHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
@@ -42,6 +43,7 @@ function Home() {
       <Search />
       <Menu />
       <Herobanner />
+      <EditProfile />
       <nav className=" fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
           <div className="col-3">

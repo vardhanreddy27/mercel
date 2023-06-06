@@ -52,7 +52,7 @@ const ProfilePage = () => {
       <div className="row p-3">
         <div className="col-md-6 nomargin offset-md-3">
           <ul className="list-group">
-            <li className="list-group-item">
+            <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
                 <div className="col-1 myflex">
                   <CgProfile />
@@ -63,7 +63,7 @@ const ProfilePage = () => {
                 </div>
               </a>
             </li>
-            <li className="list-group-item">
+            <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
                 <div className="col-1 myflex">
                   <BsFillPinMapFill />
@@ -74,7 +74,7 @@ const ProfilePage = () => {
                 </div>
               </a>
             </li>
-            <li className="list-group-item">
+            <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
                 <div className="col-1 myflex">
                   <RiUserLocationLine />
@@ -85,7 +85,7 @@ const ProfilePage = () => {
                 </div>
               </a>
             </li>
-            <li className="list-group-item">
+            <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
                 <div className="col-1 myflex">
                   <BsCart3 />
@@ -104,7 +104,7 @@ const ProfilePage = () => {
       <div className="row p-3">
         <div className="col-md-6 nomargin offset-md-3">
           <ul className="list-group">
-            <li className="list-group-item">
+            <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
                 <div className="col-1 myflex">
                   <RiFileEditLine />
@@ -115,7 +115,7 @@ const ProfilePage = () => {
                 </div>
               </a>
             </li>
-            <li className="list-group-item">
+            <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
                 <div className="col-1 myflex">
                   <FaQuestion />
@@ -126,7 +126,7 @@ const ProfilePage = () => {
                 </div>
               </a>
             </li>
-            <li className="list-group-item">
+            <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
                 <div className="col-1 myflex">
                   <TbTruckReturn />
@@ -137,7 +137,7 @@ const ProfilePage = () => {
                 </div>
               </a>
             </li>
-            <li className="list-group-item">
+            <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
                 <div className="col-1 myflex">
                   <TbLogout />
