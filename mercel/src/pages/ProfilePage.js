@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
-import Draggable from "react-draggable";
+
 import {
   BsFillCartCheckFill,
   BsFillHeartFill,
@@ -20,12 +20,6 @@ const ProfilePage = () => {
   const toggleDialog = () => {
     setIsOpen(!isOpen);
   };
-
-  const handleDrag = (_, { lastY, deltaY }) => {
-    if (deltaY > 100) {
-      toggleDialog();
-    }
-  };
   return (
     <div className="fluid-container">
       <h3 className="text-secondary ml3">
@@ -37,16 +31,17 @@ const ProfilePage = () => {
           onClose={toggleDialog}
           fullWidth
           maxWidth="md"
-          PaperComponent={(props) => (
-            <Draggable handle=".dialog-title" onDrag={handleDrag}>
-              <div {...props} />
-            </Draggable>
-          )}
           PaperProps={{
-            style: { borderRadius: 0 },
+            style: {
+              position: "fixed",
+              bottom: 0,
+              left: 0,
+              margin: 0,
+              borderRadius: 0,
+            },
           }}
         >
-          <DialogTitle className="dialog-title">Alert Dialog</DialogTitle>
+          <DialogTitle>Alert Dialog</DialogTitle>
           <DialogContent>
             <p>This is an alert message.</p>
             <Button onClick={toggleDialog} variant="contained">
