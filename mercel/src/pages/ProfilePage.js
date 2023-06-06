@@ -24,13 +24,17 @@ const ProfilePage = () => {
             <BsFillCartCheckFill className="icons" />
           </div>
           <div className="col-1 display"></div>
-          <div className="col-8 display mytextalign">Orders</div>
+          <div className="col-8 display mytextalign">
+            <p className="mb">Orders</p>
+          </div>
         </div>
         <div className="col-5 right btn border btn-lg btn-block ">
           <div className="col-3 display">
             <BsFillHeartFill className="icons" />
           </div>
-          <div className="col-9 display"> Wishlist</div>
+          <div className="col-9 display">
+            <p className="mb">Wishlist</p>
+          </div>
         </div>
       </div>
       <div className="row display-profile mt-1">
@@ -38,14 +42,18 @@ const ProfilePage = () => {
           <div className="col-3 display">
             <MdLocalOffer className="icons" />
           </div>
-          <div className="col-9 display"> Coupons</div>
+          <div className="col-9 display">
+            <p className="mb">Coupons</p>
+          </div>
         </div>
 
         <div className="col-5 right btn border btn-lg btn-block ">
           <div className="col-3 display">
             <BsHeadset className="icons" />
           </div>
-          <div className="col-9 display"> Support</div>
+          <div className="col-9 display">
+            <p className="mb">Support</p>
+          </div>
         </div>
       </div>
       <h3 className="mt-3 ml5"> Account Settings</h3>
