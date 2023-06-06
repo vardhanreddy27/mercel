@@ -7,3 +7,21 @@
 }
 /* test */
 .MuiPaper-root{width: 100%!important;}
+.css-guu4x8-MuiDialog-paper {
+    margin: 0px!important;
+    position: relative;
+    overflow-y: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    height: 90%;
+    top: 8rem;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-height: calc(100% - 64px)!important;
+    max-width: 900px;
+    background-color: white!important;
+    width: calc(100% - 0px)!important;
+}

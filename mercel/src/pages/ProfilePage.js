@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
+import Draggable from "react-draggable";
 import {
   BsFillCartCheckFill,
   BsFillHeartFill,
@@ -13,11 +15,46 @@ import { CgProfile } from "react-icons/cg";
 import { RiUserLocationLine } from "react-icons/ri";
 import { FaQuestion } from "react-icons/fa";
 const ProfilePage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDialog = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleDrag = (_, { lastY, deltaY }) => {
+    if (deltaY > 100) {
+      toggleDialog();
+    }
+  };
   return (
     <div className="fluid-container">
       <h3 className="text-secondary ml3">
         Good afternoon<span className="active"> USER</span>
       </h3>
+      <div>
+        <Dialog
+          open={isOpen}
+          onClose={toggleDialog}
+          fullWidth
+          maxWidth="md"
+          PaperComponent={(props) => (
+            <Draggable handle=".dialog-title" onDrag={handleDrag}>
+              <div {...props} />
+            </Draggable>
+          )}
+          PaperProps={{
+            style: { borderRadius: 0 },
+          }}
+        >
+          <DialogTitle className="dialog-title">Alert Dialog</DialogTitle>
+          <DialogContent>
+            <p>This is an alert message.</p>
+            <Button onClick={toggleDialog} variant="contained">
+              Close
+            </Button>
+          </DialogContent>
+        </Dialog>
+      </div>
       <div className="row display-profile mt-4 pb-2">
         <div className="col-5 left btn border btn-lg btn-block ">
           <div className="col-3 display">
@@ -61,15 +98,17 @@ const ProfilePage = () => {
         <div className="col-md-6 nomargin offset-md-3">
           <ul className="list-group">
             <li className="  list-group-item p-3">
-              <a href="/home" className="profile-link">
+              <div className="profile-link">
                 <div className="col-1 myflex">
                   <CgProfile />
                 </div>
-                <div className="col-10">Edit Profile</div>
+                <div className="col-10" onClick={toggleDialog}>
+                  Edit Profile
+                </div>
                 <div className="col-1">
                   <MdKeyboardArrowRight />
                 </div>
-              </a>
+              </div>
             </li>
             <li className="  list-group-item p-3">
               <a href="/home" className="profile-link">
