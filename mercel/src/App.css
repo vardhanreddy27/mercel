@@ -6,7 +6,7 @@
     background-color: rgb(243 243 242);
 }
 /* test */
-.css-rnmm7m-MuiPaper-root-MuiDialog-paper {
+.css-rnmm7m-MuiPaper-root-MuiDialog-paper{
+    height: 90%!important;
     width: 100%!important;
-    height: 90%;
 }

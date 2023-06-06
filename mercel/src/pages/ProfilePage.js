@@ -27,6 +27,7 @@ const ProfilePage = () => {
       </h3>
       <div>
         <Dialog
+          className="dialogbox"
           open={isOpen}
           onClose={toggleDialog}
           fullWidth
