@@ -2,8 +2,8 @@
     height: 18rem;
 }
 .secondaryback{
-    color: black;
-    background-color: rgb(243 243 242);
+    color: black!important;
+    background-color: rgb(243 243 242)!important;
 }
 /* test */
 .css-rnmm7m-MuiPaper-root-MuiDialog-paper{
@@ -26,4 +26,13 @@
     max-height: calc(100% - 4px);
     max-width: 900px;
     width: calc(100% - 0px);
+}
+.backbtn{
+    margin-top: 2rem!important;
+    margin-left: 14px!important;
+    display: flex!important;
+    justify-content: flex-start!important;
+}
+.backbtnicon{
+    color:rgb(130, 9, 155);
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
-
+import { Button, Dialog } from "@mui/material";
+import EditProfile from "../components/EditProfile";
 import {
   BsFillCartCheckFill,
   BsFillHeartFill,
@@ -8,6 +8,7 @@ import {
   BsFillPinMapFill,
   BsCart3,
 } from "react-icons/bs";
+import { IoChevronBackOutline } from "react-icons/io5";
 import { TbTruckReturn, TbLogout } from "react-icons/tb";
 import { RiFileEditLine } from "react-icons/ri";
 import { MdLocalOffer, MdKeyboardArrowRight } from "react-icons/md";
@@ -38,17 +39,15 @@ const ProfilePage = () => {
               bottom: 0,
               left: 0,
               margin: 0,
-              borderRadius: 0,
+              borderTopLeftRadius: 50,
+              borderTopRightRadius: 50,
             },
           }}
         >
-          <DialogTitle>Alert Dialog</DialogTitle>
-          <DialogContent>
-            <p>This is an alert message.</p>
-            <Button onClick={toggleDialog} variant="contained">
-              Close
-            </Button>
-          </DialogContent>
+          <Button className="backbtn" onClick={toggleDialog}>
+            <IoChevronBackOutline size={30} className="backbtnicon" />
+          </Button>
+          <EditProfile />
         </Dialog>
       </div>
       <div className="row display-profile mt-4 pb-2">
