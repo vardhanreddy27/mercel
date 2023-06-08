@@ -11,7 +11,7 @@ function EditProfile() {
   return (
     <div className="m-3">
       <div className="m-3 d-flex justify-content-center align-items-center">
-        <div className="rounded-circle border">
+        <div className="rounded-circle">
           <img
             src="./profile.png"
             alt="Profile"
