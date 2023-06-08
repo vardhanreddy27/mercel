@@ -82,6 +82,7 @@ width: 100%;
     align-items: center;
     justify-content: space-between;
 }
+
 .dropdown-toggle::after {
     display: flex;
     vertical-align: 0.255em;

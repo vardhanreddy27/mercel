@@ -67,6 +67,10 @@
 }
 .herobannerbg:focus{background-color:#dee2e624;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 .shopnow{
   height: 3rem;

@@ -38,7 +38,7 @@ function Home() {
     setIsCart(false);
   };
   return (
-    <>
+    <div className="fluid-container">
       <Search />
       <Menu />
       <Herobanner />
@@ -72,7 +72,7 @@ function Home() {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }
 

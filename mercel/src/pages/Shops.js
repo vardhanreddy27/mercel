@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { HiOutlineHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
-import { RiListSettingsFill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -83,7 +82,6 @@ function Shops() {
             onClick={() => handleSort("All")}
           >
             Sort
-            <RiListSettingsFill className="sort" />
           </button>
           <button
             className={`btn herobannerbg marginsort shadow-sm remove-border ${
