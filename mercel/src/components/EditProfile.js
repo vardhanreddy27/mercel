@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function EditProfile() {
   const [selectedGender, setSelectedGender] = useState("Select Gender");
@@ -7,10 +9,14 @@ function EditProfile() {
   const handleGenderSelect = (gender) => {
     setSelectedGender(gender);
   };
+  const [selectedDate, setSelectedDate] = useState(null);
 
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
   return (
     <div className="m-3">
-      <div className="m-3 d-flex justify-content-center align-items-center">
+      <div className="d-flex justify-content-center align-items-center">
         <div className="rounded-circle">
           <img
             src="./profile.png"
@@ -19,7 +25,7 @@ function EditProfile() {
           />
         </div>
       </div>
-      <div className="m-3">
+      <div className="m-3 mt-4">
         <input
           type="text"
           className="form-control border shadow-sm"
@@ -62,6 +68,14 @@ function EditProfile() {
             Other
           </Dropdown.Item>
         </DropdownButton>
+      </div>
+      <div className="m-3">
+        <DatePicker
+          selected={selectedDate}
+          onChange={handleDateChange}
+          placeholderText="Select your Date of Birth"
+          className="form-control border shadow-sm"
+        />
       </div>
       <div className="m-3">
         <button
