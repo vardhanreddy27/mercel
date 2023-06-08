@@ -36,3 +36,28 @@
 .backbtnicon{
     color:rgb(130, 9, 155);
 }
+
+.custom-dropdown-button button.dropdown-toggle {
+background-color: white; 
+text-align: left;
+color:#6c757d ; 
+border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+width: 100%;
+}
+  .custom-dropdown-button .dropdown-toggle-text {
+    display: flex;
+    align-items: center;
+  }
+  .w100{
+    width: 100%;
+  }
+  .rounded-circle {
+    border-radius: 50% !important;
+    height: 8rem;
+    width: 8rem;
+}   
+.img-fluid {
+    max-width: 100%!important;
+    height: 100%!important
+}
