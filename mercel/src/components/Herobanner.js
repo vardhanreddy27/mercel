@@ -1,4 +1,6 @@
 import React from "react";
+import { Carousel } from "react-bootstrap";
+
 function Herobanner() {
   return (
     <>
@@ -74,29 +76,44 @@ function Herobanner() {
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      {/* <div className="container">
-        <div className="row textcenter mt-4">
-          <div className="col-5 gradient">
+
+      <Carousel>
+        <Carousel.Item>
+          <div className="carousel-item-wrapper">
             <img
-              src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Electronics/Clearance/Clearance_store_Desktop_CC_2x._SY608_CB628315133_.jpg"
-              alt="home 1"
-              className="homeimage"
+              className="d-block w-100 carousel-image"
+              src="https://img.freepik.com/free-photo/discount-purse-podium_23-2150165455.jpg?size=626&ext=jpg&ga=GA1.1.1949622569.1685824213&semt=ais"
+              alt="First slide"
             />
+            <div className="carousel-mask"></div>
           </div>
-          <div className="col-5 gradient">
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="carousel-item-wrapper">
             <img
-              className="homeimage"
-              src="https://rukminim1.flixcart.com/image/400/400/ktyp8cw0/t-shirt/a/y/n/s-14806378-mast-harbour-original-imag76r6ba6kgj8f.jpeg?q=70"
-              alt="home 2"
+              className="d-block w-100 carousel-image"
+              src="https://img.freepik.com/free-photo/sale-with-special-discount-couch_23-2150040384.jpg?size=626&ext=jpg&ga=GA1.1.1949622569.1685824213&semt=ais"
+              alt="second slide"
             />
+            <div className="carousel-mask"></div>
           </div>
-        </div>
-      </div> */}
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="carousel-item-wrapper">
+            <img
+              className="d-block w-100 carousel-image"
+              src="https://creativemachine.co/wp-content/uploads/2020/03/ecommerce_electronics_banner_template_24_1200x628.jpg"
+              alt="Third slide"
+            />
+            <div className="carousel-mask"></div>
+          </div>
+        </Carousel.Item>
+      </Carousel>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 }
