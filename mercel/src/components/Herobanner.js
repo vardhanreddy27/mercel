@@ -77,7 +77,7 @@ function Herobanner() {
         </div>
       </div>
 
-      <Carousel>
+      <Carousel indicators={false}>
         <Carousel.Item>
           <div className="carousel-item-wrapper">
             <img

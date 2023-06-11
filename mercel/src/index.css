@@ -1,6 +1,7 @@
 .search-input {
   position: relative;
   text-align: center;
+  z-index: 100;
 }
 .searchs-icon{
   position: absolute;

@@ -106,6 +106,8 @@ width: 100%;}
   .gradient1{
     background-color:#7fffd4;
     height: 525px;
+    z-index: 1;
+    position: relative;
   }
   .offer2{
     background-color: rgb(130, 9, 155);
