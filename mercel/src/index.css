@@ -77,8 +77,8 @@ html, body {
     width: 8rem;
     color: #fff;
     background-color: black;
-    margin-left: 2rem;
-    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
     margin-top: 1rem;
     box-shadow: 7px 7px 7px #c5c5c5;
 }
@@ -207,3 +207,10 @@ hr.dashed-line {
   border: 1px solid #ddd;
   padding: 10px;
 }
+.bimg{display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: 10rem;
+  padding: 6px;
+  margin-top: 3rem;}
