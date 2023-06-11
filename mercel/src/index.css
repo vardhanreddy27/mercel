@@ -237,3 +237,10 @@ margin-top: 3rem;}
   --bs-btn-hover-bg:rgb(130, 9, 155)!important;
 
 }
+.btn3{border: white solid;
+  width: 7rem;
+background-color: white!important;}
+  .dimg{height: 13rem;
+    margin-left: -6rem;
+    margin-top: -138px;
+    position: absolute;}

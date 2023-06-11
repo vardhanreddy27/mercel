@@ -109,6 +109,20 @@ function Herobanner() {
           </div>
         </Carousel.Item>
       </Carousel>
+      <h3 className="mt-4 txtmar">Winter Collection</h3>
+      <p className="txtmar">Get your comfort with style</p>
+      <div className="card d-flex bgcard heroimg">
+        <div className="card-body ms-4 mt-2 mb-2">
+          <h3>
+            Winter sale <br />
+            20% Off
+          </h3>
+          <button className="btn btn3 ">shop now</button>
+        </div>
+        <div className="">
+          <img src="./winter.png" className="dimg" alt="winter" />
+        </div>
+      </div>
       <br />
       <br />
       <br />

@@ -144,3 +144,17 @@ margin-bottom: 6px;
         color: var(--bs-card-color);
         display: grid;
         align-content: space-evenly;}
+
+        .bgcard{background-color: #7166ddde!important;
+          margin: 2rem!important;
+          color: white!important;}
+          .heroimg{
+            display: flex!important;
+    align-items: center!important;
+    flex-direction: row!important;
+          }
+          .txtmar{
+            
+    margin-left: 2rem!important;
+
+          }
