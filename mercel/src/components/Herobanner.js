@@ -14,14 +14,65 @@ function Herobanner() {
 
         <button className="btn shopnow">shop now</button>
       </div>
-      <div className="offer2 text-secondary">
-        <div>great sale |</div>
-        <div>great sale |</div>
-        <div>great sale |</div>
-        <div>great sale |</div>
-        <div>great sale</div>
+      <div className="offer2">
+        <div className="">great sale | great sale |</div>
+        <div className="">great sale | great sale</div>
+        <div className="">| great sale</div>
       </div>
-      <div className="fluid-container gradient1 text-center"></div>
+      <div className="fluid-container gradient1 text-center">
+        <div className="d-flex">
+          <div className="card">
+            <div className="card-header text-center">Featured</div>
+            <img
+              className=""
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Electronics/Clearance/Clearance_store_Desktop_CC_2x._SY608_CB628315133_.jpg"
+              alt="Card cap"
+            />
+            <div className="card-body">
+              <p className="card-text">Electronics & More</p>
+              <p className="font-weight-bold">upto 60% off</p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="latestbadge card-header text-center">Latest</div>
+            <img
+              className=""
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Electronics/Clearance/Clearance_store_Desktop_CC_2x._SY608_CB628315133_.jpg"
+              alt="Card cap"
+            />
+            <div className="card-body">
+              <p className="card-text">Electronics & More</p>
+              <p className="font-weight-bold">upto 60% off</p>
+            </div>
+          </div>
+        </div>
+        <div className="d-flex">
+          <div className="card">
+            <div className="card-header text-center">Featured</div>
+            <img
+              className=""
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Electronics/Clearance/Clearance_store_Desktop_CC_2x._SY608_CB628315133_.jpg"
+              alt="Card cap"
+            />
+            <div className="card-body">
+              <p className="card-text">Electronics & More</p>
+              <p className="font-weight-bold">upto 60% off</p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-header text-center">Featured</div>
+            <img
+              className=""
+              src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Electronics/Clearance/Clearance_store_Desktop_CC_2x._SY608_CB628315133_.jpg"
+              alt="Card cap"
+            />
+            <div className="card-body">
+              <p className="card-text">Electronics & More</p>
+              <p className="font-weight-bold">upto 60% off</p>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* <div className="container">
         <div className="row textcenter mt-4">
           <div className="col-5 gradient">
