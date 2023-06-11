@@ -113,7 +113,7 @@ function Shops() {
       <div className="container ps-3 pe-3 pt-3 pb-5 mb-5">
         <div className="row">
           {searchedShops.map((shop, index) => (
-            <LazyLoad key={index} height={390}>
+            <LazyLoad key={index}>
               <div key={index} className="col-md-6">
                 <div className="card mb-3 shadow-sm rounded ">
                   <div className="image-container card-top-radius">

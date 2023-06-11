@@ -105,7 +105,7 @@ width: 100%;}
   justify-content: center;}
   .gradient1{
     background-color:#7fffd4;
-    height: 486px;
+    height: 496px;
   }
   .offer2{
     background-color: rgb(130, 9, 155);
@@ -126,7 +126,7 @@ width: 100%;}
   .removepad{
     margin: 0px!important;
   }
-  .card{width: 14rem;
+  .app{width: 14rem;
     margin: 1rem;}
     .card-text{
         font-weight: 300;
@@ -138,7 +138,7 @@ margin-bottom: 6px;
     }
     .card-body {
         flex: 1 1 auto;
-        padding: 0px!important;
+        padding: 10px!important;
         color: var(--bs-card-color);
         display: grid;
         align-content: space-evenly;}

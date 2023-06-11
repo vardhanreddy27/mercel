@@ -22,7 +22,7 @@ function Herobanner() {
       </div>
       <div className="fluid-container gradient1 text-center">
         <div className="d-flex">
-          <div className="card shadow">
+          <div className="card app shadow">
             <div className="card-header text-center">Featured</div>
             <img
               className=""
@@ -34,7 +34,7 @@ function Herobanner() {
               <p className="font-weight-bold">upto 60% off</p>
             </div>
           </div>
-          <div className="card shadow">
+          <div className="card app shadow">
             <div className="card-header text-center">Best Sellers</div>
             <img
               className=""
@@ -48,7 +48,7 @@ function Herobanner() {
           </div>
         </div>
         <div className="d-flex">
-          <div className="card shadow">
+          <div className="card app shadow">
             <div className="card-header text-center">Top Rated</div>
             <img
               className=""
@@ -60,7 +60,7 @@ function Herobanner() {
               <p className="font-weight-bold">Clearance Sale</p>
             </div>
           </div>
-          <div className="card shadow">
+          <div className="card app shadow">
             <div className="card-header text-center">Latest</div>
             <img
               className=""
@@ -75,7 +75,8 @@ function Herobanner() {
         </div>
       </div>
       <br />
-
+      <br />
+      <br />
       <br />
       <br />
       {/* <div className="container">
