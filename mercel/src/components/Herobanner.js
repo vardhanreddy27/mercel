@@ -123,6 +123,43 @@ function Herobanner() {
           <img src="./winter.png" className="dimg" alt="winter" />
         </div>
       </div>
+      <div className="fluid-container d-flex">
+        <div className="row">
+          <div className="col-6 removepadr">
+            <h3 className="ms-4 mt-4">Grab Best Deals</h3>
+            <div class="card">
+              <img
+                className="card-img-top roundcard "
+                src="./beauty.jpg"
+                alt="Card cap"
+              />
+            </div>{" "}
+            <div class="card">
+              <img
+                className="card-img-top roundcard"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRziUy1Vji77t-G_ftz_3D0_mNxwUMaZ4LUOcvjIppTVMgMs194gWnSptt_98ZPQgxh5ws&usqp=CAU"
+                alt="Card cap"
+              />
+            </div>
+          </div>
+          <div className="col-6 removepadl">
+            <div class="card">
+              <img
+                className="card-img-top roundcard"
+                src="./apple.jpg"
+                alt="Card cap"
+              />
+            </div>{" "}
+            <div class="card">
+              <img
+                className="card-img-top roundcard"
+                src="./ele.png"
+                alt="Card cap"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <br />
       <br />
       <br />

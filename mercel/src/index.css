@@ -239,8 +239,22 @@ margin-top: 3rem;}
 }
 .btn3{border: white solid;
   width: 7rem;
-background-color: white!important;}
+background-color: white!important;
+color: black;}
+.btn3:hover:active:focus{border: white solid;
+  width: 7rem;
+background-color: white!important;
+color: black;}
   .dimg{height: 13rem;
     margin-left: -6rem;
     margin-top: -138px;
     position: absolute;}
+    .roundcard{padding: 1rem!important;
+      border-radius: 16%!important;
+      height: 265px!important;}
+      .removepadr{
+        padding-right: 0px!important;
+      }
+      .removepadl{
+        padding-left: 0px!important;
+      }
