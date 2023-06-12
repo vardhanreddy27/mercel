@@ -137,7 +137,7 @@ function Herobanner() {
             <div class="card">
               <img
                 className="card-img-top roundcard"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRziUy1Vji77t-G_ftz_3D0_mNxwUMaZ4LUOcvjIppTVMgMs194gWnSptt_98ZPQgxh5ws&usqp=CAU"
+                src="./ele.png"
                 alt="Card cap"
               />
             </div>
@@ -149,11 +149,11 @@ function Herobanner() {
                 src="./apple.jpg"
                 alt="Card cap"
               />
-            </div>{" "}
+            </div>
             <div class="card">
               <img
                 className="card-img-top roundcard"
-                src="./ele.png"
+                src="./test.jpg"
                 alt="Card cap"
               />
             </div>
