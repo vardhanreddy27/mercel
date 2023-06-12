@@ -1,6 +1,6 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
-
+import HomeCarousel from "./HomeCarousel";
+import HomeCarousel1 from "./HomeCarousel1";
 function Herobanner() {
   return (
     <>
@@ -76,39 +76,7 @@ function Herobanner() {
           </div>
         </div>
       </div>
-
-      <Carousel indicators={false}>
-        <Carousel.Item>
-          <div className="carousel-item-wrapper">
-            <img
-              className="d-block w-100 carousel-image"
-              src="https://img.freepik.com/free-photo/discount-purse-podium_23-2150165455.jpg?size=626&ext=jpg&ga=GA1.1.1949622569.1685824213&semt=ais"
-              alt="First slide"
-            />
-            <div className="carousel-mask"></div>
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="carousel-item-wrapper">
-            <img
-              className="d-block w-100 carousel-image"
-              src="https://img.freepik.com/free-photo/sale-with-special-discount-couch_23-2150040384.jpg?size=626&ext=jpg&ga=GA1.1.1949622569.1685824213&semt=ais"
-              alt="second slide"
-            />
-            <div className="carousel-mask"></div>
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="carousel-item-wrapper">
-            <img
-              className="d-block w-100 carousel-image"
-              src="https://creativemachine.co/wp-content/uploads/2020/03/ecommerce_electronics_banner_template_24_1200x628.jpg"
-              alt="Third slide"
-            />
-            <div className="carousel-mask"></div>
-          </div>
-        </Carousel.Item>
-      </Carousel>
+      <HomeCarousel />
       <h3 className="mt-4 txtmar">Winter Collection</h3>
       <p className="txtmar">Get your comfort with style</p>
       <div className="card d-flex bgcard heroimg">
@@ -160,6 +128,8 @@ function Herobanner() {
           </div>
         </div>
       </div>
+      <HomeCarousel1 />
+
       <br />
       <br />
       <br />

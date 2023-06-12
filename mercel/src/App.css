@@ -112,7 +112,8 @@ width: 100%;}
   .offer2{
     background-color: rgb(130, 9, 155);
     margin: 0px!important;
-    padding: 0px!important;
+    padding: 0px;
+    padding-bottom: 4px!important;
     height: 100%;
     display: flex;
     justify-content: space-around;
