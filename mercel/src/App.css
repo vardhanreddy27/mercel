@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Cherry+Bomb+One&display=swap');
 .customheight{
     height: 18rem;
 }
+.logo-image{
+  height: 10%;
+}
+
+.loginfont{
+  font-family: 'Cherry Bomb One', cursive;}
 .secondaryback{
     color: black!important;
     background-color: rgb(243 243 242)!important;
@@ -36,6 +43,16 @@
 .backbtnicon{
     color:rgb(130, 9, 155);
 }
+.login-image-container{
+  height: 30rem;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  background-color: rgb(130, 9, 155);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .custom-dropdown-button button.dropdown-toggle {
 background-color: white; 
@@ -154,8 +171,19 @@ margin-bottom: 6px;
     align-items: center!important;
     flex-direction: row!important;
           }
-          .txtmar{
+.mywidth{width:100%!important;
+margin-bottom: 1rem;
+margin-top: 1rem!important;}
+.dashed-line-center{justify-content: center!important;}
+            .txtmar{
             
     margin-left: 2rem!important;
 
           }
+          .sbtn{
+            width: 90%;
+          }
+          .dashed-line{
+            width: 85%!important;
+          }
+/* load screen */

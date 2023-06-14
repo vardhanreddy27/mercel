@@ -8,6 +8,7 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Menu from "../components/Menu";
+import Login from "./Login";
 function Home() {
   const [isHome, setIsHome] = useState(true);
   const [isShops, setIsShops] = useState(false);
@@ -39,7 +40,8 @@ function Home() {
   };
   return (
     <div className="fluid-container">
-      <Search />
+      <Login />
+      {/* <Search />
       <Menu />
       <Herobanner />
       <nav className=" fixed-bottom navbar-light bg-light">
@@ -71,7 +73,7 @@ function Home() {
             </Link>
           </div>
         </div>
-      </nav>
+      </nav> */}
     </div>
   );
 }

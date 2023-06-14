@@ -45,9 +45,9 @@ color:  #3b3b3b;
 .active{
 color: rgb(130, 9, 155);
 }.background{
-background-color: rgb(130, 9, 155)!important;
-color: white!important;
-}
+  background-color: rgb(130, 9, 155)!important;
+  color: white!important;
+  }
 .nomargin{
 padding-left: 0px!important;
 padding-right: 0px!important;
