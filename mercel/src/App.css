@@ -5,9 +5,9 @@
 .logo-image{
   height: 10%;
 }
-
+/* 
 .loginfont{
-  font-family: 'Cherry Bomb One', cursive;}
+  font-family: 'Cherry Bomb One', cursive;} */
 .secondaryback{
     color: black!important;
     background-color: rgb(243 243 242)!important;
@@ -44,7 +44,7 @@
     color:rgb(130, 9, 155);
 }
 .login-image-container{
-  height: 30rem;
+  height: 27rem;
   border-bottom-left-radius: 3rem;
   border-bottom-right-radius: 3rem;
   background-color: rgb(130, 9, 155);
