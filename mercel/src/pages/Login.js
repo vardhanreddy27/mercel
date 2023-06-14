@@ -7,7 +7,7 @@ function Login() {
         <img src="./logo.svg" alt="" className="logo-image" />
       </div>
       <div className="container">
-        <div className="row text-center dashed-line-center mt-5">
+        <div className="row text-center dashed-line-center mt-4">
           <h1 className="loginfont">Welcome to vinkle</h1>
           <p className="loginfont">connect with our community</p>
           <div className="mywidth">
