@@ -24,7 +24,10 @@ function Login() {
                 <FcGoogle className="me-3" />
                 Login with Google
               </button>
+              <br />
               <hr className="dashed-line" />
+              <br />
+
               <button
                 type="button"
                 className="btn social applebtn border btn-lg btn-block"
