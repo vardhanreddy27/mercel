@@ -32,6 +32,9 @@ function Login() {
               >
                 <FaApple className="me-3" /> Login with Apple
               </button>
+              <br />
+              <br />
+              <br />
             </div>
           </div>
         </div>
