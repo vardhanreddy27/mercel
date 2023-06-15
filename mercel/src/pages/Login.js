@@ -1,15 +1,55 @@
 import React, { useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { FaApple } from "react-icons/fa";
-import { GoogleLogin } from "@react-oauth/google";
-import { GoogleOAuthProvider } from "@react-oauth/google";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { saveUserData } from "./actions";
+import GoogleLoginButton from "./GoogleLoginButton";
 function Login() {
+  const dispatch = useDispatch();
+
+  const handleGoogleLogin = () => {
+    const auth2 = window.gapi.auth2.getAuthInstance();
+    auth2.signIn().then((googleUser) => {
+      const profile = googleUser.getBasicProfile();
+      const name = profile.getName();
+      const email = profile.getEmail();
+      const imageUrl = profile.getImageUrl();
+
+      dispatch(saveUserData({ name, email, imageUrl }));
+    });
+  };
+
   useEffect(() => {
-    // Remove vertical scroll when the Login component mounts
+    const script = document.createElement("script");
+    script.src = "https://apis.google.com/js/api.js";
+
+    script.onload = () => {
+      window.gapi.load("auth2", () => {
+        window.gapi.auth2
+          .init({
+            client_id:
+              "376753352567-nrckqi9r87k4633ud8d9ej32r4ulpvmk.apps.googleusercontent.com",
+          })
+          .then(() => {
+            console.log("Google Sign-In API initialized");
+          })
+          .catch((error) => {
+            console.log("Google Sign-In initialization failed:", error);
+          });
+      });
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+  const userData = useSelector((state) => state.userData);
+  useEffect(() => {
     document.body.style.overflow = "hidden";
 
     return () => {
-      // Restore vertical scroll when the Login component unmounts
       document.body.style.overflow = "auto";
     };
   }, []);
@@ -28,17 +68,22 @@ function Login() {
               <button
                 type="button"
                 className="btn social mb-3 googlebtn border btn-lg btn-block"
+                onClick={handleGoogleLogin}
               >
                 <FcGoogle className="me-3" />
                 Login with Google
               </button>
               <hr className="dashed-line" />
-              <button
-                type="button"
-                className="btn social mt-3 applebtn border btn-lg btn-block"
-              >
-                <FaApple className="me-3" /> Login with Apple
-              </button>
+              <div>
+                {userData ? (
+                  <div>
+                    <h1>Welcome, {userData.name}!</h1>
+                    <img src={userData.imageUrl} alt={userData.name} />
+                  </div>
+                ) : (
+                  <GoogleLoginButton />
+                )}
+              </div>
             </div>
           </div>
         </div>
