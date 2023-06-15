@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPicture, setUserPicture] = useState("");
 
   const handleLoginFailure = (error) => {
     // Handle authentication failure
@@ -23,20 +26,13 @@ function Login() {
       document.body.style.overflow = "auto";
     };
   }, []);
-  const handleLoginSuccess = (response) => {
-    const { email, givenName, familyName, imageUrl } = response;
 
-    console.log("Email:", email);
-    console.log("Given Name:", givenName);
-    console.log("Family Name:", familyName);
-    console.log("Image URL:", imageUrl);
-    console.log("Google Sign-In Response:", response);
-  };
   const initializeGoogleSignIn = () => {
     // Initialize Google Sign-In
     window.google.accounts.id.initialize({
       client_id:
         "376753352567-nrckqi9r87k4633ud8d9ej32r4ulpvmk.apps.googleusercontent.com",
+      scope: "email profile https://www.googleapis.com/auth/user.birthday.read",
       callback: handleGoogleSignInCallback,
     });
   };
@@ -50,12 +46,30 @@ function Login() {
       handleLoginSuccess(response);
     }
   };
+  const decodeJWT = (credential) => {
+    // Split the credential to retrieve the JWT
+    const jwt = credential.split(".")[1];
+    const decodedData = atob(jwt);
 
+    // Parse the decoded JWT
+    const decodedToken = JSON.parse(decodedData);
+
+    return decodedToken;
+  };
   const handleGoogleLogin = () => {
     // Trigger Google Sign-In
     window.google.accounts.id.prompt();
   };
-
+  const handleLoginSuccess = (response) => {
+    const decodedToken = decodeJWT(response.credential);
+    const name = decodedToken.name;
+    const email = decodedToken.email;
+    const picture = decodedToken.picture;
+    setUserName(name);
+    setUserName(email);
+    setUserName(picture);
+    navigate("/Dashboard");
+  };
   return (
     <>
       <div className="login-image-container">
@@ -77,24 +91,6 @@ function Login() {
                 Login with Google
               </button>
               <hr className="dashed-line" />
-              <div
-                id="g_id_onload"
-                data-client_id="376753352567-nrckqi9r87k4633ud8d9ej32r4ulpvmk.apps.googleusercontent.com"
-                data-context="signin"
-                data-ux_mode="popup"
-                data-callback="http://https://mercel.vercel.app//callback"
-                data-auto_prompt="false"
-              ></div>
-
-              <div
-                class="g_id_signin"
-                data-type="standard"
-                data-shape="rectangular"
-                data-theme="outline"
-                data-text="signin_with"
-                data-size="large"
-                data-logo_alignment="left"
-              ></div>
             </div>
           </div>
         </div>
