@@ -95,14 +95,14 @@ function Herobanner() {
         <div className="row">
           <div className="col-6 removepadr">
             <h3 className="ms-4 mt-4">Grab Best Deals</h3>
-            <div class="card">
+            <div className="card">
               <img
                 className="card-img-top roundcard "
                 src="./beauty.jpg"
                 alt="Card cap"
               />
             </div>{" "}
-            <div class="card">
+            <div className="card">
               <img
                 className="card-img-top roundcard"
                 src="./ele.png"
@@ -111,14 +111,14 @@ function Herobanner() {
             </div>
           </div>
           <div className="col-6 removepadl">
-            <div class="card">
+            <div className="card">
               <img
                 className="card-img-top roundcard"
                 src="./apple.jpg"
                 alt="Card cap"
               />
             </div>
-            <div class="card">
+            <div className="card">
               <img
                 className="card-img-top roundcard"
                 src="./test.jpg"

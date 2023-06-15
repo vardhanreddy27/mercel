@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const handleLoginSuccess = (response) => {
-    // Handle successful authentication
-    console.log("Authentication successful!", response);
-  };
+  const navigate = useNavigate();
 
   const handleLoginFailure = (error) => {
     // Handle authentication failure
@@ -25,7 +23,15 @@ function Login() {
       document.body.style.overflow = "auto";
     };
   }, []);
+  const handleLoginSuccess = (response) => {
+    const { email, givenName, familyName, imageUrl } = response;
 
+    console.log("Email:", email);
+    console.log("Given Name:", givenName);
+    console.log("Family Name:", familyName);
+    console.log("Image URL:", imageUrl);
+    console.log("Google Sign-In Response:", response);
+  };
   const initializeGoogleSignIn = () => {
     // Initialize Google Sign-In
     window.google.accounts.id.initialize({
@@ -34,7 +40,6 @@ function Login() {
       callback: handleGoogleSignInCallback,
     });
   };
-
   const handleGoogleSignInCallback = (response) => {
     // Handle the Google Sign-In response
     if (response.error) {
@@ -42,7 +47,7 @@ function Login() {
       handleLoginFailure(response.error);
     } else {
       // Authentication successful
-      handleLoginSuccess(response.credential);
+      handleLoginSuccess(response);
     }
   };
 
@@ -72,6 +77,24 @@ function Login() {
                 Login with Google
               </button>
               <hr className="dashed-line" />
+              <div
+                id="g_id_onload"
+                data-client_id="376753352567-nrckqi9r87k4633ud8d9ej32r4ulpvmk.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="http://https://mercel.vercel.app//callback"
+                data-auto_prompt="false"
+              ></div>
+
+              <div
+                class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left"
+              ></div>
             </div>
           </div>
         </div>
