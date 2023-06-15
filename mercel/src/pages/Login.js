@@ -18,20 +18,21 @@ function Login() {
               <br />
               <button
                 type="button"
-                className="btn social googlebtn border btn-lg btn-block"
+                className="btn social mb-3 googlebtn border btn-lg btn-block"
               >
                 <FcGoogle className="me-3" />
                 Login with Google
               </button>
-              <br />
               <hr className="dashed-line" />
-              <br />
               <button
                 type="button"
-                className="btn social applebtn border btn-lg btn-block"
+                className="btn social mt-3 applebtn border btn-lg btn-block"
               >
                 <FaApple className="me-3" /> Login with Apple
               </button>
+              <br />
+              <br />
+              <br />
               <br />
               <br />
               <br />
