@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { GoogleLogin } from "@react-oauth/google";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 function Login() {
+  useEffect(() => {
+    // Remove vertical scroll when the Login component mounts
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      // Restore vertical scroll when the Login component unmounts
+      document.body.style.overflow = "auto";
+    };
+  }, []);
   return (
     <>
       <div className="login-image-container">
