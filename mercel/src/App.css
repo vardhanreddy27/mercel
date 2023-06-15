@@ -174,8 +174,8 @@ margin-bottom: 6px;
     .card-body {
         flex: 1 1 auto;
         padding: 10px!important;
-        border-top-left-radius: 3rem!important;
-        border-top-right-radius: 3rem!important;        display: grid;
+        border-top-left-radius: 2rem!important;
+        border-top-right-radius: 2rem!important;        display: grid;
         align-content: space-evenly;}
 
         .bgcard{background-color: #7166ddde!important;
@@ -197,6 +197,7 @@ margin-bottom: 6px;
 /* load screen */
 .logincard{
   --bs-card-border-radius: 0rem!important;
+  height: 17rem!important;
   
 }
 .logincard1{
