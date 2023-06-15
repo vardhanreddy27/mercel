@@ -7,16 +7,14 @@ function Login() {
   return (
     <>
       <div className="login-image-container">
-        <h1 className="loginfont">VINKLE </h1>
+        <h1 className="loginfont">Vinkle</h1>
       </div>
       <div className="card logincard logincard1 ">
         <div className="card-body bodylogin">
           <div className="row p-4">
             <div className="col">
-              <h1>
-                Welcome to <span className="logotxt">VINKLE</span>
-              </h1>
-              <p>connect with our community</p>
+              <h5>Login or Signup</h5>
+              <p className="text-secondary">connect with our community</p>
               <br />
               <button
                 type="button"

@@ -16,7 +16,6 @@
     background-color: rgb(243 243 242)!important;
 }
 /* test */
-.logotxt{font-weight: bold;}
 .css-rnmm7m-MuiPaper-root-MuiDialog-paper{
     height: 90%!important;
     width: 100%!important;
@@ -69,7 +68,6 @@ color: white;
   justify-content: center;
   align-items: center;
 }
-
 
 .custom-dropdown-button button.dropdown-toggle {
 background-color: white; 
