@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useSelector } from "react-redux";
 
 function EditProfile() {
   const [selectedGender, setSelectedGender] = useState("Select Gender");
+  const user = useSelector((state) => state.user.user);
 
   const handleGenderSelect = (gender) => {
     setSelectedGender(gender);
@@ -19,7 +21,7 @@ function EditProfile() {
       <div className="d-flex justify-content-center align-items-center">
         <div className="rounded-circle">
           <img
-            src="./profile.png"
+            src={user.picture}
             alt="Profile"
             className="img-fluid rounded-circle"
           />
@@ -30,7 +32,7 @@ function EditProfile() {
           type="text"
           className="form-control border shadow-sm"
           id="formGroupExampleInput"
-          placeholder="Your name"
+          value={user.given_name}
         />
       </div>
 
@@ -40,7 +42,7 @@ function EditProfile() {
           className="form-control border shadow-sm"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
-          placeholder="Your email id"
+          value={user.email}
         />
       </div>
       <div className="m-3">

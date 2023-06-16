@@ -8,7 +8,6 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Menu from "../components/Menu";
-import Login from "./Login";
 function Dashboard() {
   const [isHome, setIsHome] = useState(true);
   const [isShops, setIsShops] = useState(false);
@@ -51,6 +50,7 @@ function Dashboard() {
               <p className={isHome ? "menufont active" : "menufont"}>home</p>
             </Link>
           </div>
+
           <div className="col-3">
             <Link to="/shops" onClick={clickShops}>
               <BiStore size={30} className={isShops ? "active" : ""} />

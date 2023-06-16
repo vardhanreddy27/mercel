@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { setUser } from "../features/user/userSlice";
 function Login() {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userPicture, setUserPicture] = useState("");
-
   const handleLoginFailure = (error) => {
     // Handle authentication failure
     console.error("Authentication failed!", error);
@@ -60,14 +57,16 @@ function Login() {
     // Trigger Google Sign-In
     window.google.accounts.id.prompt();
   };
+  const dispatch = useDispatch();
+
   const handleLoginSuccess = (response) => {
     const decodedToken = decodeJWT(response.credential);
-    const name = decodedToken.name;
+    const given_name = decodedToken.given_name;
     const email = decodedToken.email;
     const picture = decodedToken.picture;
-    setUserName(name);
-    setUserName(email);
-    setUserName(picture);
+    // Dispatch the setUser action to update the Redux store
+    dispatch(setUser({ given_name, email, picture }));
+
     navigate("/Dashboard");
   };
   return (

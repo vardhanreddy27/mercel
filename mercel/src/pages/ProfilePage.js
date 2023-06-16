@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Dialog } from "@mui/material";
+import { useSelector } from "react-redux";
 import EditProfile from "../components/EditProfile";
 import {
   BsFillCartCheckFill,
@@ -17,6 +18,7 @@ import { RiUserLocationLine } from "react-icons/ri";
 import { FaQuestion } from "react-icons/fa";
 const ProfilePage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const user = useSelector((state) => state.user.user);
 
   const toggleDialog = () => {
     setIsOpen(!isOpen);
@@ -24,7 +26,7 @@ const ProfilePage = () => {
   return (
     <div className="fluid-container">
       <h3 className="text-secondary ml3">
-        Good afternoon<span className="active"> USER</span>
+        Good afternoon<span className="active"> {user.given_name}</span>
       </h3>
       <div>
         <Dialog
