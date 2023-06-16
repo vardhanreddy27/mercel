@@ -61,7 +61,7 @@ const Cart = () => {
           <nav className=" fixed-bottom navbar-light bg-light">
             <div className="row text-center p-2 pt-3">
               <div className="col-3">
-                <Link to="/" onClick={clickHome}>
+                <Link to="/Dashboard" onClick={clickHome}>
                   <HiOutlineHome size={30} className={isHome ? "active" : ""} />
                   <p className={isHome ? "menufont active" : "menufont"}>
                     home

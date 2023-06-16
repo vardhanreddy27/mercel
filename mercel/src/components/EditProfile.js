@@ -50,7 +50,7 @@ function EditProfile() {
           type="tel"
           className="form-control border shadow-sm"
           id="mobile number"
-          placeholder="Your phone number"
+          placeholder="Your mobile number"
         />
       </div>
       <div className="m-3">
