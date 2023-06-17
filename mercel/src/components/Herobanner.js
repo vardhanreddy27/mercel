@@ -92,7 +92,7 @@ function Herobanner() {
         </div>
       </div>
       <div className="fluid-container d-flex">
-        <div className="row">
+        <div className="row nomargin">
           <div className="col-6 removepadr">
             <h3 className="ms-4 mt-4">Grab Best Deals</h3>
             <div className="card">
