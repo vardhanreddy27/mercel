@@ -65,10 +65,27 @@ function Login() {
     const given_name = decodedToken.given_name;
     const email = decodedToken.email;
     const picture = decodedToken.picture;
-    // Dispatch the setUser action to update the Redux store
-    dispatch(setUser({ given_name, email, picture }));
 
-    navigate("/Dashboard");
+    const requestBody = { given_name, email, picture };
+
+    // Send a POST request to the serverless function
+    fetch("https://your-project.vercel.app/api/saveUser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestBody),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); // Handle the response data accordingly
+
+        navigate("/Dashboard");
+      })
+      .catch((error) => {
+        console.error("Failed to save user:", error);
+        // Handle the error condition
+      });
   };
   return (
     <>
