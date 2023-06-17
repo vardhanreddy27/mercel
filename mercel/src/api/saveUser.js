@@ -49,4 +49,20 @@ const saveUser = async (req, res) => {
   }
 };
 
-module.exports = saveUser;
+module.exports = (req, res) => {
+  // Enable CORS for all routes
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    // Handle preflight requests
+    res.status(200).end();
+  } else if (req.method === "POST") {
+    // Handle POST requests to save user
+    saveUser(req, res);
+  } else {
+    // Handle unsupported methods
+    res.status(405).json({ message: "Method Not Allowed" });
+  }
+};
