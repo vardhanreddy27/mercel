@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Dialog } from "@mui/material";
 import { useSelector } from "react-redux";
 import EditProfile from "../components/EditProfile";
+import { useDispatch } from "react-redux";
+import { setUser } from "../features/user/userSlice";
 import {
   BsFillCartCheckFill,
   BsFillHeartFill,
@@ -16,7 +18,19 @@ import { MdLocalOffer, MdKeyboardArrowRight } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { RiUserLocationLine } from "react-icons/ri";
 import { FaQuestion } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 const ProfilePage = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Dispatch the setUser action to clear the user data in the Redux store
+    dispatch(setUser(null));
+
+    // Redirect the user to the login page or any other desired page
+    navigate("/");
+  };
   const [isOpen, setIsOpen] = useState(false);
   const user = useSelector((state) => state.user.user);
 
@@ -181,16 +195,17 @@ const ProfilePage = () => {
                 </div>
               </a>
             </li>
-            <li className="  list-group-item p-3">
-              <a href="/home" className="profile-link">
-                <div className="col-1 myflex">
-                  <TbLogout />
-                </div>
-                <div className="col-10"> Logout</div>
-                <div className="col-1">
-                  <MdKeyboardArrowRight />
-                </div>
-              </a>
+            <li
+              className="profile-link  list-group-item p-3"
+              onClick={handleLogout}
+            >
+              <div className="col-1 myflex">
+                <TbLogout />
+              </div>
+              <div className="col-10"> Logout</div>
+              <div className="col-1">
+                <MdKeyboardArrowRight />
+              </div>
             </li>
             <br />
             <br />
