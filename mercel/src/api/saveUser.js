@@ -36,13 +36,13 @@ const saveUser = async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    res.status(200).json({ message: "User saved successfully" });
+    return res.status(200).json({ message: "User saved successfully" });
   } catch (error) {
     console.error("Failed to save user:", error);
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    res.status(500).json({ message: "Failed to save user" });
+    return res.status(500).json({ message: "Failed to save user" });
   } finally {
     // Close the MongoDB connection
     await client.close();
