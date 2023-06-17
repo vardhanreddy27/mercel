@@ -67,7 +67,7 @@ function Login() {
     const picture = decodedToken.picture;
 
     const requestBody = { given_name, email, picture };
-
+    dispatch(setUser({ given_name, email, picture }));
     // Send a POST request to the serverless function
     fetch("https://mercel.vercel.app/api/saveUser", {
       method: "POST",
@@ -83,7 +83,7 @@ function Login() {
         return response.json();
       })
       .then((data) => {
-        console.log(data); // Handle the response data accordingly
+        // Handle the response data accordingly
         navigate("/Dashboard");
       })
       .catch((error) => {
