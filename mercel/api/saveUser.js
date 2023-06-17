@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 
 const saveUser = async (req, res) => {
   const MONGODB_URI =
-    "mongodb+srv://vishnu:Vardhan@27@cluster0.fczkwxs.mongodb.net/?retryWrites=true&w=majority";
+    "mongodb+srv://vishnu:Vardhan@27@cluster0.fczkwxs.mongodb.net/vinkle";
   const DATABASE_NAME = "vinkle";
   const COLLECTION_NAME = "Users";
 
