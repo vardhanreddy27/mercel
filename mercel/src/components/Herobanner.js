@@ -4,7 +4,7 @@ import HomeCarousel1 from "./HomeCarousel1";
 function Herobanner() {
   return (
     <>
-      <div className="row herobannerbg">
+      <div className="row nomargin herobannerbg">
         <div className="col-4">
           <h1 className="ps-3 pt-4 font">
             Latest
@@ -14,7 +14,7 @@ function Herobanner() {
           <button className="btn shopnow">shop now</button>
         </div>
         <div className="col-8 bimg">
-          <img src="./banner.png" alt="banner img " />
+          <img src="./banner.png" className="bannericonimg" alt="banner img " />
         </div>
       </div>
       <div className="offer2">

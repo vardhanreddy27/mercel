@@ -51,6 +51,7 @@ color: rgb(130, 9, 155);
 .nomargin{
 padding-left: 0px!important;
 padding-right: 0px!important;
+--bs-gutter-x:0px!important;
 }
 .activebackground{
 background-color:  white;
@@ -141,7 +142,10 @@ color: white!important;
 background-color:rgb(130, 9, 155)!important;
 border: none;
 
-}.selected:focus {
+}
+.bannericonimg{width: 100%!important;}
+
+.selected:focus {
 color: white!important;
 background-color:rgb(130, 9, 155)!important;
 border: none;
