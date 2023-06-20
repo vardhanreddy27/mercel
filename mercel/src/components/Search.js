@@ -11,7 +11,8 @@ function Search() {
     try {
       const response = await fetch("https://mercel.vercel.app/api/searchSuggestions?query=${value}");
       const data = await response.json();
-      setSuggestions(data.suggestions);
+      const suggestionData = JSON.stringify(data.suggestions); // Stringify the suggestions
+      setSuggestions(JSON.parse(suggestionData)); // Parse the suggestions back to an array
     } catch (error) {
       console.error("Failed to fetch search suggestions:", error);
     }
