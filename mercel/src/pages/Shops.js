@@ -49,7 +49,7 @@ function Shops() {
   };
 
   useEffect(() => {
-    fetch("/shops.json")
+    fetch("/api/shops") // API route set up to fetch the shops data from MongoDB
       .then((response) => response.json())
       .then((data) => {
         setShops(data);
