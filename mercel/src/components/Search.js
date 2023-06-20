@@ -30,7 +30,12 @@ function Search() {
 
   const getSuggestionValue = (suggestion) => suggestion;
 
-  const renderSuggestion = (suggestion) => <div>{suggestion}</div>;
+  const renderSuggestion = (suggestion) => (
+    <div>
+      <img src={suggestion.image} alt={suggestion.name} />
+      {suggestion.name}
+    </div>
+  );
 
   const onChange = (event, { newValue }) => {
     setValue(newValue);
