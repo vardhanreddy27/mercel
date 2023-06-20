@@ -4,6 +4,22 @@ import HomeCarousel1 from "./HomeCarousel1";
 function Herobanner() {
   return (
     <>
+      <HomeCarousel1 />
+
+      <h3 className="mt-4 txtmar">Winter Collection</h3>
+      <p className="txtmar">Get your comfort with style</p>
+      <div className="card d-flex bgcard heroimg">
+        <div className="card-body ms-4 mt-2 mb-2">
+          <h3>
+            Winter sale <br />
+            20% Off
+          </h3>
+          <button className="btn btn3 ">shop now</button>
+        </div>
+        <div className="">
+          <img src="./winter.png" className="dimg" alt="winter" />
+        </div>
+      </div>
       <div className="row nomargin herobannerbg">
         <div className="col-4">
           <h1 className="ps-3 pt-4 font">
@@ -77,20 +93,7 @@ function Herobanner() {
         </div>
       </div>
       <HomeCarousel />
-      <h3 className="mt-4 txtmar">Winter Collection</h3>
-      <p className="txtmar">Get your comfort with style</p>
-      <div className="card d-flex bgcard heroimg">
-        <div className="card-body ms-4 mt-2 mb-2">
-          <h3>
-            Winter sale <br />
-            20% Off
-          </h3>
-          <button className="btn btn3 ">shop now</button>
-        </div>
-        <div className="">
-          <img src="./winter.png" className="dimg" alt="winter" />
-        </div>
-      </div>
+
       <div className="fluid-container d-flex">
         <div className="row nomargin">
           <div className="col-6 removepadr">
@@ -128,7 +131,6 @@ function Herobanner() {
           </div>
         </div>
       </div>
-      <HomeCarousel1 />
 
       <br />
       <br />
