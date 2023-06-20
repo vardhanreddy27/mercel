@@ -27,7 +27,10 @@ const saveUser = async (req, res) => {
       // User already exists, return without any error message
       res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
       res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
-      res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+      res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Content-Type,localhost:3000"
+      );
       return res.status(200).json({ message: "User already exists" });
     }
 
@@ -37,13 +40,19 @@ const saveUser = async (req, res) => {
 
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type,localhost:3000"
+    );
     return res.status(200).json({ message: "User saved successfully" });
   } catch (error) {
     console.error("Failed to save user:", error);
     res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
     res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Content-Type,localhost:3000"
+    );
     return res.status(500).json({ message: "Failed to save user" });
   } finally {
     // Close the MongoDB connection
