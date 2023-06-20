@@ -49,7 +49,7 @@ function Shops() {
   };
 
   useEffect(() => {
-    fetch("https://mercel.vercel.app/api/shops") // API route set up to fetch the shops data from MongoDB
+    fetch("/shops.json")
       .then((response) => response.json())
       .then((data) => {
         setShops(data);
