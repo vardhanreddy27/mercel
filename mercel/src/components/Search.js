@@ -7,16 +7,16 @@ function Search() {
   const [suggestions, setSuggestions] = useState([]);
 
   // Fetch search suggestions from the API endpoint
-  const fetchSuggestions = async (value) => {
-    try {
-      const response = await fetch(`https://mercel.vercel.app/api/searchSuggestions?query=${value}`);
-      const data = await response.json();
-      const suggestionData = JSON.stringify(data.suggestions);
-      setSuggestions(JSON.parse(suggestionData));
-    } catch (error) {
-      console.error("Failed to fetch search suggestions:", error);
-    }
-  };
+const fetchSuggestions = async (value) => {
+  try {
+    const response = await fetch(`https://mercel.vercel.app/api/searchSuggestions?query=${value}`);
+    const data = await response.json();
+    const suggestionData = JSON.stringify(data.suggestions);
+    setSuggestions(JSON.parse(suggestionData));
+  } catch (error) {
+    console.error("Failed to fetch search suggestions:", error);
+  }
+};
 
   const onSuggestionsFetchRequested = ({ value }) => {
     // Fetch suggestions when input value changes
@@ -30,12 +30,7 @@ function Search() {
 
   const getSuggestionValue = (suggestion) => suggestion;
 
-  const renderSuggestion = (suggestion) => (
-    <div>
-      <img src={suggestion.image} alt={suggestion.name} />
-      {suggestion.name}
-    </div>
-  );
+  const renderSuggestion = (suggestion) => <div>{suggestion}</div>;
 
   const onChange = (event, { newValue }) => {
     setValue(newValue);
