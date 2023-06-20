@@ -1,4 +1,6 @@
 const { MongoClient } = require("mongodb");
+import microCors from "micro-cors";
+const cors = microCors();
 
 const saveUser = async (req, res) => {
   const MONGODB_URI =
@@ -49,4 +51,5 @@ const saveUser = async (req, res) => {
   }
 };
 
-module.exports = saveUser;
+//module.exports = saveUser;
+export default cors(saveUser);
