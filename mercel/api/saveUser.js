@@ -29,7 +29,7 @@ const saveUser = async (req, res) => {
       res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
       res.setHeader(
         "Access-Control-Allow-Headers",
-        "Content-Type,localhost:3000"
+        "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version,localhost:3000"
       );
       return res.status(200).json({ message: "User already exists" });
     }
@@ -42,7 +42,7 @@ const saveUser = async (req, res) => {
     res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
     res.setHeader(
       "Access-Control-Allow-Headers",
-      "Content-Type,localhost:3000"
+      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version,localhost:3000"
     );
     return res.status(200).json({ message: "User saved successfully" });
   } catch (error) {
@@ -51,7 +51,7 @@ const saveUser = async (req, res) => {
     res.setHeader("Access-Control-Allow-Methods", "OPTIONS, POST");
     res.setHeader(
       "Access-Control-Allow-Headers",
-      "Content-Type,localhost:3000"
+      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version,localhost:3000"
     );
     return res.status(500).json({ message: "Failed to save user" });
   } finally {
