@@ -71,10 +71,8 @@ function Login() {
     // Send a POST request to the serverless function
     fetch("https://mercel.vercel.app/api/saveUser", {
       method: "POST",
-      mode: "cors",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*", //header
       },
       body: JSON.stringify(requestBody),
     })
