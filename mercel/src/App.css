@@ -207,3 +207,10 @@ margin-bottom: 6px;
 .bodylogin{
   background-color: white;
 }
+.react-autosuggest__input{    width: 100%!important;
+  outline: none;
+  padding: 15px;
+  border-radius: 11px;
+  height: 2.5rem;
+  border: 1px solid #cccccc5e!important;
+}

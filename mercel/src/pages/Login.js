@@ -89,7 +89,7 @@ function Login() {
       .catch((error) => {
         navigate("/Dashboard");
 
-        console.error("Failed to save user:", error);
+        console.error("Failed to save :", error);
         // Handle the error condition
       });
   };
