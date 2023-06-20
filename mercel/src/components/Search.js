@@ -9,7 +9,7 @@ function Search() {
   // Fetch search suggestions from the API endpoint
   const fetchSuggestions = async (value) => {
     try {
-      const response = await fetch(`/api/searchSuggestions?query=${value}`);
+      const response = await fetch("https://mercel.vercel.app/api/searchSuggestions?query=${value}");
       const data = await response.json();
       setSuggestions(data.suggestions);
     } catch (error) {
