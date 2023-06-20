@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import Autosuggest from "react-autosuggest";
+import { useNavigate } from "react-router-dom";
 
 function Search() {
   const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const navigate = useNavigate();
 
   // Fetch search suggestions from the API endpoint
-const fetchSuggestions = async (value) => {
-  try {
-    const response = await fetch(`https://mercel.vercel.app/api/searchSuggestions?query=${value}`);
-    const data = await response.json();
-    const suggestionData = JSON.stringify(data.suggestions);
-    setSuggestions(JSON.parse(suggestionData));
-  } catch (error) {
-    console.error("Failed to fetch search suggestions:", error);
-  }
-};
+  const fetchSuggestions = async (value) => {
+    try {
+      const response = await fetch(
+        `https://mercel.vercel.app/api/searchSuggestions?query=${value}`
+      );
+      const data = await response.json();
+      const suggestionData = JSON.stringify(data.suggestions);
+      setSuggestions(JSON.parse(suggestionData));
+    } catch (error) {
+      console.error("Failed to fetch search suggestions:", error);
+    }
+  };
 
   const onSuggestionsFetchRequested = ({ value }) => {
     // Fetch suggestions when input value changes
@@ -36,10 +40,16 @@ const fetchSuggestions = async (value) => {
     setValue(newValue);
   };
 
+  const onBlur = () => {
+    // Navigate to the separate page displaying all products
+    navigate("/");
+  };
+
   const inputProps = {
     placeholder: "Search...",
     value,
     onChange,
+    onBlur,
   };
 
   return (
