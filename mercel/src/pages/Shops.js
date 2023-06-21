@@ -48,10 +48,11 @@ function Shops() {
   };
 
   useEffect(() => {
-    fetch("/shops.json")
-      .then((response) => response.json())
+    fetch("/api/shops")
+      .then((response) => response.text())
       .then((data) => {
-        setShops(data);
+        const parsedData = JSON.parse(data);
+        setShops(parsedData);
         setIsLoading(false);
       })
       .catch((error) => console.error("Error:", error));

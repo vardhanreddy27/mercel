@@ -61,5 +61,4 @@ const fetchSuggestions = async (value) => {
     </div>
   );
 }
-
 export default Search;
