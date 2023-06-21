@@ -3,7 +3,7 @@ const { MongoClient } = require("mongodb");
 const MONGODB_URI =
   "mongodb+srv://vishnu:rrr123@cluster0.fczkwxs.mongodb.net/vinkle?retryWrites=true&w=majority";
 const DATABASE_NAME = "vinkle";
-const COLLECTION_NAME = "Users";
+const COLLECTION_NAME = "Shops";
 
 async function connectToDatabase() {
   const client = new MongoClient(MONGODB_URI);
