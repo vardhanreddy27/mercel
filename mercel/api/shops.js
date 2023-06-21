@@ -24,9 +24,9 @@ async function connectToDatabase() {
 module.exports = async (req, res) => {
   try {
     const data = await connectToDatabase();
-    res.status(200).json(data).header("Content-Type", "application/json");
+    res.status(200).json(data);
   } catch (error) {
     console.error("Error:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    res.status(500).json({ message: "some error" });
   }
 };
