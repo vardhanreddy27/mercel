@@ -5,7 +5,6 @@ import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import SearchShop from "../components/SearchShop";
-import LazyLoad from "react-lazy-load";
 import { Offer } from "@styled-icons/boxicons-solid/Offer";
 import { Grid, Button, CircularProgress, Skeleton } from "@mui/material";
 
@@ -133,8 +132,7 @@ function Shops() {
           ) : (
             // Display actual data once it's loaded
             searchedShops.map((shop, index) => (
-              <LazyLoad key={index}>
-                <div key={index} className="col-md-6">
+                    <div key={index} className="col-md-6">
                   <div className="card mb-3 shadow-sm rounded ">
                     <div className="image-container card-top-radius">
                       <img
@@ -162,7 +160,6 @@ function Shops() {
                     </div>
                   </div>
                 </div>
-              </LazyLoad>
             ))
           )}
         </div>
