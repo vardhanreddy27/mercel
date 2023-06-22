@@ -6,8 +6,7 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import SearchShop from "../components/SearchShop";
 import { Offer } from "@styled-icons/boxicons-solid/Offer";
-import { Grid,Skeleton } from "@mui/material";
-import axios from "axios"; // Import Axios
+import { Grid, Button, CircularProgress, Skeleton } from "@mui/material";
 
 function Shops() {
   const [shops, setShops] = useState([]);
@@ -49,10 +48,10 @@ function Shops() {
   };
 
   useEffect(() => {
-    axios
-      .get("/api/shops") // Use axios.get instead of fetch
-      .then((response) => {
-        const parsedData = response.data; // Access response data directly
+    fetch("/api/shops")
+      .then((response) => response.text())
+      .then((data) => {
+        const parsedData = JSON.parse(data);
         setShops(parsedData);
         setIsLoading(false);
       })
