@@ -1,12 +1,12 @@
 import React from "react";
 import Search from "../components/Search";
+import ProductsList from "../pages/ProductsList";
 import { HiOutlineHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import ProductsList from "./ProductsList";
 function Products() {
   const [isHome, setIsHome] = useState(true);
   const [isShops, setIsShops] = useState(false);
@@ -39,7 +39,7 @@ function Products() {
   return (
     <div className="fluid-container">
     <Search />
-<ProductsList /> 
+    <ProductsList />
    <nav className=" fixed-bottom navbar-light bg-light">
       <div className="row nomargin text-center p-2 pt-3">
         <div className="col-3">

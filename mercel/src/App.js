@@ -8,6 +8,7 @@ import Shops from "./pages/Shops";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProductsList from "./pages/ProductsList";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home Isactive="active" />}></Route>
           <Route path="/Dashboard" element={<Dashboard />}></Route>
           <Route path="/Products" element={<Products />}></Route>
+          <Route path="/ProductsList" element={<ProductsList />} />
           <Route path="/shops" element={<Shops Isactive="active" />}></Route>
           <Route
             path="/trackorders"

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import Autosuggest from "react-autosuggest";
 
 function Search() {
+  const navigate = useNavigate();
   const [value, setValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
@@ -32,17 +33,32 @@ function Search() {
 
   const getSuggestionValue = (suggestion) => suggestion;
 
-  const renderSuggestion = (suggestion) => <div>{suggestion}</div>;
-
-  const onChange = (event, { newValue }) => {
-    setValue(newValue);
+  const renderSuggestion = (suggestion) => {
+    return (
+      <div
+        onClick={() => {
+          handleSuggestionClick(suggestion);
+        }}
+      >
+        {suggestion}
+      </div>
+    );
   };
 
-  const inputProps = {
-    placeholder: "Search...",
-    value,
-    onChange,
-    className: "custom-input",
+  const handleSearch = () => {
+    searchProducts();
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    setValue(suggestion);
+    searchProducts();
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      searchProducts();
+    }
   };
 
   const searchProducts = async () => {
@@ -53,35 +69,43 @@ function Search() {
       const data = await response.json();
       // Process the received data (e.g., update state with the products)
       console.log("Received products:", data);
+      // Navigate to the products page with the products data
+      navigate('/Products', { state: { products: data } }); // Pass the state property
     } catch (error) {
       console.error("Failed to fetch search products:", error);
     }
   };
 
-  const handleSearch = (event) => {
-    event.preventDefault();
-    searchProducts();
+  const onChange = (event, { newValue }) => {
+    setValue(newValue);
+  };
+
+  const inputProps = {
+    placeholder: "Search...",
+    value,
+    onChange,
+    className: "custom-input",
+    onKeyPress: handleKeyPress, // Add onKeyPress event handler
   };
 
   return (
     <div className="search-input p-3 activebackground">
-      <form onSubmit={handleSearch}>
-        <Autosuggest
-          suggestions={suggestions}
-          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-          onSuggestionsClearRequested={onSuggestionsClearRequested}
-          getSuggestionValue={getSuggestionValue}
-          renderSuggestion={renderSuggestion}
-          inputProps={inputProps}
-          theme={{
-            suggestion: "custom-suggestion", //custom CSS class for suggestion items
-            suggestionsContainer: "custom-suggestions-container", //custom CSS class for the suggestions container
-          }}
-        />
-        <button type="submit">
-          <FaSearch className="search-icon" />
-        </button>
-      </form>
+      <div className="search-form">
+        <div className="search-input-container">
+          <Autosuggest
+            suggestions={suggestions}
+            onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+            onSuggestionsClearRequested={onSuggestionsClearRequested}
+            getSuggestionValue={getSuggestionValue}
+            renderSuggestion={renderSuggestion}
+            inputProps={inputProps}
+            theme={{
+              suggestion: "custom-suggestion", //custom CSS class for suggestion items
+              suggestionsContainer: "custom-suggestions-container", //custom CSS class for the suggestions container
+            }}
+          />
+        </div>
+      </div>
     </div>
   );
 }
