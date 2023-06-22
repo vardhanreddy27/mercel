@@ -1,13 +1,11 @@
-// api/searchProducts.js
-
 import { MongoClient } from "mongodb";
 
 export default async function handler(req, res) {
   const { query } = req.query;
-  const MONGODB_URI =
-    "mongodb+srv://vishnu:rrr123@cluster0.fczkwxs.mongodb.net/vinkle?retryWrites=true&w=majority";
+  const MONGODB_URI = "mongodb+srv://vishnu:rrr123@cluster0.fczkwxs.mongodb.net/vinkle?retryWrites=true&w=majority";
   const DATABASE_NAME = "vinkle";
   const COLLECTION_NAME = "Products";
+  
   try {
     // Connect to the MongoDB database
     const client = await MongoClient.connect(MONGODB_URI, {
@@ -20,9 +18,12 @@ export default async function handler(req, res) {
     const collection = db.collection(COLLECTION_NAME);
 
     // Perform the search query on the collection
-    const searchResults = await collection.find({
-      $text: { $search: query },
-    }).toArray();
+    const searchResults = await collection.find(
+      { $text: { $search: query } },
+      { score: { $meta: "textScore" } } // Include textScore to get relevance score
+    )
+    .sort({ score: { $meta: "textScore" } }) // Sort by relevance score
+    .toArray();
 
     // Close the MongoDB connection
     client.close();
