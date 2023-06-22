@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   const MONGODB_URI =
     "mongodb+srv://vishnu:rrr123@cluster0.fczkwxs.mongodb.net/vinkle?retryWrites=true&w=majority";
   const DATABASE_NAME = "vinkle";
-  const COLLECTION_NAME = "Users";
+  const COLLECTION_NAME = "Products";
   try {
     // Connect to the MongoDB database
     const client = await MongoClient.connect(MONGODB_URI, {
