@@ -48,7 +48,7 @@ function Shops() {
   };
 
   useEffect(() => {
-    fetch("/api/shops")
+    fetch("https://mercel.vercel.app/api/shops")
       .then((response) => response.text())
       .then((data) => {
         const parsedData = JSON.parse(data);
