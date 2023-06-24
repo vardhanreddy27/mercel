@@ -3,6 +3,7 @@ import { Button, Dialog } from "@mui/material";
 import { useSelector } from "react-redux";
 import EditProfile from "../components/EditProfile";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { setUser } from "../features/user/userSlice";
 import {
   BsFillCartCheckFill,
@@ -33,14 +34,13 @@ const ProfilePage = () => {
   };
   const [isOpen, setIsOpen] = useState(false);
   const user = useSelector((state) => state.user.user);
-
   const toggleDialog = () => {
     setIsOpen(!isOpen);
   };
   return (
     <div className="fluid-container">
       <h3 className="text-secondary ml3">
-        Good afternoon<span className="active"> {user.given_name}</span>
+        Good afternoon<span className="active"> {user?.given_name || ""}</span>
       </h3>
       <div>
         <Dialog
@@ -80,9 +80,10 @@ const ProfilePage = () => {
           <div className="col-3 display">
             <BsFillHeartFill className="icons" />
           </div>
+          <Link to="/Wishlist" >
           <div className="col-9 display">
             <p className="mb">Wishlist</p>
-          </div>
+          </div></Link>
         </div>
       </div>
       <div className="row display-profile mt-1">

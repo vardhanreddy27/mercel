@@ -9,6 +9,7 @@ import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductsList from "./pages/ProductsList";
+import Wishlist from "./pages/Wishlist";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home Isactive="active" />}></Route>
           <Route path="/Dashboard" element={<Dashboard />}></Route>
+          <Route path="/Wishlist" element={<Wishlist />}></Route>
           <Route path="/Products" element={<Products />}></Route>
           <Route path="/ProductsList" element={<ProductsList />} />
           <Route path="/shops" element={<Shops Isactive="active" />}></Route>

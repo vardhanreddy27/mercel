@@ -1,21 +1,20 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import { AiOutlineShop } from "react-icons/ai";
-import { MdOutlineDiscount } from "react-icons/md";
+import { AiOutlineShop } from 'react-icons/ai';
+import { MdOutlineDiscount } from 'react-icons/md';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleWishlist } from '../features/wishlist/WishlistSlice';
 
 function ProductsList() {
   const location = useLocation();
   const products = location.state && location.state.products ? location.state.products : [];
   const heartRefs = useRef([]);
 
-  const [wishlist, setWishlist] = useState([]);
+  const dispatch = useDispatch();
+  const wishlist = useSelector((state) => state.wishlist);
 
-  const toggleWishlist = (productId) => {
-    setWishlist((prevWishlist) =>
-      prevWishlist.includes(productId)
-        ? prevWishlist.filter((id) => id !== productId)
-        : [...prevWishlist, productId]
-    );
+  const handleToggleWishlist = (product) => {
+    dispatch(toggleWishlist(product));
   };
 
   useEffect(() => {
@@ -25,11 +24,11 @@ function ProductsList() {
       button.classList.toggle('active');
       button.classList.toggle('inactive');
     };
-  
+
     heartRefs.current.forEach((link, index) => {
       link.addEventListener('click', () => handleClick(index));
     });
-  
+
     return () => {
       heartRefs.current.forEach((link, index) => {
         if (link) {
@@ -37,8 +36,7 @@ function ProductsList() {
         }
       });
     };
-  }, [wishlist]); // Empty dependency array to trigger cleanup on component unmount
-
+  }, []);
   return (
     <div className="pt-5 fluid-container">
       <br />
@@ -59,10 +57,12 @@ function ProductsList() {
                 <h3 className="d-inline">{product.name} </h3>
                 <div className="var1 d-inline">
                 <a
-                    ref={(ref) => (heartRefs.current[index] = ref)}
-                    className={`button one mobile button--secondary ${wishlist.includes(product._id) ? 'active' : 'inactive'}`}
-                    onClick={() => toggleWishlist(product._id)}
-                  >
+  ref={(ref) => (heartRefs.current[index] = ref)}
+  className={`button one mobile button--secondary ${
+    wishlist.some((item) => item._id === product._id) ? 'active' : 'inactive'
+  }`}
+  onClick={() => handleToggleWishlist(product)}
+>
                       <div className="btn__effect">
                       <svg className="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
                         <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z"></path>
