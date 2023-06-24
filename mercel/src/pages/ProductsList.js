@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-
+import { AiOutlineShop } from "react-icons/ai";
+import { MdOutlineDiscount } from "react-icons/md";
 function ProductsList() {
   const location = useLocation();
   const products = location.state && location.state.products ? location.state.products : [];
@@ -24,17 +25,24 @@ function ProductsList() {
       button.classList.toggle('inactive');
     };
 
-    heartRefs.current.forEach((button, index) => {
-      button.addEventListener('click', () => handleClick(index));
+    heartRefs.current.forEach((link, index) => {
+      link.addEventListener('click', () => handleClick(index));
     });
 
     return () => {
-      heartRefs.current.forEach((button, index) => {
-        button.removeEventListener('click', () => handleClick(index));
+      heartRefs.current.forEach((link, index) => {
+        link.removeEventListener('click', () => handleClick(index));
       });
     };
   }, []);
 
+  useEffect(() => {
+    return () => {
+      heartRefs.current.forEach((link) => {
+        link.removeEventListener('click', () => {});
+      });
+    };
+  }, []);
   return (
     <div className="pt-5 fluid-container">
       <br />
@@ -83,8 +91,8 @@ function ProductsList() {
                     </div>
                     </a>
                 </div>
-                <p className="nomargin">{product.shop}</p>
-                <p className='text-success nomargin'>{product.discount} % OFF</p>
+                <p className="nomargin"><AiOutlineShop /> {product.shop}</p>
+                <p className='text-success nomargin'><MdOutlineDiscount /> {product.discount} % OFF</p>
                 <p className="original-price d-inline text-secondary">₹{originalPrice}</p>
                 <p className='d-inline'> ₹{product.price}</p>
               </div>
