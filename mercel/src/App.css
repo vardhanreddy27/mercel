@@ -225,3 +225,10 @@ margin-bottom: 6px;
   top: 4rem;
   margin-left: -16px;
 }
+.grid{display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.original-price {
+  text-decoration: line-through;
+}
