@@ -1,30 +1,37 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function ProductsList() {
   const location = useLocation();
   const products = location.state && location.state.products ? location.state.products : [];
-  const heartRef = useRef(null);
+  const heartRefs = useRef([]);
+
+  const [wishlist, setWishlist] = useState([]);
+
+  const toggleWishlist = (productId) => {
+    setWishlist((prevWishlist) =>
+      prevWishlist.includes(productId)
+        ? prevWishlist.filter((id) => id !== productId)
+        : [...prevWishlist, productId]
+    );
+  };
 
   useEffect(() => {
-    const button = heartRef.current;
-
-    const handleClick = () => {
-      if (button.classList.contains('deactivate')) {
-        button.classList.remove('deactivate');
-      }
-      if (button.classList.contains('active')) {
-        button.classList.add('deactivate');
-      }
+    const handleClick = (index) => {
+      const button = heartRefs.current[index];
       button.classList.toggle('animate');
       button.classList.toggle('active');
       button.classList.toggle('inactive');
     };
 
-    button.addEventListener('click', handleClick);
+    heartRefs.current.forEach((button, index) => {
+      button.addEventListener('click', () => handleClick(index));
+    });
 
     return () => {
-      button.removeEventListener('click', handleClick);
+      heartRefs.current.forEach((button, index) => {
+        button.removeEventListener('click', () => handleClick(index));
+      });
     };
   }, []);
 
@@ -32,11 +39,11 @@ function ProductsList() {
     <div className="pt-5 fluid-container">
       <br />
       <div className="row p-2">
-        {products.map((product) => {
+      {products.map((product, index) => {
           const originalPrice = Math.floor((product.price * 100) / (100 - product.discount));
 
           return (
-            <div key={product._id} className="grid border ">
+             <div key={product._id} className="grid border ">
               <div className='col-4 pimgh'>
                 <img
                   src={product.picture}
@@ -47,8 +54,12 @@ function ProductsList() {
               <div className='col-8 p-3'>
                 <h3 className="d-inline">{product.name} </h3>
                 <div className="var1 d-inline">
-                  <a ref={heartRef} className="button one inactive mobile button--secondary">
-                    <div className="btn__effect">
+                <a
+                    ref={(ref) => (heartRefs.current[index] = ref)}
+                    className={`button one mobile button--secondary ${wishlist.includes(product._id) ? 'active' : 'inactive'}`}
+                    onClick={() => toggleWishlist(product._id)}
+                  >
+                      <div className="btn__effect">
                       <svg className="heart-stroke icon-svg icon-svg--size-4 icon-svg--color-silver" viewBox="20 18 29 28" aria-hidden="true" focusable="false">
                         <path d="M28.3 21.1a4.3 4.3 0 0 1 4.1 2.6 2.5 2.5 0 0 0 2.3 1.7c1 0 1.7-.6 2.2-1.7a3.7 3.7 0 0 1 3.7-2.6c2.7 0 5.2 2.7 5.3 5.8.2 4-5.4 11.2-9.3 15a2.8 2.8 0 0 1-2 1 3.4 3.4 0 0 1-2.2-1c-9.6-10-9.4-13.2-9.3-15 0-1 .6-5.8 5.2-5.8m0-3c-5.3 0-7.9 4.3-8.2 8.5-.2 3.2.4 7.2 10.2 17.4a6.3 6.3 0 0 0 4.3 1.9 5.7 5.7 0 0 0 4.1-1.9c1.1-1 10.6-10.7 10.3-17.3-.2-4.6-4-8.6-8.4-8.6a7.6 7.6 0 0 0-6 2.7 8.1 8.1 0 0 0-6.2-2.7z"></path>
                       </svg>
@@ -70,7 +81,7 @@ function ProductsList() {
                         <span className="effect"></span>
                       </div>
                     </div>
-                  </a>
+                    </a>
                 </div>
                 <p className="nomargin">{product.shop}</p>
                 <p className='text-success nomargin'>{product.discount} % OFF</p>

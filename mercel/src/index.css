@@ -377,7 +377,7 @@ body {
   text-shadow: none;
   transition: background 0.1s linear;
   font-weight: 400;
-  color: #0090e3;
+  color: #8d01ff;
   background: #fff;
   transition-property: border;
   transition-timing-function: ease-in-out;
@@ -405,8 +405,8 @@ body {
 }
 
 .icon-svg--color-blue {
-  fill: #0090e3;
-  color: #0090e3;
+  fill: rgb(130, 9, 155);
+  color: rgb(130, 9, 155);
 }
 
 .icon-svg {
@@ -463,7 +463,7 @@ body {
   right: 0;
   border-radius: 1.5px;
   height: 3px;
-  background: #0090e3;
+  background: rgb(130, 9, 155);
 }
 .effect-group .effect:after {
   content: "";
@@ -581,7 +581,7 @@ body {
   }
   50% {
     transform: scale(1.15);
-    fill: #0090e3;
+    fill: rgb(130, 9, 155);
   }
   100% {
     transform: scale(1);
@@ -596,7 +596,7 @@ body {
   }
   50% {
     transform: scale(1.15);
-    fill: #0090e3;
+    fill: rgb(130, 9, 155);
   }
   100% {
     transform: scale(1);
