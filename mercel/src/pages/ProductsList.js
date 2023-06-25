@@ -4,17 +4,24 @@ import { AiOutlineShop } from 'react-icons/ai';
 import { MdOutlineDiscount } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleWishlist } from '../features/wishlist/WishlistSlice';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function ProductsList() {
   const location = useLocation();
+
   const products = location.state && location.state.products ? location.state.products : [];
   const heartRefs = useRef([]);
 
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist);
-
   const handleToggleWishlist = (product) => {
+    const isProductInWishlist = wishlist.some((item) => item._id === product._id);
+  
     dispatch(toggleWishlist(product));
+  
+    if (!isProductInWishlist) {
+      toast.success('Product added to wishlist!');
+    }
   };
 
   useEffect(() => {
@@ -39,7 +46,18 @@ function ProductsList() {
   }, []);
   return (
     <div className="pt-5 fluid-container">
-      <br />
+      <br />    <ToastContainer
+position="top-center"
+autoClose={1500}
+hideProgressBar
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss={false}
+draggable={false}
+pauseOnHover={false}
+theme="dark"/>
+
       <div className="row p-2">
       {products.map((product, index) => {
           const originalPrice = Math.floor((product.price * 100) / (100 - product.discount));
@@ -86,7 +104,7 @@ function ProductsList() {
                       </div>
                     </div>
                     </a>
-                </div>
+                </div>  
                 <p className="nomargin"><AiOutlineShop /> {product.shop}</p>
                 <p className='text-success nomargin'><MdOutlineDiscount /> {product.discount} % OFF</p>
                 <p className="original-price d-inline text-secondary">₹{originalPrice}</p>

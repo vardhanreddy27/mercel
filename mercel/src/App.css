@@ -233,6 +233,7 @@ margin-bottom: 6px;
   text-decoration: line-through;
 }
 .wishlisttocart{
-  height: 9rem;
-  width: 7rem;
+  width: 111px;
+    height: 137px;
+    object-fit: contain;
 }
