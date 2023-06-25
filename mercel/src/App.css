@@ -232,3 +232,7 @@ margin-bottom: 6px;
 .original-price {
   text-decoration: line-through;
 }
+.wishlisttocart{
+  height: 9rem;
+  width: 7rem;
+}
