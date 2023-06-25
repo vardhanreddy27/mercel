@@ -51,7 +51,10 @@ a:hover {
   background-color: rgb(130, 9, 155) !important;
   color: white !important;
 }
-
+.mygrid{    display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;}
 .nomargin {
   padding-left: 0px !important;
   padding-right: 0px !important;

@@ -58,12 +58,12 @@ draggable={false}
 pauseOnHover={false}
 theme="dark"/>
 
-      <div className="row p-2">
+      <div className="row nomargin">
       {products.map((product, index) => {
           const originalPrice = Math.floor((product.price * 100) / (100 - product.discount));
 
           return (
-             <div key={product._id} className="grid border ">
+             <div key={product._id} className="grid border nomargin ">
               <div className='col-4 pimgh'>
                 <img
                   src={product.picture}

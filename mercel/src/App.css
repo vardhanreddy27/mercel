@@ -224,8 +224,10 @@ margin-bottom: 6px;
   width: 101%;
   top: 4rem;
   margin-left: -16px;
+}.red{
+  color: red;
 }
-.grid{display: flex;
+.grid{
   align-items: center;
   padding: 15px;
 }
