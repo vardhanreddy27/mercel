@@ -45,7 +45,7 @@ function ProductsList() {
     };
   }, []);
   return (
-    <div className="pt-5 fluid-container">
+    <div className="pt-5 fluid-container fix">
       <br />    <ToastContainer
 position="top-center"
 autoClose={1500}

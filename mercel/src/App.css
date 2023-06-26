@@ -227,7 +227,9 @@ margin-bottom: 6px;
 }.red{
   color: red;
 }
+
 .grid{
+  display: flex;
   align-items: center;
   padding: 15px;
 }
