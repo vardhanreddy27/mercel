@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { AiOutlineShop } from 'react-icons/ai';
 import { MdOutlineDiscount } from 'react-icons/md';
-import { BsFillCartFill } from 'react-icons/bs';
 import { IoClose } from 'react-icons/io5';
 
 function MyWishlist() {
@@ -34,7 +33,8 @@ function MyWishlist() {
                     <p className="d-inline"> ₹{product.price}</p>
                     <button type="button" className="btn selected mt-1">Add to Cart</button>
                   </div>
-                  <div className="col-2"><div className="mygrid"><IoClose className='red'/>
+                  <div className="col-2"><div className="mygrid">
+                    <IoClose className='red'/>
               </div></div>
                 </div>
               </div>

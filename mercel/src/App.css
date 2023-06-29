@@ -227,7 +227,7 @@ margin-bottom: 6px;
 }.red{
   color: red;
 }
-
+.smargin{    --bs-gutter-x: -5px !important;}
 .grid{
   display: flex;
   align-items: center;

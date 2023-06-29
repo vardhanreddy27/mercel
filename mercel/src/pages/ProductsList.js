@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { AiOutlineShop } from 'react-icons/ai';
 import { MdOutlineDiscount } from 'react-icons/md';
@@ -14,13 +15,19 @@ function ProductsList() {
 
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist);
-  const handleToggleWishlist = (product) => {
+  const handleToggleWishlist = async (product) => {
     const isProductInWishlist = wishlist.some((item) => item._id === product._id);
   
     dispatch(toggleWishlist(product));
   
     if (!isProductInWishlist) {
-      toast.success('Product added to wishlist!');
+      try {
+        await axios.post('../../api/addToWishlist', { product });
+        toast.success('Product added to wishlist!');
+      } catch (error) {
+        console.error('Failed to add product to wishlist:', error);
+        toast.error('Failed to add product to wishlist');
+      }
     }
   };
 
@@ -58,7 +65,7 @@ draggable={false}
 pauseOnHover={false}
 theme="dark"/>
 
-      <div className="row nomargin">
+      <div className="row smargin">
       {products.map((product, index) => {
           const originalPrice = Math.floor((product.price * 100) / (100 - product.discount));
 
