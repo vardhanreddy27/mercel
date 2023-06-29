@@ -22,7 +22,7 @@ function ProductsList() {
   
     if (!isProductInWishlist) {
       try {
-        await axios.post('../../api/addToWishlist', { product });
+        await axios.post('https://mercel.vercel.app/api/addToWishlist', { product });
         toast.success('Product added to wishlist!');
       } catch (error) {
         console.error('Failed to add product to wishlist:', error);
