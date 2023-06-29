@@ -25,10 +25,10 @@ function ProductsList() {
         const payload = {
           product,
           userEmail: user.email,
+          productId:product._id,
         };
   
         await axios.post('https://mercel.vercel.app/api/removeFromWishlist', payload);
-        toast.success('Product removed from wishlist!');
       } catch (error) {
         console.error('Failed to remove product from wishlist:', error);
         toast.error('Failed to remove product from wishlist');
