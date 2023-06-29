@@ -23,7 +23,12 @@ function ProductsList() {
   
     if (!isProductInWishlist) {
       try {
-        await axios.post('https://mercel.vercel.app/api/addToWishlist', { product });
+        const payload = {
+          product,
+          userEmail: user.email
+        };
+  
+        await axios.post('https://mercel.vercel.app/api/addToWishlist', payload);
         toast.success('Product added to wishlist!');
       } catch (error) {
         console.error('Failed to add product to wishlist:', error);
@@ -78,7 +83,7 @@ theme="dark"/>
                   style={{ width: '100%', height: '150px', objectFit: 'contain' }}
                   alt={product.name}
                 />
-              </div>{console.log(user.email)} 
+              </div>
               <div className='col-8 p-3'>
                 <h3 className="d-inline">{product.name} </h3>
                 <div className="var1 d-inline">
