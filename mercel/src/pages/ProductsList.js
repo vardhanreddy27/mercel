@@ -18,13 +18,28 @@ function ProductsList() {
   const handleToggleWishlist = async (product) => {
     const isProductInWishlist = wishlist.some((item) => item._id === product._id);
   
-    dispatch(toggleWishlist(product));
-  
-    if (!isProductInWishlist) {
+    if (isProductInWishlist) {
+      // Remove the product from the wishlist
+      dispatch(toggleWishlist(product));
       try {
         const payload = {
           product,
-          userEmail: user.email
+          userEmail: user.email,
+        };
+  
+        await axios.post('https://mercel.vercel.app/api/removeFromWishlist', payload);
+        toast.success('Product removed from wishlist!');
+      } catch (error) {
+        console.error('Failed to remove product from wishlist:', error);
+        toast.error('Failed to remove product from wishlist');
+      }
+    } else {
+      // Add the product to the wishlist
+      dispatch(toggleWishlist(product));
+      try {
+        const payload = {
+          product,
+          userEmail: user.email,
         };
   
         await axios.post('https://mercel.vercel.app/api/addToWishlist', payload);
