@@ -13,7 +13,6 @@ function ProductsList() {
   const products = location.state && location.state.products ? location.state.products : [];
   const heartRefs = useRef([]);
   const user = useSelector((state) => state.user.user);
-
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist);
   const handleToggleWishlist = async (product) => {

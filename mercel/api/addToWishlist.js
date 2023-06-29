@@ -6,7 +6,7 @@ const addToWishlist = async (req, res) => {
   const DATABASE_NAME = "vinkle";
   const COLLECTION_NAME = "Wishlist";
 
-  const { product } = req.body;
+  const { product, userEmail } = req.body;
 
   // Connect to the MongoDB database
   const client = new MongoClient(MONGODB_URI, {
@@ -26,8 +26,8 @@ const addToWishlist = async (req, res) => {
       return res.status(200).json({ message: "Product already exists in the wishlist" });
     }
 
-    // Insert the new product document
-    await collection.insertOne(product);
+    // Insert the new product document with userEmail
+    await collection.insertOne({ ...product, userEmail });
 
     return res.status(200).json({ message: "Product added to the wishlist" });
   } catch (error) {
