@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef,useState } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { AiOutlineShop } from 'react-icons/ai';
@@ -77,7 +77,7 @@ theme="dark"/>
                   style={{ width: '100%', height: '150px', objectFit: 'contain' }}
                   alt={product.name}
                 />
-              </div>
+              </div>{console.log(user.email)} 
               <div className='col-8 p-3'>
                 <h3 className="d-inline">{product.name} </h3>
                 <div className="var1 d-inline">
