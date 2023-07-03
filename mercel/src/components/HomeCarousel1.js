@@ -19,7 +19,7 @@ function HomeCarousel1() {
           <div className="carousel-item-wrapper">
             <img
               className="d-block w-100 carousel-image"
-              src="https://creativemachine.co/wp-content/uploads/2020/03/ecommerce_electronics_banner_template_24_1200x628.jpg"
+              src="https://imgk.timesnownews.com/story/Vivo_Christmas_offer.jpg"
               alt="second slide"
             />
             <div className=""></div>
@@ -29,7 +29,7 @@ function HomeCarousel1() {
           <div className="carousel-item-wrapper">
             <img
               className="d-block w-100 carousel-image"
-              src="https://creativemachine.co/wp-content/uploads/2020/03/ecommerce_electronics_banner_template_24_1200x628.jpg"
+              src="https://imgk.timesnownews.com/story/Vivo_Christmas_offer.jpg"
               alt="Third slide"
             />
             <div className=""></div>

@@ -1,13 +1,83 @@
-import React from "react";
+import React, { useRef } from "react";
 import HomeCarousel from "./HomeCarousel";
 import HomeCarousel1 from "./HomeCarousel1";
+import { Rerousel } from 'rerousel';
+
 function Herobanner() {
+  const customers = [
+    { image: 'https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png' },
+    { image: 'https://1000logos.net/wp-content/uploads/2019/06/Adidas-Logo-1991.jpg' },
+    { image: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Celio%27s_logo.svg' },
+    { image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGSJ44GIL7hr4vjKMe6CcRepzZRpm4ubRpwEUSD3KB&s' },
+    { image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Lee_Logo.svg/1280px-Lee_Logo.svg.png' }
+  ];
+
+  const customerLogo = useRef(null);
+  
+
   return (
     <>
       <HomeCarousel1 />
 
-      <h3 className="mt-4 txtmar">Winter Collection</h3>
-      <p className="txtmar">Get your comfort with style</p>
+      <div className="deals-card p-3 pb-5">
+      <div className="text-center">
+        <h3 className="p-4 ">Deals of The day</h3>
+      </div>
+      <div className="fluid-container deals-card text-center">
+        <div className="d-flex">
+          <div className="card">
+            <img
+              className=""
+              src="https://m.media-amazon.com/images/I/811HqEmouAL._AC_UL600_QL65_.jpg"
+              alt="Card cap"
+            />
+            <div className="card-body">
+              <p className="font-weight-bold">Extra 10% off</p>
+            </div>
+          </div>
+          <div className="card">
+
+            <img
+              className=""
+              src="https://m.media-amazon.com/images/I/415dA5tCLHL.jpg" 
+              alt="Card cap"
+            />
+            <div className="card-body">
+              <p className="font-weight-bold">upto 60% off</p>
+            </div>
+          </div>
+        </div>
+        <div className="d-flex">
+          <div className="card">
+
+            <img
+              className=""
+              src="https://images.dailyobjects.com/marche/product-images/1201/all-blue-pedal-daypack-images/All-Blue-Pedal-Daypack-vw.png?tr=cm-pad_resize,v-2,w-640,h-487,dpr-1"
+              alt="Card cap"
+            />
+            <div className="card-body">
+              <p className="font-weight-bold">upto 60% off</p>
+            </div>
+          </div>
+          <div className="card">
+
+            <img
+              className=""
+              src="https://img.freepik.com/free-photo/new-pair-white-sneakers-isolated-white_93675-133978.jpg?size=626&ext=jpg&ga=GA1.1.1520291970.1688405752&semt=ais"
+              alt="Card cap"
+            />
+            <div className="card-body">
+
+              <p className="font-weight-bold">upto 60% off</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+
       <div className="card d-flex bgcard heroimg">
         <div className="card-body ms-4 mt-2 mb-2">
           <h3>
@@ -20,6 +90,25 @@ function Herobanner() {
           <img src="./winter.png" className="dimg" alt="winter" />
         </div>
       </div>
+
+<h3 className="p-2 text-center">Popular brands</h3>
+<div className="logo-grid" ref={customerLogo}>
+        <Rerousel itemRef={customerLogo} >
+          {customers.map((c) => {
+            return (
+              <img
+                key={c.image}
+                src={c.image}
+                alt="Customer Logo"
+                className="logo-img"
+              />
+            );
+          })}
+        </Rerousel>
+      </div>
+
+
+
       <div className="row nomargin herobannerbg">
         <div className="col-4">
           <h1 className="ps-3 pt-4 font">
@@ -29,10 +118,12 @@ function Herobanner() {
           </h1>
           <button className="btn shopnow">shop now</button>
         </div>
+
         <div className="col-8 bimg">
           <img src="./banner.png" className="bannericonimg" alt="banner img " />
         </div>
       </div>
+      
       <div className="offer2">
         <div className="">great sale | great sale |</div>
         <div className="">great sale | great sale</div>
@@ -92,6 +183,8 @@ function Herobanner() {
           </div>
         </div>
       </div>
+     
+
       <HomeCarousel />
 
       <div className="fluid-container d-flex">

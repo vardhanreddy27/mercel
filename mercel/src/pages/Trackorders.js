@@ -1,13 +1,9 @@
-import React from "react";
-import Search from "../components/Search";
+import React from 'react'
 
 function Trackorders() {
   return (
-    <>
-      <Search />
-      <h1 className="p-5">track orders</h1>
-    </>
-  );
+    <div>Trackorders</div>
+  )
 }
 
-export default Trackorders;
+export default Trackorders
