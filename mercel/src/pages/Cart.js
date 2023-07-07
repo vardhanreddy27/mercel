@@ -55,6 +55,8 @@ const Cart = () => {
             </div>
             <div className="">
               <RecommendedProducts />
+              <br />
+              <br />
             </div>
           </div>
 
