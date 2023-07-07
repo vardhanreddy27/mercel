@@ -1,20 +1,9 @@
 import React, { useRef } from "react";
 import HomeCarousel from "./HomeCarousel";
 import HomeCarousel1 from "./HomeCarousel1";
-import { Rerousel } from 'rerousel';
+import MultipleItems from "./MultipleItems";
 
 function Herobanner() {
-  const customers = [
-    { image: 'https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png' },
-    { image: 'https://1000logos.net/wp-content/uploads/2019/06/Adidas-Logo-1991.jpg' },
-    { image: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Celio%27s_logo.svg' },
-    { image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGSJ44GIL7hr4vjKMe6CcRepzZRpm4ubRpwEUSD3KB&s' },
-    { image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Lee_Logo.svg/1280px-Lee_Logo.svg.png' }
-  ];
-
-  const customerLogo = useRef(null);
-  
-
   return (
     <>
       <HomeCarousel1 />
@@ -91,22 +80,7 @@ function Herobanner() {
         </div>
       </div>
 
-<h3 className="p-2 text-center">Popular brands</h3>
-<div className="logo-grid" ref={customerLogo}>
-        <Rerousel itemRef={customerLogo} >
-          {customers.map((c) => {
-            return (
-              <img
-                key={c.image}
-                src={c.image}
-                alt="Customer Logo"
-                className="logo-img"
-              />
-            );
-          })}
-        </Rerousel>
-      </div>
-
+<MultipleItems />
 
 
       <div className="row nomargin herobannerbg">

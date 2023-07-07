@@ -247,3 +247,7 @@ margin-bottom: 6px;
   padding: 2rem;
   text-align:center; /* Set the desired height */
 }
+
+.slick-slide img {
+  display: content!important;
+}

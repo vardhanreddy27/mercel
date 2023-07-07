@@ -1,7 +1,9 @@
 import React from "react";
+import MultipleItems from "./MultipleItems";
 
 function RecommendedProducts() {
-  return <div>RecommendedProducts</div>;
+  return <><MultipleItems />
+  </>;
 }
 
 export default RecommendedProducts;

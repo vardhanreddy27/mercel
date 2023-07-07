@@ -42,7 +42,7 @@ const Cart = () => {
 
       {itemCount === 0 ? (
         <>
-          <div className="container pt-4">
+          <div className="pt-4">
             <div className="row p-2 ps-3">
               <h3>Cart</h3>
             </div>
@@ -53,7 +53,7 @@ const Cart = () => {
               />
               <p className="fw-bold text-muted">your cart is empty!</p>
             </div>
-            <div className="row customheight  p-2 secondaryback">
+            <div className="">
               <RecommendedProducts />
             </div>
           </div>
