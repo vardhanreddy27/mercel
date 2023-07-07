@@ -1,12 +1,13 @@
 import React, { useEffect, useRef,useState } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
-
 import { AiOutlineShop } from 'react-icons/ai';
 import { MdOutlineDiscount } from 'react-icons/md';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleWishlist } from '../features/wishlist/WishlistSlice';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function MyWishlist() {
   const wishlistItems = useSelector((state) => state.wishlist);
   const location = useLocation();
@@ -72,22 +73,12 @@ function MyWishlist() {
       });
     };
   }, []);
-    return (
-    <div> <ToastContainer
-    position="top-center"
-    autoClose={1500}
-    hideProgressBar
-    newestOnTop={false}
-    closeOnClick={false}
-    rtl={false}
-    pauseOnFocusLoss={false}
-    draggable={false}
-    pauseOnHover={false}
-    theme="dark"/>
+  return (
+    <div>
       <h1>My Wishlist</h1>
       {wishlistItems.length > 0 ? (
         <div className="pt-5 fluid-container">
-            {products.map((product, index) => {
+          {wishlistItems.map((product, index) => {
           const originalPrice = Math.floor((product.price * 100) / (100 - product.discount));
 
             return (
@@ -140,7 +131,7 @@ function MyWishlist() {
                       </div>
                     </div>
                     </a>
-                </div>              </div></div>
+                </div>                </div></div>
                 </div>
               </div>
             );
