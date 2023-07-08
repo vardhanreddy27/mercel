@@ -100,8 +100,17 @@ function MyWishlist() {
   }, []);
   return (
     <div>
-            <ToastContainer />
-
+<ToastContainer
+position="top-center"
+autoClose={1500}
+hideProgressBar
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss={false}
+draggable={false}
+pauseOnHover={false}
+theme="dark"/>
       <h1>My Wishlist</h1>
       {wishlistItems.length > 0 ? (
         <div className="pt-5 fluid-container">
