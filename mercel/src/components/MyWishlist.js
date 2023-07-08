@@ -11,6 +11,9 @@ import 'react-toastify/dist/ReactToastify.css';
 function MyWishlist() {
   const handleAddToCart = async (product) => {
     try {
+      // Remove the product from the wishlist
+      await handleToggleWishlist(product);
+  
       const payload = {
         product,
         userEmail: user.email,
@@ -97,6 +100,8 @@ function MyWishlist() {
   }, []);
   return (
     <div>
+            <ToastContainer />
+
       <h1>My Wishlist</h1>
       {wishlistItems.length > 0 ? (
         <div className="pt-5 fluid-container">
