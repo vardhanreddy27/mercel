@@ -9,6 +9,28 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function MyWishlist() {
+  const handleAddToCart = async (product) => {
+    try {
+      const payload = {
+        product,
+        userEmail: user.email,
+      };
+  
+      // Make a POST request to the serverless function
+      const response = await axios.post(
+        'https://mercel.vercel.app/api/addToCart',
+        payload
+      );
+  
+      // Handle the response if needed
+  
+      // Example: Display a success message
+      toast.success('Product added to cart!');
+    } catch (error) {
+      console.error('Failed to add product to cart:', error);
+      toast.error('Failed to add product to cart');
+    }
+  };
   const wishlistItems = useSelector((state) => state.wishlist);
   const location = useLocation();
 
@@ -97,7 +119,9 @@ function MyWishlist() {
                     </p>
                     <p className="original-price d-inline text-secondary">₹{originalPrice}</p>
                     <p className="d-inline"> ₹{product.price}</p>
-                    <button type="button" className="btn selected mt-1">Add to Cart</button>
+                    <button type="button" className="btn selected mt-1"
+                      onClick={() => handleAddToCart(product)}
+                    >Add to Cart</button>
                   </div>
                   <div className="col-2"><div className="mygrid">
                   <div className="var1 d-inline">
@@ -138,7 +162,7 @@ function MyWishlist() {
           })}
         </div>
       ) : (
-        <p className="mt-5">Your wishlist is empty.</p>
+        <p className="mt-5 text-center ">Your wishlist is empty.</p>
       )}
     </div>
   );
