@@ -23,7 +23,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await fetch('https://mercel.vercel.app/api/cartItems', {
+        const response = await fetch(`https://mercel.vercel.app/api/cartItems?userEmail=${user.email}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
