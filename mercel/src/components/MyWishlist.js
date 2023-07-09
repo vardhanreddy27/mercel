@@ -24,7 +24,7 @@ function MyWishlist() {
         'https://mercel.vercel.app/api/addToCart',
         payload
       );
-
+console.log(response);
       // Handle the response if needed
 
       // Example: Display a success message
