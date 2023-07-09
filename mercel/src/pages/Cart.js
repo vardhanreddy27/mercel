@@ -22,7 +22,30 @@ const Cart = () => {
     setIsShops(false);
     setIsCart(false);
   };
-  
+  const removeFromCart = async (productId) => {
+    try {
+      const response = await fetch('https://mercel.vercel.app/api/removeFromCart', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          productId,
+          userEmail: user.email,
+        }),
+      });
+
+      if (response.ok) {
+        // Remove the item from the cart locally
+        setCartItems((prevItems) => prevItems.filter((item) => item.productId !== productId));
+        console.log('Product removed from cart');
+      } else {
+        console.error('Error removing product from cart:', response.status);
+      }
+    } catch (error) {
+      console.error('Error removing product from cart:', error);
+    }
+  };
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
@@ -91,7 +114,7 @@ const Cart = () => {
                 <div className="col-8">
                     <p className='ps-1 d-inline'>{item.name}</p></div>
                     <div className="col-2 d-inline">1</div>
-                    <div className="col-2 d-inline"><GrFormClose color="red" /></div>
+                    <div className="col-2 d-inline" onClick={() => removeFromCart(item.productId)} ><GrFormClose color="red" /></div>
                     </div>
                   </div>
               ))}
