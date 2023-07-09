@@ -36,7 +36,6 @@ function MyWishlist() {
   };
   const wishlistItems = useSelector((state) => state.wishlist);
   const location = useLocation();
-
   const products = location.state && location.state.products ? location.state.products : [];
   const heartRefs = useRef([]);
   const user = useSelector((state) => state.user.user);

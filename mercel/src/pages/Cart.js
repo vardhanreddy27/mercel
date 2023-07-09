@@ -67,16 +67,12 @@ const Cart = () => {
     <>
       {/* https://cdnl.iconscout.com/lottie/premium/thumb/shopping-bag-6866084-5624247.gif test with this img also this is for expty cart image*/}
 
-      {itemCount === 0 ? (
+      {itemCount != 0 ? (
         <>
           <div className="pt-4">
             <div className="row p-2 ps-3">
               <h3>Cart</h3>
-              <ul>
-        {cartItems.map((item) => (
-          <li key={item._id}>{item.name}</li>
-        ))}
-      </ul>
+             
             </div>
             <div className="row text-center">
               <img
@@ -87,6 +83,8 @@ const Cart = () => {
             </div>
             <div className="">
               <RecommendedProducts />
+              <br />
+              <br />
               <br />
               <br />
             </div>
@@ -131,8 +129,18 @@ const Cart = () => {
         </>
       ) : (
         <div>
+           <ul>
+        {cartItems.map((item) => (
+          <li key={item._id}>{item.name}</li>
+        ))}
+      </ul>
           <h1 className="text-muted">Your cart is not empty</h1>
           <p>Add items to your cart to continue shopping.</p>
+          <RecommendedProducts />
+              <br />
+              <br />
+              <br />
+              <br />
         </div>
       )}
     </>
