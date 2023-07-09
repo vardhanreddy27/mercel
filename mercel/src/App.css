@@ -15,6 +15,10 @@
     color: black!important;
     background-color: rgb(243 243 242)!important;
 }
+.secd{
+  background-color: rgb(243 243 242)!important;
+  height: 100vh;
+}
 /* test */
 .css-rnmm7m-MuiPaper-root-MuiDialog-paper{
     height: 90%!important;

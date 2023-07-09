@@ -506,6 +506,12 @@ body {
   top: 0;
   opacity: 0;
 }
+.backgroundcolor{
+  background-color:  rgb(130, 9, 155);
+  color: white;
+}.stickybtn{position: sticky;
+  bottom: 80px;
+  z-index: 10000;}
 .broken-heart--left {
   transform: rotate(0deg);
   transform-origin: 60% 200%;

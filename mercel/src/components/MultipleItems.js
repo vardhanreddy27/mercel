@@ -49,7 +49,7 @@ const MultipleItems = () => {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-3">
       <h3>Recommended products</h3>
       <Slider {...settings}>
       {recommendedProducts.map((product, index) => (

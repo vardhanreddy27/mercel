@@ -76,19 +76,22 @@ const Cart = () => {
       {cartItems.length > 0 ? (
         <>
           {/* Cart is not empty */}
-          <div className="pt-4">
+          <div className="pt-4 secd">
             <div className=" p-2 ps-3">
               <h3>Cart</h3>
             </div>
-            <div className=" text-center ">
+            <div className="container">
               {/* Cart items rendering */}
               {cartItems.map((item) => (
-                <div key={item._id}>
-                  <p>{item.name}</p>
-                </div>
+                  <p className='ps-1'>{item.name}</p>
               ))}
             </div>
               <RecommendedProducts />
+             <div className="row p-3 stickybtn">
+             <button type="button" className="btn backgroundcolor  btn-lg btn-block">Checkout</button>
+
+             </div>
+
               <br />
               <br />
 
@@ -103,13 +106,11 @@ const Cart = () => {
             <br />
             <br />
             <br />
-            <br />
-          </div>
+         </div>
         </>
       )}
-
-      {/* Navigation */}
-      <nav className="fixed-bottom navbar-light bg-light">
+  {/* Navigation */}
+  <nav className="fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
           <div className="col-3">
             <Link to="/Dashboard" onClick={clickHome}>
@@ -142,7 +143,8 @@ const Cart = () => {
             </Link>
           </div>
         </div>
-      </nav>
+      </nav>   
+  
     </>
   );
 };
