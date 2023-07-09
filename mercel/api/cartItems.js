@@ -21,6 +21,7 @@ const viewCart = async (req, res) => {
 
     // Find all products in the Cart for the given userEmail
     const CartItems = await collection.find({ userEmail }).toArray();
+    res.setHeader('Cache-Control', 'no-store');
 
     return res.status(200).json(CartItems);
   } catch (error) {
