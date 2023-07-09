@@ -5,7 +5,7 @@ const addToCart = async (req, res) => {
     "mongodb+srv://vishnu:rrr123@cluster0.fczkwxs.mongodb.net/vinkle?retryWrites=true&w=majority";
   const DATABASE_NAME = "vinkle";
   const COLLECTION_NAME = "Cart";
-
+  await collection.dropIndex('product_Id');
   const { product, userEmail } = req.body;
 
   // Connect to the MongoDB database
