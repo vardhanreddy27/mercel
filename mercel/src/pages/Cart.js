@@ -107,7 +107,7 @@ const Cart = () => {
             <div className="container checkoutcon">
               {/* Cart items rendering */}
               {cartItems.map((item) => (
-                  <div className='row pt-4'>
+                  <div className='row pt-4 pb-4'>
                     <div className="col-4 image-container">
   <img src={item.picture} alt={item.name} />
 </div>                    <div className="col-8 d-flex justify-content-center align-items-center">
