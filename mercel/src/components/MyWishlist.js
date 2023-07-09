@@ -11,25 +11,24 @@ import 'react-toastify/dist/ReactToastify.css';
 function MyWishlist() {
   const handleAddToCart = async (product) => {
     try {
+      // Remove the product from the wishlist
+      await handleToggleWishlist(product);
+
       const payload = {
         product,
         userEmail: user.email,
       };
-  
-      // Make a POST request to add the product to the cart
-      const addToCartResponse = await axios.post(
+
+      // Make a POST request to the serverless function
+      const response = await axios.post(
         'https://mercel.vercel.app/api/addToCart',
         payload
       );
-  
-      // Remove the product from the wishlist
-      await handleToggleWishlist(product);
-  
-      // Handle the responses if needed
-  
-      // Example: Display success messages
+
+      // Handle the response if needed
+
+      // Example: Display a success message
       toast.success('Product added to cart!');
-      toast.success('Product removed from wishlist!');
     } catch (error) {
       console.error('Failed to add product to cart:', error);
       toast.error('Failed to add product to cart');
