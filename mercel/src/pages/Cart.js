@@ -24,7 +24,10 @@ const Cart = () => {
     const fetchCartItems = async () => {
       try {
         const response = await fetch('https://mercel.vercel.app/api/cartItems', {
-          method: 'POST',
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify({ userEmail: user.email }),
         });
 
@@ -41,7 +44,7 @@ const Cart = () => {
     };
 
     fetchCartItems();
-  }, []);
+  }, [user.email]);
   const clickProfile = () => {
     setIsHome(false);
     setIsProfile(true);
@@ -71,7 +74,7 @@ const Cart = () => {
               <h3>Cart</h3>
               <ul>
         {cartItems.map((item) => (
-          <li key={item._id}>{item.productName}</li>
+          <li key={item._id}>{item.name}</li>
         ))}
       </ul>
             </div>
