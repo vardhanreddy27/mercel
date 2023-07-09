@@ -66,9 +66,11 @@ const MultipleItems = () => {
           </p>
           <p className="original-price d-inline text-secondary">₹{product.price}</p>
           <p className='d-inline'> ₹{product.price}</p>
+          <br />  <br />
         </div>
       ))}
              </Slider>
+           
     </div>
   );
 };

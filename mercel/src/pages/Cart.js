@@ -4,6 +4,7 @@ import { BiStore } from "react-icons/bi";
 import { useSelector } from 'react-redux';
 import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
+import { GrFormClose} from "react-icons/gr";
 import { Link } from "react-router-dom";
 import RecommendedProducts from "../components/RecommendedProducts";
 
@@ -80,15 +81,25 @@ const Cart = () => {
             <div className=" p-2 ps-3">
               <h3>Cart</h3>
             </div>
-            <div className="container">
+            <div className="container checkoutcon">
               {/* Cart items rendering */}
               {cartItems.map((item) => (
-                  <p className='ps-1'>{item.name}</p>
+                  <div className='row pt-4'>
+                    <div className="col-4 image-container">
+  <img src={item.picture} alt={item.name} />
+</div>                    <div className="col-8 d-flex justify-content-center align-items-center">
+                <div className="col-8">
+                    <p className='ps-1 d-inline'>{item.name}</p></div>
+                    <div className="col-2 d-inline">1</div>
+                    <div className="col-2 d-inline"><GrFormClose color="red" /></div>
+                    </div>
+                  </div>
               ))}
             </div>
               <RecommendedProducts />
+              
              <div className="row p-3 stickybtn">
-             <button type="button" className="btn backgroundcolor  btn-lg btn-block">Checkout</button>
+             <button type="button" className="btn backgroundcolor checkout  btn-lg btn-block">Checkout</button>
 
              </div>
 

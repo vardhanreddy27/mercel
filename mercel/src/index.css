@@ -506,12 +506,37 @@ body {
   top: 0;
   opacity: 0;
 }
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Adjust the height as needed */
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.checkoutcon{
+  background-color: white;
+    width: 90%;
+    border-radius: 1rem;
+}
+.checkout{
+  width: 90%;
+  margin: 18px;
+}
+.slick-list{
+  border-radius: 1rem;
+}
 .backgroundcolor{
   background-color:  rgb(130, 9, 155);
   color: white;
 }.stickybtn{position: sticky;
   bottom: 80px;
-  z-index: 10000;}
+  z-index: 10000;
+  display: contents;}
 .broken-heart--left {
   transform: rotate(0deg);
   transform-origin: 60% 200%;
