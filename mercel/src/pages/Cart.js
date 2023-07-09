@@ -122,7 +122,7 @@ const Cart = () => {
               <RecommendedProducts />
               
              <div className="row p-3 stickybtn">
-             <button type="button" className="btn backgroundcolor checkout  btn-lg btn-block">Checkout</button>
+             <button type="button" className="btn backgroundcolor fixed-bottom checkout  btn-lg btn-block">Checkout</button>
 
              </div>
 
