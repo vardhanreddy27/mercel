@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { HiOutlineHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
+import { useSelector } from 'react-redux';
 import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import RecommendedProducts from "../components/RecommendedProducts";
 const Cart = () => {
+  const [cartItems, setCartItems] = useState([]);
   const [isHome, setIsHome] = useState(false);
   const itemCount = 0;
+  const user = useSelector((state) => state.user.user);
   const [isShops, setIsShops] = useState(false);
   const [isProfile, setIsProfile] = useState(false);
   const [isCart, setIsCart] = useState(true);
@@ -18,6 +20,28 @@ const Cart = () => {
     setIsShops(false);
     setIsCart(false);
   };
+  useEffect(() => {
+    const fetchCartItems = async () => {
+      try {
+        const response = await fetch('https://mercel.vercel.app/api/cartItems', {
+          method: 'POST',
+          body: JSON.stringify({ userEmail: user.email }),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          setCartItems(data);
+        } else {
+          // Handle error case
+          console.error('Error fetching cart items:', response.status);
+        }
+      } catch (error) {
+        console.error('Error fetching cart items:', error);
+      }
+    };
+
+    fetchCartItems();
+  }, []);
   const clickProfile = () => {
     setIsHome(false);
     setIsProfile(true);
@@ -45,6 +69,11 @@ const Cart = () => {
           <div className="pt-4">
             <div className="row p-2 ps-3">
               <h3>Cart</h3>
+              <ul>
+        {cartItems.map((item) => (
+          <li key={item._id}>{item.productName}</li>
+        ))}
+      </ul>
             </div>
             <div className="row text-center">
               <img
