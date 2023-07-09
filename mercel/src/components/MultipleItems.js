@@ -8,7 +8,9 @@ const MultipleItems = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    prevArrow: <></>, // Empty JSX element to remove the left navigation button
+    nextArrow: <></>, 
   };
   const recommendedProducts = [
     {
