@@ -18,8 +18,8 @@ const addToCart = async (req, res) => {
     const db = client.db(DATABASE_NAME);
     const collection = db.collection(COLLECTION_NAME);
     // Insert the new product document with userEmail
-    await collection.insertOne({ ...product, userEmail });
-    return res.status(200).json({ message: "Product added to the cart" });
+    await collection.insertOne({ ...product, userEmail, productId: product.productId });
+    return res.status(200).json({ message: "Product added to the cart" });   
   } catch (error) {
     console.error("Failed to add product to wishlist:", error);
     return res.status(500).json({ message: "Failed to add product to cart" });
