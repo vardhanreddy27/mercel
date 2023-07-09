@@ -18,16 +18,8 @@ const addToCart = async (req, res) => {
     await client.connect();
     const db = client.db(DATABASE_NAME);
     const collection = db.collection(COLLECTION_NAME);
-
-    // Check if the product already exists in the wishlist
-    const existingProduct = await collection.findOne({ _id: product._id });
-    if (existingProduct) {
-      // Product already exists, return without any error message
-      return res.status(200).json({ message: "Product already exists in the cart" });
-    }
     // Insert the new product document with userEmail
     await collection.insertOne({ ...product, userEmail });
-    console.log(userEmail);
     return res.status(200).json({ message: "Product added to the cart" });
   } catch (error) {
     console.error("Failed to add product to wishlist:", error);
