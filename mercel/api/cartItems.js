@@ -6,7 +6,7 @@ const viewCart = async (req, res) => {
   const DATABASE_NAME = "vinkle";
   const COLLECTION_NAME = "Cart";
 
-  const { userEmail } = req.body;
+  const { userEmail } = req.query; 
 
   // Connect to the MongoDB database
   const client = new MongoClient(MONGODB_URI, {
