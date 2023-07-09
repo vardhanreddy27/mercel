@@ -20,7 +20,6 @@ const viewCart = async (req, res) => {
     const collection = db.collection(COLLECTION_NAME);
 
     // Find all products in the Cart for the given userEmail
-    console.log(userEmail);
     const CartItems = await collection.find({ userEmail }).toArray();
     res.setHeader('Cache-Control', 'no-store');
     return res.status(200).json(CartItems);
