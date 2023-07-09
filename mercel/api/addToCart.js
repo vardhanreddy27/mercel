@@ -25,9 +25,9 @@ const addToWishlist = async (req, res) => {
       // Product already exists, return without any error message
       return res.status(200).json({ message: "Product already exists in the cart" });
     }
-    console.log(userEmail);
     // Insert the new product document with userEmail
     await collection.insertOne({ ...product, userEmail });
+    console.log(userEmail);
     return res.status(200).json({ message: "Product added to the cart" });
   } catch (error) {
     console.error("Failed to add product to wishlist:", error);
