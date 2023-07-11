@@ -108,8 +108,8 @@ const Cart = () => {
               {/* Cart items rendering */}
               {cartItems.map((item) => (
                   <div className='row pt-4 pb-4'>
-                    <div className="col-4 image-container">
-  <img src={item.picture} alt={item.name} />
+                    <div className="col-4 cartimgcon">
+  <img src={item.picture} alt={item.name} className="cartimg"/>
 </div>                    <div className="col-8 d-flex justify-content-center align-items-center">
                 <div className="col-8">
                     <p className='ps-1 d-inline'>{item.name}</p></div>
