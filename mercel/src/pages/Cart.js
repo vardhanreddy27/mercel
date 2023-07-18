@@ -31,13 +31,15 @@ const Cart = () => {
         },
         body: JSON.stringify({
           productId,
-          userEmail: user.email,
+          userEmail: user.email, // Pass the user's email
         }),
       });
-
+  
       if (response.ok) {
         // Remove the item from the cart locally
-        setCartItems((prevItems) => prevItems.filter((item) => item.productId !== productId));
+        setCartItems((prevItems) =>
+          prevItems.filter((item) => item.productId !== productId)
+        );
         console.log('Product removed from cart');
       } else {
         console.error('Error removing product from cart:', response.status);
