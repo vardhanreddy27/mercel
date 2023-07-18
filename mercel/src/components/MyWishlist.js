@@ -32,7 +32,7 @@ console.log(response);
     } catch (error) {
       console.error('Failed to add product to cart:', error);
       toast.error('Failed to add product to cart');
-      toast.error('Failed to remove product from wishlist');
+      toast.error('Failed to add product from wishlist');
     }
   };
   const wishlistItems = useSelector((state) => state.wishlist);
@@ -52,7 +52,6 @@ console.log(response);
         const payload = {
           product,
           userEmail: user.email,
-          productId:product._id,
         };
   
         await axios.post('https://mercel.vercel.app/api/removeFromWishlist', payload);

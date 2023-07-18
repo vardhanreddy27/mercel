@@ -6,7 +6,7 @@ const DATABASE_NAME = "vinkle";
 const COLLECTION_NAME = "Cart";
 
 module.exports = async (req, res) => {
-  const { productId, userEmail } = req.body;
+  const { product, userEmail } = req.body;
 
   // Connect to the MongoDB database
   const client = new MongoClient(MONGODB_URI, {
@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
     const collection = db.collection(COLLECTION_NAME);
 
     // Find and remove the product from the cart using productId and userEmail
-    await collection.deleteOne({ _id: productId, userEmail: userEmail });
+    await collection.deleteOne({ _id: product.id, userEmail: userEmail });
 
     return res.status(200).json({ message: "Product removed from the cart" });
   } catch (error) {
