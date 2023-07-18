@@ -7,6 +7,7 @@ import { BsCart4 } from "react-icons/bs";
 import { GrFormClose} from "react-icons/gr";
 import { Link } from "react-router-dom";
 import RecommendedProducts from "../components/RecommendedProducts";
+import { ObjectId } from "mongodb"; // Import ObjectId from mongodb
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -31,7 +32,7 @@ const removeFromCart = async (productId) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        productId,
+        productId: ObjectId(productId), // Convert productId to ObjectId format
         userEmail: user.email, // Pass the user's email
       }),
     });
