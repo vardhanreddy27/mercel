@@ -7,7 +7,6 @@ import { BsCart4 } from "react-icons/bs";
 import { GrFormClose} from "react-icons/gr";
 import { Link } from "react-router-dom";
 import RecommendedProducts from "../components/RecommendedProducts";
-import { ObjectId } from "mongodb"; // Import ObjectId from mongodb
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -23,8 +22,7 @@ const Cart = () => {
     setIsShops(false);
     setIsCart(false);
   };
-  
-const removeFromCart = async (productId) => {
+  const removeFromCart = async (productId) => {
   try {
     const response = await fetch('https://mercel.vercel.app/api/removeFromCart', {
       method: 'POST',
@@ -32,7 +30,7 @@ const removeFromCart = async (productId) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        productId: ObjectId(productId), // Convert productId to ObjectId format
+        productId,
         userEmail: user.email, // Pass the user's email
       }),
     });
