@@ -22,32 +22,33 @@ const Cart = () => {
     setIsShops(false);
     setIsCart(false);
   };
-  const removeFromCart = async (productId) => {
-    try {
-      const response = await fetch('https://mercel.vercel.app/api/removeFromCart', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          productId,
-          userEmail: user.email, // Pass the user's email
-        }),
-      });
   
-      if (response.ok) {
-        // Remove the item from the cart locally
-        setCartItems((prevItems) =>
-          prevItems.filter((item) => item.productId !== productId)
-        );
-        console.log('Product removed from cart');
-      } else {
-        console.error('Error removing product from cart:', response.status);
-      }
-    } catch (error) {
-      console.error('Error removing product from cart:', error);
+const removeFromCart = async (productId) => {
+  try {
+    const response = await fetch('https://mercel.vercel.app/api/removeFromCart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        productId,
+        userEmail: user.email, // Pass the user's email
+      }),
+    });
+
+    if (response.ok) {
+      // Remove the item from the cart locally
+      setCartItems((prevItems) =>
+        prevItems.filter((item) => item.productId !== productId)
+      );
+      console.log('Product removed from cart');
+    } else {
+      console.error('Error removing product from cart:', response.status);
     }
-  };
+  } catch (error) {
+    console.error('Error removing product from cart:', error);
+  }
+};
   useEffect(() => {
     const fetchCartItems = async () => {
       try {

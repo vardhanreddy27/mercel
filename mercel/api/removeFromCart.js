@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 
 const MONGODB_URI =
   "mongodb+srv://vishnu:rrr123@cluster0.fczkwxs.mongodb.net/vinkle?retryWrites=true&w=majority";
@@ -6,7 +6,12 @@ const DATABASE_NAME = "vinkle";
 const COLLECTION_NAME = "Cart";
 
 module.exports = async (req, res) => {
-  const { product, userEmail } = req.body;
+  const { productId, userEmail } = req.body;
+
+  // Validate the ObjectId format for productId
+  if (!ObjectId.isValid(productId)) {
+    return res.status(400).json({ message: "Invalid productId format" });
+  }
 
   // Connect to the MongoDB database
   const client = new MongoClient(MONGODB_URI, {
@@ -20,7 +25,7 @@ module.exports = async (req, res) => {
     const collection = db.collection(COLLECTION_NAME);
 
     // Find and remove the product from the cart using productId and userEmail
-    await collection.deleteOne({ _id: product.id, userEmail: userEmail });
+    await collection.deleteOne({ _id: ObjectId(productId), userEmail });
 
     return res.status(200).json({ message: "Product removed from the cart" });
   } catch (error) {
