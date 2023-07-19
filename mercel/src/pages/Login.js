@@ -101,13 +101,26 @@ function Login() {
       <div className="card logincard logincard1">
         <div className="card-body bodylogin">
           <div className="row p-4">
-            <div className="col">
-              <h5>Login or Signup</h5>
+            <div className="col ">
+              <h1 className="font-weight-bold">Login or Signup</h1>
               <p className="text-secondary">connect with our community</p>
               <br />
+              <div className="input-group mb-3 ">
+        <div className="input-group-prepend">
+          <div className="input-group-text shadow-sm form-control loginnumbericonborder"><div className="font-weight-bold">+91</div></div>
+        </div>
+        <input type="tel"           id="mobile number"
+ className="form-control loginnumberborder  shadow-sm" placeholder="Enter Mobile Number" />
+      </div>
+
+      <button
+                type="button"
+                className="btn shadow-sm mb-3 googlebtn background border btn-lg btn-block"
+              >
+Continue              </button>
               <button
                 type="button"
-                className="btn social mb-3 googlebtn border btn-lg btn-block"
+                className="btn shadow-sm social mb-3 googlebtn border btn-lg btn-block"
                 onClick={handleGoogleLogin}
               >
                 <FcGoogle className="me-3" />

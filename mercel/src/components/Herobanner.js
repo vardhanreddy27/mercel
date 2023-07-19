@@ -21,7 +21,7 @@ function Herobanner() {
               alt="Card cap"
             />
             <div className="card-body">
-              <p className="font-weight-bold">Extra 10% off</p>
+              <p className="font-weight-bold1">Extra 10% off</p>
             </div>
           </div>
           <div className="card">
@@ -32,7 +32,7 @@ function Herobanner() {
               alt="Card cap"
             />
             <div className="card-body">
-              <p className="font-weight-bold">upto 60% off</p>
+              <p className="font-weight-bold1">upto 60% off</p>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ function Herobanner() {
               alt="Card cap"
             />
             <div className="card-body">
-              <p className="font-weight-bold">upto 60% off</p>
+              <p className="font-weight-bold1">upto 60% off</p>
             </div>
           </div>
           <div className="card">
@@ -57,7 +57,7 @@ function Herobanner() {
             />
             <div className="card-body">
 
-              <p className="font-weight-bold">upto 60% off</p>
+              <p className="font-weight-bold1">upto 60% off</p>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ function Herobanner() {
             />
             <div className="card-body">
               <p className="card-text">Electronics & More</p>
-              <p className="font-weight-bold">upto 60% off</p>
+              <p className="font-weight-bold1">upto 60% off</p>
             </div>
           </div>
           <div className="card app shadow">
@@ -126,7 +126,7 @@ function Herobanner() {
             />
             <div className="card-body">
               <p className="card-text">Adults & Kids Cycles</p>
-              <p className="font-weight-bold">upto 20% off</p>
+              <p className="font-weight-bold1">upto 20% off</p>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@ function Herobanner() {
             />
             <div className="card-body">
               <p className="card-text">Fashion & Clothing</p>
-              <p className="font-weight-bold">Clearance Sale</p>
+              <p className="font-weight-bold1">Clearance Sale</p>
             </div>
           </div>
           <div className="card app shadow">
@@ -152,7 +152,7 @@ function Herobanner() {
             />
             <div className="card-body">
               <p className="card-text ps-1 pe-1">Backpacks & Bags</p>
-              <p className="font-weight-bold">upto 40% off</p>
+              <p className="font-weight-bold1">upto 40% off</p>
             </div>
           </div>
         </div>

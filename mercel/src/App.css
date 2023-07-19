@@ -19,6 +19,9 @@
   background-color: rgb(243 243 242)!important;
   height: 100vh;
 }
+#root{
+  height: 100vh!important;
+}
 /* test */
 .css-rnmm7m-MuiPaper-root-MuiDialog-paper{
     height: 90%!important;
@@ -171,10 +174,14 @@ width: 100%;}
         font-weight: 300;
         margin: 0px!important;
     }
-    .font-weight-bold{
-font-weight: 600;
-margin-bottom: 6px;
-    }
+    .font-weight-bold1{
+      font-weight: 600;
+      margin-bottom: 6px;
+          }
+          .font-weight-bold{
+            font-weight: 600;
+                }
+                     
     .card-body {
         flex: 1 1 auto;
         padding: 10px!important;
@@ -197,7 +204,15 @@ margin-bottom: 6px;
 
           }
 
-     
+          .loginnumberborder{
+            border-bottom-left-radius: 0px!important;
+            border-top-left-radius: 0px!important;
+           }
+           .loginnumbericonborder{
+            border-bottom-right-radius: 0px!important;
+            border-top-right-radius: 0px!important;
+           }
+                 
 /* load screen */
 .logincard{
   --bs-card-border-radius: 0rem!important;
