@@ -19,8 +19,8 @@
   background-color: rgb(243 243 242)!important;
   height: 100vh;
 }
-#root{
-  height: 100vh!important;
+.height{
+  height: 100vh;
 }
 /* test */
 .css-rnmm7m-MuiPaper-root-MuiDialog-paper{

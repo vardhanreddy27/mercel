@@ -118,15 +118,16 @@ function Login() {
                 className="btn shadow-sm mb-3 googlebtn background border btn-lg btn-block"
               >
 Continue              </button>
+<hr className="dashed-line" />
+
               <button
                 type="button"
-                className="btn shadow-sm social mb-3 googlebtn border btn-lg btn-block"
+                className="btn shadow-sm social mt-3 googlebtn border btn-lg btn-block"
                 onClick={handleGoogleLogin}
               >
                 <FcGoogle className="me-3" />
                 Login with Google
               </button>
-              <hr className="dashed-line" />
             </div>
           </div>
         </div>
