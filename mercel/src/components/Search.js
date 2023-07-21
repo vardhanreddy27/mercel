@@ -81,7 +81,7 @@ function Search() {
   };
 
   const inputProps = {
-    placeholder: "Search...",
+    placeholder: "Search in Vinkal",
     value,
     onChange,
     className: "custom-input",

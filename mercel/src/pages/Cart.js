@@ -4,7 +4,7 @@ import { BiStore } from "react-icons/bi";
 import { useSelector } from 'react-redux';
 import { CgProfile } from "react-icons/cg";
 import { BsCart4 } from "react-icons/bs";
-import { GrFormClose} from "react-icons/gr";
+import { GrFormClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import RecommendedProducts from "../components/RecommendedProducts";
 
@@ -50,6 +50,9 @@ const Cart = () => {
 };
   useEffect(() => {
     const fetchCartItems = async () => {
+      if (!user || !user.email) {
+        return; // Exit the function if the user is not logged in or email is not present
+      }
       try {
         const response = await fetch(`https://mercel.vercel.app/api/cartItems?userEmail=${user.email}`, {
           method: 'GET',
@@ -73,8 +76,11 @@ const Cart = () => {
       }
     };
 
-    fetchCartItems();
-  }, [user.email]);
+    if (user && user.email) {
+      fetchCartItems();
+    }
+  }, [user]);
+
   
   const clickProfile = () => {
     setIsHome(false);
@@ -99,6 +105,8 @@ const Cart = () => {
 
   return (
     <>
+          {user ? ( // Check if the user is logged in
+<>
       {cartItems.length > 0 ? (
         <>
           {/* Cart is not empty */}
@@ -145,11 +153,22 @@ const Cart = () => {
          </div>
         </>
       )}
+        </>
+          ) : (
+            <>
+              <div className='cenb'>
+              <Link to="/Login" onClick={clickCart}>
+
+              <button type="button" className="btn backgroundcolor btn-lg btn-block">Login or Signup</button>
+</Link>
+              </div>
+            </>
+          )}
   {/* Navigation */}
   <nav className="fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
           <div className="col-3">
-            <Link to="/Dashboard" onClick={clickHome}>
+            <Link to="/" onClick={clickHome}>
               <HiOutlineHome size={30} className={isHome ? "active" : ""} />
               <p className={isHome ? "menufont active" : "menufont"}>
                 home

@@ -5,17 +5,22 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useSelector } from "react-redux";
 
 function EditProfile() {
-  const [selectedGender, setSelectedGender] = useState("Select Gender");
   const user = useSelector((state) => state.user.user);
+  const [selectedGender, setSelectedGender] = useState("Select Gender");
+  const [selectedDate, setSelectedDate] = useState(null);
 
   const handleGenderSelect = (gender) => {
     setSelectedGender(gender);
   };
-  const [selectedDate, setSelectedDate] = useState(null);
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+
+  if (!user) {
+    return <div className="text-center p-4">Please log in to edit your profile.</div>;
+  }
+
   return (
     <div className="m-3">
       <div className="d-flex justify-content-center align-items-center">
