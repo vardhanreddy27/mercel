@@ -24,6 +24,11 @@
   justify-content: center!important;
   align-content: center!important;
 }
+.loginimg{    display: flex;
+  height: inherit;
+  width: 100%;
+}
+
 .height{
   height: 100vh;
 }
@@ -225,8 +230,7 @@ width: 100%;}
   
 }
 .logincard1{
-  background-color: rgb(130, 9, 155)!important;
-
+  background-image: linear-gradient(to right, #4d89dd, #c149e6)!important;
 }
 .bodylogin{
   background-color: white;

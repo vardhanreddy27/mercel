@@ -96,7 +96,7 @@ function Login() {
   return (
     <>
       <div className="login-image-container">
-        <h1 className="loginfont">Vinkle</h1>
+        <img src="./login.png" className="loginimg" alt="login"/>
       </div>
       <div className="card logincard logincard1">
         <div className="card-body bodylogin">
