@@ -29,9 +29,7 @@
   width: 100%;
 }
 
-.height{
-  height: 100vh;
-}
+
 /* test */
 .css-rnmm7m-MuiPaper-root-MuiDialog-paper{
     height: 90%!important;
@@ -226,7 +224,6 @@ width: 100%;}
 /* load screen */
 .logincard{
   --bs-card-border-radius: 0rem!important;
-  height: 17rem!important;
   
 }
 .logincard1{
