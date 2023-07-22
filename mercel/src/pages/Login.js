@@ -84,10 +84,10 @@ function Login() {
       })
       .then((data) => {
         // Handle the response data accordingly
-        navigate("/Dashboard");
+        navigate("/");
       })
       .catch((error) => {
-        navigate("/Dashboard");
+        navigate("/Login");
 
         console.error("Failed to save :", error);
         // Handle the error condition
