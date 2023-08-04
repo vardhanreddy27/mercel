@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Trackorders from "./pages/Trackorders";
+import NonMobile from "./components/NonMobile";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Shops from "./pages/Shops";
@@ -12,11 +13,15 @@ import ProductsList from "./pages/ProductsList";
 import Wishlist from "./pages/Wishlist";
 
 function App() {
+  const isMobile = window.innerWidth < 800;
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/Login" element={<Home Isactive="active" />}></Route>
+        {isMobile ? (
+        <>
+        <Route path="/Login" element={<Home Isactive="active" />}></Route>
           <Route path="/" element={<Dashboard />}></Route>
           <Route path="/Wishlist" element={<Wishlist />}></Route>
           <Route path="/Products" element={<Products />}></Route>
@@ -30,7 +35,11 @@ function App() {
             path="/profile"
             element={<Profile Isactive="active" />}
           ></Route>
-          <Route path="/cart" element={<Cart Isactive="active" />}></Route>
+          <Route path="/cart" element={<Cart Isactive="active" />}></Route></>
+      ) : (
+        <Route path="/*" element={<NonMobile />} />
+      )}
+          
         </Routes>
       </BrowserRouter>
     </>
