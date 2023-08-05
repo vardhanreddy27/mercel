@@ -167,22 +167,23 @@ const Cart = () => {
   {/* Navigation */}
   <nav className="fixed-bottom navbar-light bg-light">
         <div className="row text-center p-2 pt-3">
-          <div className="col-3">
-            <Link to="/" onClick={clickHome}>
-              <HiOutlineHome size={30} className={isHome ? "active" : ""} />
-              <p className={isHome ? "menufont active" : "menufont"}>
-                home
-              </p>
-            </Link>
-          </div>
-          <div className="col-3">
-            <Link to="/shops" onClick={clickShops}>
+         
+        <div className="col-3">
+            <Link to="/" onClick={clickShops}>
               <BiStore size={30} className={isShops ? "active" : ""} />
               <p className={isShops ? "menufont active" : "menufont"}>
                 shops
               </p>
             </Link>
+          </div> <div className="col-3">
+            <Link to="/Dashboard" onClick={clickHome}>
+              <HiOutlineHome size={30} className={isHome ? "active" : ""} />
+              <p className={isHome ? "menufont active" : "menufont"}>
+                Products
+              </p>
+            </Link>
           </div>
+      
           <div className="col-3">
             <Link to="/profile" onClick={clickProfile}>
               <CgProfile size={30} className={isProfile ? "active" : ""} />
