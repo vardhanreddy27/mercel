@@ -98,7 +98,7 @@ function Shops() {
             Fashion
           </button>
           <button
-            className={`btn herobannerbg shadow-sm ${
+            className={`btn herobannerbg shadow-sm mback ${
               selectedCategory === "Electronics" ? "selected" : ""
             }`}
             onClick={() => handleSort("Electronics")}
@@ -106,7 +106,7 @@ function Shops() {
             Electronics
           </button>
           <button
-            className={`btn herobannerbg marginsort shadow-sm remove-border ${
+            className={`btn herobannerbg shadow-sm  ${
               selectedCategory === "All" ? "" : ""
             }`}
             onClick={() => handleSort("All")}
