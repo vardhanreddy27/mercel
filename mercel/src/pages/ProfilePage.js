@@ -145,7 +145,7 @@ const ProfilePage = () => {
               </a>
             </li>
             <li className="  list-group-item p-3">
-              <a href="/home" className="profile-link">
+              <a href="/cart" className="profile-link">
                 <div className="col-1 myflex">
                   <BsCart3 />
                 </div>

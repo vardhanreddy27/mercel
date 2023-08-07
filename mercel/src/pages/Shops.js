@@ -81,21 +81,14 @@ function Shops() {
       <div className="container">
         <div className="d-flex justify-content-center">
           <button
-            className={`btn herobannerbg marginsort shadow-sm remove-border ${
-              selectedCategory === "All"
+            className={`btn herobannerbg marginsort shadow-sm ${
+              selectedCategory === "Sports" ? "selected" : ""
             }`}
-            onClick={() => handleSort("All")}
+            onClick={() =>  handleSort("Sports")}
           >
-            Sort
+            Sports
           </button>
-          <button
-            className={`btn herobannerbg marginsort shadow-sm remove-border ${
-              selectedCategory === "All" ? "" : ""
-            }`}
-            onClick={() => handleSort("All")}
-          >
-            Nearest
-          </button>
+       
           <button
             className={`btn herobannerbg marginsort shadow-sm ${
               selectedCategory === "Fashion" ? "selected" : ""
@@ -112,6 +105,14 @@ function Shops() {
           >
             Electronics
           </button>
+          <button
+            className={`btn herobannerbg marginsort shadow-sm remove-border ${
+              selectedCategory === "All" ? "" : ""
+            }`}
+            onClick={() => handleSort("All")}
+          >
+            More
+          </button> 
         </div>
       </div>
 
