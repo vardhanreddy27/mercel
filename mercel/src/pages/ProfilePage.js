@@ -114,7 +114,7 @@ const ProfilePage = () => {
                 <div className="col-1 myflex">
                   <CgProfile />
                 </div>
-                <div className="col-10" onClick={toggleDialog}>
+                <div className="col-10 font-weight-bold" onClick={toggleDialog}>
                   Edit Profile
                 </div>
                 <div className="col-1">
@@ -127,7 +127,7 @@ const ProfilePage = () => {
                 <div className="col-1 myflex">
                   <BsFillPinMapFill />
                 </div>
-                <div className="col-10">Track Orders</div>
+                <div className="col-10 font-weight-bold">Track Orders</div>
                 <div className="col-1">
                   <MdKeyboardArrowRight />
                 </div>
@@ -138,7 +138,7 @@ const ProfilePage = () => {
                 <div className="col-1 myflex">
                   <RiUserLocationLine />
                 </div>
-                <div className="col-10">Manage Address</div>
+                <div className="col-10 font-weight-bold">Manage Address</div>
                 <div className="col-1">
                   <MdKeyboardArrowRight />
                 </div>
@@ -149,7 +149,7 @@ const ProfilePage = () => {
                 <div className="col-1 myflex">
                   <BsCart3 />
                 </div>
-                <div className="col-10">Cart</div>
+                <div className="col-10 font-weight-bold">Cart</div>
                 <div className="col-1">
                   <MdKeyboardArrowRight />
                 </div>
@@ -168,7 +168,7 @@ const ProfilePage = () => {
                 <div className="col-1 myflex">
                   <RiFileEditLine />
                 </div>
-                <div className="col-10"> Terms and Conditions</div>
+                <div className="col-10 font-weight-bold"> Terms and Conditions</div>
                 <div className="col-1">
                   <MdKeyboardArrowRight />
                 </div>
@@ -179,7 +179,7 @@ const ProfilePage = () => {
                 <div className="col-1 myflex">
                   <FaQuestion />
                 </div>
-                <div className="col-10"> FAQs</div>
+                <div className="col-10 font-weight-bold"> FAQs</div>
                 <div className="col-1">
                   <MdKeyboardArrowRight />
                 </div>
@@ -190,7 +190,7 @@ const ProfilePage = () => {
                 <div className="col-1 myflex">
                   <TbTruckReturn />
                 </div>
-                <div className="col-10"> Returns & Cancellations</div>
+                <div className="col-10 font-weight-bold"> Returns & Cancellations</div>
                 <div className="col-1">
                   <MdKeyboardArrowRight />
                 </div>
@@ -204,7 +204,7 @@ const ProfilePage = () => {
               <div className="col-1 myflex">
                 <TbLogout />
               </div>
-              <div className="col-10"> Logout</div>
+              <div className="col-10 font-weight-bold"> Logout</div>
               <div className="col-1">
                 <MdKeyboardArrowRight />
               </div>
@@ -214,7 +214,7 @@ const ProfilePage = () => {
             <div className="col-1 myflex">
               <TbLogin />
             </div>
-            <div className="col-10"> Login</div>
+            <div className="col-10 font-weight-bold"> Login</div>
             <a href="/Login" className="profile-link">
  <div className="col-1">
               <MdKeyboardArrowRight />

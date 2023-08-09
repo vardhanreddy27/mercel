@@ -4,7 +4,6 @@ import { BiStore } from "react-icons/bi";
 import { useSelector } from 'react-redux';
 import { CgProfile } from "react-icons/cg";
 import Search from "../components/Search";
-
 import { BsCart4 } from "react-icons/bs";
 import { GrFormClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
