@@ -4,8 +4,12 @@
 }
 .logo-image{
   height: 10%;
+}.loginimg2{
+  height: 90%;
 }
-
+.contents{
+  display: contents;
+}
 .loginfont{
   font-family: 'Cherry Bomb One', cursive;
   font-size: xxx-large;}.loginfont1{

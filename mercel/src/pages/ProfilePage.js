@@ -13,7 +13,7 @@ import {
   BsCart3,
 } from "react-icons/bs";
 import { IoChevronBackOutline } from "react-icons/io5";
-import { TbTruckReturn, TbLogout } from "react-icons/tb";
+import { TbTruckReturn, TbLogout,TbLogin } from "react-icons/tb";
 import { RiFileEditLine } from "react-icons/ri";
 import { MdLocalOffer, MdKeyboardArrowRight } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
@@ -164,7 +164,7 @@ const ProfilePage = () => {
         <div className="col-md-6 nomargin offset-md-3">
           <ul className="list-group">
             <li className="  list-group-item p-3">
-              <a href="/home" className="profile-link">
+              <a href="/" className="profile-link">
                 <div className="col-1 myflex">
                   <RiFileEditLine />
                 </div>
@@ -175,7 +175,7 @@ const ProfilePage = () => {
               </a>
             </li>
             <li className="  list-group-item p-3">
-              <a href="/home" className="profile-link">
+              <a href="/" className="profile-link">
                 <div className="col-1 myflex">
                   <FaQuestion />
                 </div>
@@ -186,7 +186,7 @@ const ProfilePage = () => {
               </a>
             </li>
             <li className="  list-group-item p-3">
-              <a href="/home" className="profile-link">
+              <a href="/" className="profile-link">
                 <div className="col-1 myflex">
                   <TbTruckReturn />
                 </div>
@@ -196,6 +196,7 @@ const ProfilePage = () => {
                 </div>
               </a>
             </li>
+            {user?
             <li
               className="profile-link  list-group-item p-3"
               onClick={handleLogout}
@@ -207,7 +208,22 @@ const ProfilePage = () => {
               <div className="col-1">
                 <MdKeyboardArrowRight />
               </div>
-            </li>
+            </li> :
+            <li
+            className="profile-link  list-group-item p-3">
+            <div className="col-1 myflex">
+              <TbLogin />
+            </div>
+            <div className="col-10"> Login</div>
+            <a href="/Login" className="profile-link">
+ <div className="col-1">
+              <MdKeyboardArrowRight />
+            </div>
+            </a>
+
+          </li> 
+            
+            }
             <br />
             <br />
             <br />
