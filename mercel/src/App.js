@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Trackorders from "./pages/Trackorders";
 import NonMobile from "./components/NonMobile";
+import Faq from "./pages/Faq";
 import Profile from "./pages/Profile";
 import Dashboard from "./pages/Dashboard";
 import Shops from "./pages/Shops";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/Login" element={<Home Isactive="active" />}></Route>
           <Route path="/" element={<Shops Isactive="active" />}></Route>
           <Route path="/Wishlist" element={<Wishlist />}></Route>
+          <Route path="/Faq" element={<Faq />}></Route>
           <Route path="/Products" element={<Products />}></Route>
           <Route path="/ProductsList" element={<ProductsList />} />
           <Route path="/Dashboard" element={<Dashboard />} ></Route>

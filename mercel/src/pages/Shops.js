@@ -6,7 +6,7 @@ import { BsCart4 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import SearchShop from "../components/SearchShop";
 import { Offer } from "@styled-icons/boxicons-solid/Offer";
-import { Grid, Button, CircularProgress, Skeleton } from "@mui/material";
+import { Grid, Skeleton } from "@mui/material";
 
 function Shops() {
   const [shops, setShops] = useState([]);

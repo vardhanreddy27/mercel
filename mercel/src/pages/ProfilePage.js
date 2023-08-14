@@ -175,7 +175,7 @@ const ProfilePage = () => {
               </a>
             </li>
             <li className="  list-group-item p-3">
-              <a href="/" className="profile-link">
+              <a href="/Faqs" className="profile-link">
                 <div className="col-1 myflex">
                   <FaQuestion />
                 </div>

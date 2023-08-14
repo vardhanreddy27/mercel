@@ -7,6 +7,14 @@
 }.loginimg2{
   height: 90%;
 }
+.accordion-button:focus,
+.accordion-button:active {
+  outline: none!important; /* Remove outline */
+  box-shadow: none!important;  /* Remove box shadow if present */
+  /* Add any other styling you want for the focus/active state */
+}
+.accordion-button:focus {outline: none!important;  /* Remove outline */
+  box-shadow: none!important; }
 .contents{
   display: contents;
 }
