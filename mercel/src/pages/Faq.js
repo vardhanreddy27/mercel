@@ -1,6 +1,6 @@
 import React from 'react'
 import Faqs from "../components/Faqs";
-import Search from "../components/Search";
+import Back from "../components/Back";
 import { HiOutlineHome } from "react-icons/hi";
 import { BiStore } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
@@ -38,7 +38,7 @@ function Faq() {
   };
   return (
     <>
-          <Search />
+    <Back />
       <Faqs />
       <nav className=" fixed-bottom navbar-light bg-light">
         <div className="row nomargin text-center p-2 pt-3">

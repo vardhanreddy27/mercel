@@ -6,7 +6,7 @@ function Faqs() {
     <div className="row accordionstyle">
         
     <div className="accordion accordion-flush" id="accordionFlushExample">
-    <h2 className="text-center pt-5 mt-5">Frequently asked questions</h2>
+    <h2 className="text-center">Frequently asked questions</h2>
 <div className="accordion-item mt-3">
   <h2 className="accordion-header" id="flush-headingOne">
     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
