@@ -12,6 +12,8 @@ import Cart from "./pages/Cart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductsList from "./pages/ProductsList";
 import Wishlist from "./pages/Wishlist";
+import Return from "./pages/Return";
+import Terms from "./pages/Terms";
 
 function App() {
   const isMobile = window.innerWidth < 800;
@@ -26,6 +28,8 @@ function App() {
           <Route path="/" element={<Shops Isactive="active" />}></Route>
           <Route path="/Wishlist" element={<Wishlist />}></Route>
           <Route path="/Faq" element={<Faq />}></Route>
+          <Route path="/Terms" element={<Terms />}></Route>
+          <Route path="/Return" element={<Return />}></Route>
           <Route path="/Products" element={<Products />}></Route>
           <Route path="/ProductsList" element={<ProductsList />} />
           <Route path="/Dashboard" element={<Dashboard />} ></Route>

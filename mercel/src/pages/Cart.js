@@ -8,6 +8,7 @@ import { BsCart4 } from "react-icons/bs";
 import { GrFormClose } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import RecommendedProducts from "../components/RecommendedProducts";
+import Back from '../components/Back';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -157,7 +158,7 @@ const Cart = () => {
         </>
           ) : (
             <>
-                  <Search />
+                  <Back />
 
               <div className='cenb'>
               <img src="https://i.pinimg.com/originals/e5/07/d7/e507d704d4b6fdcb17116762fcd99acd.gif" className="loginimg2" alt="login" />

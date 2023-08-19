@@ -164,7 +164,7 @@ const ProfilePage = () => {
         <div className="col-md-6 nomargin offset-md-3">
           <ul className="list-group">
             <li className="  list-group-item p-3">
-              <a href="/" className="profile-link">
+              <a href="/Terms" className="profile-link">
                 <div className="col-1 myflex">
                   <RiFileEditLine />
                 </div>
@@ -186,7 +186,7 @@ const ProfilePage = () => {
               </a>
             </li>
             <li className="  list-group-item p-3">
-              <a href="/" className="profile-link">
+              <a href="/Return" className="profile-link">
                 <div className="col-1 myflex">
                   <TbTruckReturn />
                 </div>

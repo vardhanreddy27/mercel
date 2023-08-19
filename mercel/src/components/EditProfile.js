@@ -3,6 +3,8 @@ import { Dropdown, DropdownButton } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useSelector } from "react-redux";
+import Back from '../components/Back';
+import { Link } from "react-router-dom";
 
 function EditProfile() {
   const user = useSelector((state) => state.user.user);
@@ -18,7 +20,16 @@ function EditProfile() {
   };
 
   if (!user) {
-    return <div className="text-center p-4">Please log in to edit your profile.</div>;
+    return (
+      <>
+        <div className='cenb'>
+          <img src="https://i.pinimg.com/originals/e5/07/d7/e507d704d4b6fdcb17116762fcd99acd.gif" className="loginimg2" alt="login" />
+          <Link to="/Login"  className="contents">
+            <button type="button" className="btn backgroundcolor btn-lg btn-block">Login or Signup</button>
+          </Link>
+        </div>
+      </>
+    );
   }
 
   return (
