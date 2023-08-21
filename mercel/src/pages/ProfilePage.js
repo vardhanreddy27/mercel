@@ -211,16 +211,14 @@ const ProfilePage = () => {
             </li> :
             <li
             className="profile-link  list-group-item p-3">
-            <div className="col-1 myflex">
+         <Link to="/Login" className="myflex w-100">  <div className="col-1">
               <TbLogin />
             </div>
             <div className="col-10 font-weight-bold"> Login</div>
-            <a href="/Login" className="profile-link">
  <div className="col-1">
               <MdKeyboardArrowRight />
             </div>
-            </a>
-
+            </Link> 
           </li> 
             
             }

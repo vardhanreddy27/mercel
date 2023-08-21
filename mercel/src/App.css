@@ -40,10 +40,18 @@
   align-content: center!important;
 }
 .loginimg{    display: flex;
-  height: inherit;
   width: 100%;
 }
+.login-image-container {
+  position: relative;
+}
 
+.cancel-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
 
 /* test */
 .css-rnmm7m-MuiPaper-root-MuiDialog-paper{

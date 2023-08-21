@@ -3,8 +3,12 @@ import { FcGoogle } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUser } from "../features/user/userSlice";
+import { FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 function Login() {
+  const [isCancelled, setIsCancelled] = useState(true);
+
   const navigate = useNavigate();
   const handleLoginFailure = (error) => {
     // Handle authentication failure
@@ -95,8 +99,13 @@ function Login() {
   };
   return (
     <>
-      <div className="login-image-container">
-        <img src="./login.png" className="loginimg" alt="login"/>
+        <div className="login-image-container">
+        {isCancelled && (
+          <div className="cancel-icon" onClick={() => navigate(-1)}>
+            <FaTimes />
+          </div>
+        )}
+        <img src="./login.png" className="loginimg" alt="login" />
       </div>
       <div className="card logincard logincard1">
         <div className="card-body bodylogin">
