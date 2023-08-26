@@ -37,10 +37,10 @@ height: 17rem;;
   background-color: rgb(243 243 242)!important;
   height: 100vh;
 }
-.cenb{    display: grid!important;
+.cenb{       display: grid!important;
   height: 100vh;
-  justify-content: center!important;
-  align-content: center!important;
+  align-content: space-around;
+  justify-content: space-evenly;
 }
 .loginimg{    display: flex;
   width: 100%;

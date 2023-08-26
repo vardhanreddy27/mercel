@@ -25,7 +25,7 @@ function EditProfile() {
         <div className='cenb'>
           <img src="https://i.pinimg.com/originals/e5/07/d7/e507d704d4b6fdcb17116762fcd99acd.gif" className="loginimg23" alt="login" />
           <Link to="/Login"  className="contents">
-            <button type="button" className="btn backgroundcolor btn-lg btn-block">Login or Signup</button>
+            <button type="button" className="btn backgroundcolor btn-lg btn-block">Login / Signup</button>
           </Link>
         </div>
       </>
