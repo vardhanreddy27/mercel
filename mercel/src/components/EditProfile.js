@@ -24,10 +24,12 @@ function EditProfile() {
       <>
         <div className='cenb'>
           <img src="https://i.pinimg.com/originals/e5/07/d7/e507d704d4b6fdcb17116762fcd99acd.gif" className="loginimg23" alt="login" />
-          <Link to="/Login"  className="contents">
-            <button type="button" className="btn backgroundcolor btn-lg btn-block">Login / Signup</button>
+          <div className="fixed-bottom d-flex justify-content-center">
+   <Link to="/Login"  className="contents">
+            <button type="button" className="btn loginbtn1  backgroundcolor btn-lg btn-block">Login / Signup</button>
           </Link>
-        </div>
+          </div>
+          </div>
       </>
     );
   }

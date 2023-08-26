@@ -37,10 +37,21 @@ height: 17rem;;
   background-color: rgb(243 243 242)!important;
   height: 100vh;
 }
-.cenb{       display: grid!important;
-  height: 100vh;
+.loginbtn1{    height: 4rem;
+  border-radius: 0px!important;
+  width: 100%;}
+.cenb{      display: grid;
   align-content: space-around;
+  height: 100%;
   justify-content: space-evenly;
+}
+.customheight{height:47rem}
+.btnmar{
+  width: 100%;
+    border-radius: 0px!important;
+}
+.marginclass{
+  margin-bottom: 6rem;
 }
 .loginimg{    display: flex;
   width: 100%;

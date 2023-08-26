@@ -158,15 +158,16 @@ const Cart = () => {
         </>
           ) : (
             <>
-                  <Back />
+                  
 
-              <div className='cenb'>
-              <img src="https://i.pinimg.com/originals/e5/07/d7/e507d704d4b6fdcb17116762fcd99acd.gif" className="loginimg2" alt="login" />
+              <div className='d-flex justify-content-center align-items-center customheight'>
+              <img src="https://i.pinimg.com/originals/e5/07/d7/e507d704d4b6fdcb17116762fcd99acd.gif" className="" alt="login" />
               <Link to="/Login" onClick={clickCart} className="contents">
+              <div className="fixed-bottom d-flex marginclass justify-content-center">
 
-              <button type="button" className="btn backgroundcolor btn-lg btn-block">Login / Signup</button>
+              <button type="button" className="btn btnmar backgroundcolor btn-lg btn-block">Login / Signup</button></div>
 </Link>
-              </div>
+</div>
             </>
           )}
   {/* Navigation */}
