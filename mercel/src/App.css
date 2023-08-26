@@ -7,6 +7,9 @@
 }.loginimg2{
   height: 90%;
 }
+.loginimg23{
+height: 17rem;;
+}
 .accordion-button:focus,
 .accordion-button:active {
   outline: none!important; /* Remove outline */
