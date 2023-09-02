@@ -137,7 +137,7 @@ function Shops() {
       </div> */}
       <div className={isFixed ? 'myrules' : 'pt-3'}
 >
-        <div className="row">
+        <div className="row ps-2 pe-2">
           {isLoading ? (
             // Display skeleton loading for images and card text
             <Grid container spacing={3}>
@@ -154,7 +154,7 @@ function Shops() {
           ) : (
             // Display actual data once it's loaded
             searchedShops.map((shop, index) => (
-                    <div key={index} className="col-md-6">
+                    <div key={index} className="col-md-6  p-2">
                   <div className="card mb-3 shadow-sm rounded ">
                     <div className="image-container card-top-radius">
                       <img
