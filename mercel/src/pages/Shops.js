@@ -77,8 +77,9 @@ function Shops() {
 
   return (
     <>
+    
       <SearchShop handleSearch={handleSearch} />
-      <div className="container">
+      {/* <div className="container">
         <div className="d-flex justify-content-center">
           <button
             className={`btn herobannerbg marginsort shadow-sm ${
@@ -114,9 +115,9 @@ function Shops() {
             More
           </button> 
         </div>
-      </div>
+      </div> */}
 
-      <div className="container ps-3 pe-3 pt-3 pb-5 mb-5">
+      <div className="container ps-3 pe-3 pt-1 mt-2 pb-5 mb-5">
         <div className="row">
           {isLoading ? (
             // Display skeleton loading for images and card text
