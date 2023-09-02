@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FaSearch } from "react-icons/fa";
 import { BiFilterAlt } from "react-icons/bi";
 import { BsChevronDown } from "react-icons/bs";
 import { ImLocation } from "react-icons/im";

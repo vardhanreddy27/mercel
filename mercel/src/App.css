@@ -268,6 +268,8 @@ width: 100%;}
 }
 .bodylogin{
   background-color: white;
+}.myrules{
+  margin-top: 50px;
 }
 .custom-input {
   width: 100%; /* Set the width of the input field to 100% */

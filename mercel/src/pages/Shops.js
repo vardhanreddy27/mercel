@@ -74,7 +74,26 @@ function Shops() {
   const searchedShops = filteredShops.filter((shop) =>
     shop.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  const [isFixed, setIsFixed] = useState(false);
 
+  useEffect(() => {
+    // Function to handle scroll event
+    const handleScroll = () => {
+      if (window.scrollY > 20) { // Adjust the threshold as needed
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    // Attach the event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <>
     
@@ -116,8 +135,8 @@ function Shops() {
           </button> 
         </div>
       </div> */}
-
-      <div className="container ps-3 pe-3 pt-1 mt-2 pb-5 mb-5">
+      <div className={isFixed ? 'myrules' : 'pt-3'}
+>
         <div className="row">
           {isLoading ? (
             // Display skeleton loading for images and card text
