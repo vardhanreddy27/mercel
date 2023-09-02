@@ -27,11 +27,11 @@ function SearchShop({ handleSearch }) {
 
   return (
     <div className="row">
-      <div className="row pb-2">
-        <div className="col">
+      <div className="row pb-2 pt-2">
+        <div className="col ten">
           <ImLocation style={{ fontSize: "12px" }} /> Delivery at 1/380-5-1 <BsChevronDown />
         </div>
-        <div className="col text-end me-2">
+        <div className="col text-end myend">
           Filters <BiFilterAlt />
         </div>
       </div>

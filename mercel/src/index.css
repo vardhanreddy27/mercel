@@ -94,6 +94,10 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+}.myend{
+  padding-right: 0px!important;
+}.ten{
+  margin-left: 10px!important;
 }
 .dwidth{
   width: 94%;
