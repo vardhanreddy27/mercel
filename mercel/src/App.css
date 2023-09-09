@@ -266,6 +266,11 @@ width: 100%;}
 .logincard1{
   background-image: linear-gradient(to right, #4d89dd, #c149e6)!important;
 }
+.stopscroll{
+  width: 100%; /* or whatever width you want */
+  height: 100vh; /* 100% of the viewport height */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
 .bodylogin{
   background-color: white;
 }.myrules{

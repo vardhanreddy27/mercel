@@ -37,7 +37,7 @@ function Profile() {
   };
   return (
     <>
-      <div className="container pt-4">
+      <div className="container pt-4 stopscroll">
         <div className="wrapper">
           <ProfilePage />
         </div>
